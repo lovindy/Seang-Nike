@@ -1,0 +1,7 @@
+.title {
+    font-family: "Libre Baskerville", serif;
+}
+
+.text-gradient {
+    @apply .gay;
+  }
