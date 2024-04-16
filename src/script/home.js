@@ -105,20 +105,16 @@ fetch("../components/navbar.html")
       textHid.classList.add("invisible");
     });
 
-    // kid 
+    // kid
     kidBtn.addEventListener("mouseenter", () => {
       menuList.classList.add("h-[400px]");
       overlayBG.classList.remove("hidden");
       textHid.classList.remove("invisible");
-
-
     });
     menuList.addEventListener("mouseenter", () => {
       menuList.classList.add("h-[400px]");
       overlayBG.classList.remove("hidden");
       textHid.classList.remove("invisible");
-
-
     });
     menuList.addEventListener("mouseleave", () => {
       menuList.classList.remove("h-[400px]");
@@ -157,8 +153,6 @@ fetch("../components/navbar.html")
       overlayBG.classList.add("hidden");
       textHid.classList.add("invisible");
     });
-    
-
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -181,5 +175,16 @@ fetch("../components/bodyhome.html")
     body.innerHTML = data;
     // let left_click = 1;
     // let right_click = 2;
+  })
+  .catch((error) => console.error("Error fetching included file:", error));
+
+// menu bottom
+
+const menu_bottom = document.querySelector(".menu-bottom-layout");
+fetch("../components/footer.html")
+  .then((res) => res.text())
+  .then((data) => {
+    menu_bottom.innerHTML = data;
+
   })
   .catch((error) => console.error("Error fetching included file:", error));

@@ -1,7 +1,136 @@
 .title {
-    font-family: "Libre Baskerville", serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 .text-gradient {
-    @apply .gay;
-  }
+  @apply .gay;
+}
+
+.menu-bottom-container {
+  padding-top: 10px;
+}
+
+.menu-bottom {
+  max-width: 1850px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.menu-bottom .f1 a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 20px;
+  margin-top: 10px;
+  color: gray;
+}
+.menu-bottom .f1 a:hover {
+  color: black;
+}
+
+.menu-bottom .f1 p {
+  font-size: 20px;
+}
+
+.footer-container {
+  background-color: black;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.footer {
+  max-width: 1500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.footer ul li {
+  list-style: none;
+  line-height: 25px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.footer a:hover {
+ color: white;
+}
+
+
+.footer .head {
+  font-style: bold;
+  color: white;
+  font-size: 13px;
+}
+
+.footer .right-text ul li a{
+  font-style: bold;
+  color: white;
+  line-height: 20px;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.footer .icon img{
+  height: 30px;
+  width: 30px;
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+.footer .icon img:hover {
+  background-color: greenyellow;
+}
+
+/* sub footer */
+
+.sub-footer-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-footer ul{
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  line-height: 25px;
+}
+
+.sub-footer ul li a {
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+  
+}
+
+.sub-footer .map {
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+.sub-footer .map:hover {
+  color: greenyellow;
+}
+
+.sub-footer ul li a:hover {
+  color: white;
+}
+.sub-footer .map img {
+  width: 20px;
+}
