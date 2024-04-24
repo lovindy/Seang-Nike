@@ -1,449 +1,624 @@
 <link rel="stylesheet" href="../styles/style.css" />
 
-<div class=".header-layout items-center justify-center hidden lg:flex">
-  <header
-    class="head-bar items-center justify-between w-full max-w-[1850px] h-[72px] flex py-6">
-    <!-- logo nike -->
-    <div class="imgage-logo flex items-center justify-between">
-      <p class="text-[26px]">New Releases (2271)</p>
-    </div>
-    <!-- right side text -->
-    <div>
-      <ul class="flex justify-center items-center gap-8 text-[16px]">
-        <li id="filter-btn" class="flex items-center gap-2">
-          <a id="hide" href="#"><span class="hover:text-gray-300">Hide Filters</span></a>
-          <a href="#"><img class="size-[20px]" src="../images/home-icon/newspaper.png" alt=""></a>
-        </li>
+<header
+  class="sticky top-0 z-[100] bg-white max-w-[1850px] mx-auto px-6 py-4 flex items-center justify-between">
+  <div class="imgage-logo flex items-center justify-between">
+    <p class="text-[26px]">New Releases (2271)</p>
+  </div>
+  <!-- right side text -->
+  <div>
+    <ul class="flex justify-center items-center gap-8 text-[16px]">
+      <li id="filter-btn" class="flex items-center gap-2">
+        <a id="hide" href="#"
+          ><span class="hover:text-gray-300">Hide Filters</span></a
+        >
+        <a href="#"
+          ><img
+            class="size-[20px]"
+            src="../images/home-icon/newspaper.png"
+            alt=""
+        /></a>
+      </li>
 
-        <li class="flex items-center gap-2">
-          <a href="#"><span class="hover:text-gray-300">Sort By</span></a>
-          <a href=""><img class="size-[20px]" src="../images/home-icon/down-arrow.png" alt=""></a>
-        </li>
-
-        
-      </ul>
-    </div>
-  </header>
-</div>
+      <li class="flex items-center gap-2">
+        <a href="#"><span class="hover:text-gray-300">Sort By</span></a>
+        <a href=""
+          ><img
+            class="size-[20px]"
+            src="../images/home-icon/down-arrow.png"
+            alt=""
+        /></a>
+      </li>
+    </ul>
+  </div>
+</header>
 
 <!-- main -->
-<div class="w-full bg-red-400 h-[300vh]">
-  <!-- sidebar -->
-  <div id="filter" class="max-w-[1850px] mx-auto flex justify-center">
-    <div class="w-[15%] h-[300vh] bg-slate-400 hidden lg:flex">
-      <!-- text -->
-      <div class="w-full bg-red-200">
-        <!-- pickup -->
-        <div class="flex justify-between items-center">
-          <p>Pick Up Today</p>
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider"></span>
-          </label>
+
+<!-- sidebar -->
+<section class="max-w-[1850px] mx-auto flex px-6">
+  <aside
+    id="filter"
+    class="sticky top-16 w-[18%] bg-orange-200 h-screen overflow-y-scroll">
+    <div class="flex justify-between items-center">
+      <p>Pick Up Today</p>
+      <label class="switch">
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- goods -->
+    <div class="bg-slate-200">
+      <p>Shoes</p>
+      <p class="pt-2">Tops & T-Shirts</p>
+      <p class="pt-2">Shorts</p>
+      <p class="pt-2">Hoodies & Pullovers</p>
+      <p class="pt-2">Jackets & Vests</p>
+      <p class="pt-2">Pants & Tights</p>
+      <p class="pt-2">Swimming</p>
+      <p class="pt-2">Socks</p>
+      <p class="py-2">
+        Accessories & <br />
+        Equipment
+      </p>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Gender</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Men</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Women</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Unisex</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- kids -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Kids</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Boys</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Girls</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- Shop by Price -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Shop by Price</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">$0 - $25</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">$25 - $50</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">$50 - $100</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">$100 - $150</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Over $150</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+    <!-- Color -->
+
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Color</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <!-- grid color -->
+      <div class="grid grid-cols-3 grid-rows-4 gap-3 pt-6">
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-purple-500 mb-2"></div>
+          <p class="text-center">Purple</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- goods -->
-        <div class="bg-slate-200">
-          <p>Shoes</p>
-          <p class="pt-2">Tops & T-Shirts</p>
-          <p class="pt-2">Shorts</p>
-          <p class="pt-2">Hoodies & Pullovers</p>
-          <p class="pt-2">Jackets & Vests</p>
-          <p class="pt-2">Pants & Tights</p>
-          <p class="pt-2">Swimming</p>
-          <p class="pt-2">Socks</p>
-          <p class="py-2">
-            Accessories & <br />
-            Equipment
-          </p>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-black mb-2"></div>
+          <p class="text-center">Black</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Gender</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Men</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Women</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Unisex</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-red-500 mb-2"></div>
+          <p class="text-center">Red</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- kids -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Kids</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Boys</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Girls</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-orange-500 mb-2"></div>
+          <p class="text-center">Orange</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- Shop by Price -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Shop by Price</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">$0 - $25</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">$25 - $50</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">$50 - $100</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">$100 - $150</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Over $150</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-blue-500 mb-2"></div>
+          <p class="text-center">Blue</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-        <!-- Color -->
-
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Color</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <!-- grid color -->
-          <div class="grid grid-cols-3 grid-rows-4 gap-3 pt-6">
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-purple-500 mb-2"></div>
-              <p class="text-center">Purple</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div class="w-[26px] h-[26px] rounded-full bg-black mb-2"></div>
-              <p class="text-center">Black</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div class="w-[26px] h-[26px] rounded-full bg-red-500 mb-2"></div>
-              <p class="text-center">Red</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-orange-500 mb-2"></div>
-              <p class="text-center">Orange</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-blue-500 mb-2"></div>
-              <p class="text-center">Blue</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div class="w-[26px] h-[26px] rounded-full bg-white mb-2"></div>
-              <p class="text-center">White</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-yellow-700 mb-2"></div>
-              <p class="text-center">Brown</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-green-600 mb-2"></div>
-              <p class="text-center">Green</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-yellow-500 mb-2"></div>
-              <p class="text-center">Yellow</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-lime-500 mb-2"></div>
-              <p class="text-center">Lime</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-gray-500 mb-2"></div>
-              <p class="text-center">Gray</p>
-            </div>
-            <div class="flex flex-col items-center">
-              <div
-                class="w-[26px] h-[26px] rounded-full bg-pink-500 mb-2"></div>
-              <p class="text-center">Pink</p>
-            </div>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-white mb-2"></div>
+          <p class="text-center">White</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- Sports & Activities -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Sports & Activities</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Lifestyle</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Running</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Training & Gym</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Yoga</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Football</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Basketball</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Voleyball</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Golf</p>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Tennis</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Swimming</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-yellow-700 mb-2"></div>
+          <p class="text-center">Brown</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- athletes -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Athletes</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">LeBron James</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Kevin Durant</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Serena Williams</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Rafael Nadal</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Giannis</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Lyhour</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Zion Williamson</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Russell Westbrook</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-green-600 mb-2"></div>
+          <p class="text-center">Green</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- brand -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Brand</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Nike Sportswear</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Jordan</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Nike By You</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Converse</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">NikeLab</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">ACG</p>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Nike Pro</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-yellow-500 mb-2"></div>
+          <p class="text-center">Yellow</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- Collections -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Collections</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Air Force 1</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Air Max</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Alpha Huarache</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Cortez</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-lime-500 mb-2"></div>
+          <p class="text-center">Lime</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- Collaborator -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Collaborator</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Nike x MMW</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">
-              Doernbecher <br />
-              Freestyle
-            </p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-gray-500 mb-2"></div>
+          <p class="text-center">Gray</p>
         </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- Sale & Offers -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Sale & Offers</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Price in Bag</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Sale</p>
-          </div>
-        </div>
-        <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
-
-        <!-- Best For -->
-        <div class="bg-slate-200">
-          <div class="flex justify-between items-center">
-            <p class="font-medium">Best For</p>
-            <img
-              class="size-[20px]"
-              src="../images/home-icon/upload.png"
-              alt="" />
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Wet Weather</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Cold Weather</p>
-          </div>
-          <div class="flex items-center gap-2">
-            <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-            <p class="pt-2">Dry Weather</p>
-          </div>
+        <div class="flex flex-col items-center">
+          <div class="w-[26px] h-[26px] rounded-full bg-pink-500 mb-2"></div>
+          <p class="text-center">Pink</p>
         </div>
       </div>
     </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
 
+    <!-- Sports & Activities -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Sports & Activities</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Lifestyle</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Running</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Training & Gym</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Yoga</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Football</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Basketball</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Voleyball</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Golf</p>
+      </div>
 
-    <!-- image-content -->
-    <div id="release" class="w-[85%] h-[300vh] bg-sky-300"></div>
-    
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Tennis</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Swimming</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
 
+    <!-- athletes -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Athletes</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">LeBron James</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Kevin Durant</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Serena Williams</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Rafael Nadal</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Giannis</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Lyhour</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Zion Williamson</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Russell Westbrook</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- brand -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Brand</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Nike Sportswear</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Jordan</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Nike By You</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Converse</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">NikeLab</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">ACG</p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Nike Pro</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- Collections -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Collections</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Air Force 1</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Air Max</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Alpha Huarache</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Cortez</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- Collaborator -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Collaborator</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Nike x MMW</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">
+          Doernbecher <br />
+          Freestyle
+        </p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- Sale & Offers -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Sale & Offers</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Price in Bag</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Sale</p>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0 dark:bg-gray-500" />
+
+    <!-- Best For -->
+    <div class="bg-slate-200">
+      <div class="flex justify-between items-center">
+        <p class="font-medium">Best For</p>
+        <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Wet Weather</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Cold Weather</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
+        <p class="pt-2">Dry Weather</p>
+      </div>
+    </div>
+  </aside>
+
+  <div id="right-content" class="w-[82%] h-[200vh] bg-sky-300">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. In corrupti
+      tenetur totam magnam excepturi et mollitia porro dolorem doloremque, eius
+      aliquid ipsam asperiores dicta quo voluptatibus perspiciatis iusto
+      incidunt aliquam cumque animi molestias expedita obcaecati distinctio
+      vitae! Sed, nobis quibusdam neque necessitatibus excepturi dignissimos
+      natus perferendis nesciunt, voluptas at debitis illum a ea, consequatur
+      odio numquam odit aut? Dicta, modi? Aperiam est nemo asperiores nisi
+      voluptas distinctio vero. Reprehenderit eligendi veniam minus eveniet
+      natus facilis! Incidunt obcaecati nostrum, asperiores nobis nemo ratione
+      voluptates reprehenderit veritatis deserunt perferendis animi, dignissimos
+      omnis, natus hic est! Consequuntur totam non nisi temporibus quaerat
+      aperiam amet mollitia pariatur qui perspiciatis obcaecati, iste ut
+      aliquam, nemo optio molestiae perferendis alias adipisci tempore dolor!
+      Itaque est fuga temporibus error officiis nihil neque laborum autem. Eos,
+      non. Asperiores doloremque corporis minus iure provident numquam sequi
+      praesentium error debitis sapiente. Dolores, quia veniam eaque inventore
+      minima molestiae corporis facilis nulla, assumenda doloribus aperiam nihil
+      beatae est quas saepe facere accusantium totam autem ea ipsum officiis
+      ducimus obcaecati? Explicabo, veniam est sapiente libero totam placeat
+      velit exercitationem pariatur perferendis ipsam officia ut nesciunt
+      inventore, cupiditate nulla error et porro! Aperiam corporis, dolorum
+      quibusdam illum reprehenderit error est voluptate accusamus magni, quaerat
+      enim voluptates nemo, cumque minima. Rem natus eligendi nesciunt fuga!
+      Dolore sint in repellat assumenda fuga distinctio consequuntur culpa!
+      Praesentium optio quod debitis excepturi, iste reprehenderit iusto velit
+      nesciunt atque, sed perferendis veniam laborum rem! Nisi quidem
+      repellendus maiores eos dolorum voluptate aliquid, accusantium tempore
+      explicabo laborum numquam neque molestias voluptatum ullam repellat illo.
+      Illo, id? Quam reprehenderit, corporis maiores dolor natus inventore vel
+      nostrum, illum repellendus molestias harum aut quidem eaque omnis corrupti
+      nihil beatae? Magni dolorum consequuntur incidunt, cupiditate voluptatem
+      sunt! Officiis nostrum harum ut magni odit in delectus aliquam, placeat id
+      voluptatem laborum non fugiat nemo tempore consequatur suscipit sed
+      commodi laboriosam aliquid accusantium ipsum facere? Ducimus cupiditate
+      excepturi, odio quis magni laboriosam commodi neque atque aut dolores esse
+      at placeat harum temporibus blanditiis qui sapiente repellat. Harum, qui,
+      quae nulla fuga cupiditate iusto impedit mollitia placeat consequatur
+      aspernatur explicabo rerum ab voluptas, quaerat inventore fugiat numquam
+      voluptate deserunt odit recusandae enim amet sequi sint! Rerum corporis,
+      totam ducimus nobis quasi exercitationem et excepturi fugiat eligendi iure
+      odio consequatur necessitatibus? Recusandae id nesciunt ipsa ipsam
+      quisquam possimus illum voluptatem doloribus, ut, labore quia architecto
+      modi necessitatibus et eligendi animi facilis veritatis. Laudantium vel
+      debitis illo quidem cupiditate facilis modi eum id deleniti, labore
+      provident obcaecati reiciendis veritatis consequuntur nulla odio
+      repellendus quis maxime magnam. Deleniti doloribus perferendis possimus,
+      velit excepturi eos nobis totam numquam repellendus. Libero earum illum,
+      itaque doloremque aliquid necessitatibus suscipit odio voluptates
+      inventore eius, eveniet laborum assumenda? Beatae sint, ex nostrum ipsam
+      odio laborum saepe qui eius esse soluta dolore itaque voluptates quisquam
+      eveniet nihil, at necessitatibus, eos provident sunt ad! Cumque ipsam
+      aliquam porro? Eaque nam vel perspiciatis. Cum sapiente corporis omnis!
+      Veniam officia, neque, facere rerum earum quae commodi repudiandae qui ea
+      corrupti dicta voluptatum modi recusandae, beatae nihil quas. Accusamus
+      perferendis ex possimus ea enim modi officiis ullam architecto ducimus,
+      totam, sequi iusto, quas deleniti? Esse numquam voluptates, autem, nostrum
+      excepturi rem voluptatum doloribus vero, distinctio ipsa blanditiis
+      deserunt aspernatur aperiam sed corrupti. Libero harum autem animi dicta
+      quia iusto, non quidem sint. Neque sit rerum, in, at earum placeat veniam
+      quod exercitationem, possimus magni pariatur autem expedita quia omnis!
+      Voluptatibus consectetur distinctio, delectus exercitationem saepe illum
+      modi at eaque repellendus! Dolores nemo quidem in officia error voluptas
+      inventore et dolor pariatur, veritatis voluptatum placeat. Quisquam
+      eveniet illo, excepturi reiciendis cupiditate unde nostrum. Nemo eum
+      impedit ab voluptate molestias ad praesentium deserunt natus, asperiores
+      dolore dolorem ratione in doloribus minima animi magnam nostrum porro!
+      Expedita quam dolore ea, similique esse obcaecati natus? Repellendus nihil
+      iste neque dolore nostrum quidem ad id, labore, dolorum eius ducimus
+      cupiditate obcaecati, quis tempore! Eligendi doloremque eaque sequi sed
+      molestiae fugit minima aspernatur rerum! Neque placeat aspernatur
+      asperiores? Enim facere eum ullam porro fugiat explicabo error saepe.
+      Nulla repellendus fugit exercitationem ratione sequi voluptate possimus
+      nobis voluptatum alias quasi dolorum commodi quae, repellat, molestias
+      odit nemo earum facere, et obcaecati cumque minus libero praesentium? Quis
+      suscipit nobis deleniti perferendis omnis modi facere enim ipsam! Tempore
+      qui neque sit nesciunt, quam dolor quos vero. Reprehenderit quidem laborum
+      maxime mollitia libero blanditiis aliquam earum, nisi, repellat, cum eum
+      similique ad quod? Veniam voluptatum cumque ut consectetur sunt iure at
+      explicabo, recusandae, vero iusto, atque quibusdam nostrum. Illum, placeat
+      hic! Quo delectus velit accusantium eos, eligendi perferendis placeat est
+      doloremque fuga quos explicabo ipsam aspernatur fugiat molestias qui
+      dignissimos numquam a, excepturi consequuntur quasi ex voluptatem. Maiores
+      incidunt vitae ipsum sequi adipisci totam delectus exercitationem
+      voluptatem, iste veniam, molestiae sunt veritatis praesentium nisi. Eius,
+      illo eos eveniet qui voluptatibus reiciendis cumque earum doloribus
+      molestias, ea ab ipsum a maxime illum blanditiis at magni eligendi quia,
+      recusandae minus. Nihil fugit deleniti, atque numquam tempore earum
+      itaque, nobis excepturi beatae error vel? Odit debitis molestias iusto.
+      Aliquid quaerat et nemo culpa obcaecati, numquam atque totam porro dolorum
+      commodi similique esse fugit laudantium veniam illum adipisci quae eos
+      velit quia quibusdam eaque. Fugiat distinctio ipsa tempore necessitatibus.
+      Tempore consectetur cum blanditiis sint aut, exercitationem aliquam a! Est
+      minus sunt blanditiis cum modi facere, laboriosam ipsam. Vero tenetur
+      laboriosam ducimus voluptatem fuga, magni at iste. Laudantium modi aliquam
+      ut, cumque corporis vero saepe eligendi itaque sequi esse quia fugit et
+      excepturi, nobis quos enim dignissimos incidunt vitae quis cum molestias
+      consequuntur ipsa quidem? Dolore laudantium quas sequi minima veritatis
+      veniam maxime dolor blanditiis, nam, rem necessitatibus suscipit qui?
+      Veritatis facilis dolor, fuga perspiciatis earum quos accusantium tenetur
+      sunt quam enim quod? Impedit sequi tempore laborum incidunt, nostrum
+      iusto. Magnam blanditiis veritatis, non labore eos cum, voluptas harum
+      voluptatum consectetur quas perspiciatis a repellat repudiandae incidunt
+      itaque ipsum. Explicabo ipsa quas magni unde. Repudiandae, soluta ratione
+      architecto veniam ea iusto, quos tempora, totam sit ab sunt! Veniam
+      accusamus sint qui rem quibusdam laborum dolorem, labore placeat et hic
+      molestias quasi blanditiis perferendis totam fuga porro consequuntur
+      facere facilis. Reprehenderit quisquam excepturi atque dolore consectetur
+      voluptas quaerat sunt, voluptate dolores nisi numquam, enim vel, aliquid
+      eos obcaecati inventore. Dolore, aut officiis veritatis, vel aliquid,
+      neque ratione quam nesciunt architecto earum dolorem laborum quo veniam
+      soluta velit incidunt. Sed suscipit doloribus in corrupti quas, tenetur
+      sit similique itaque quis, optio excepturi necessitatibus libero inventore
+      accusamus cumque repellat dolor? Illum sapiente tenetur aut et, quasi
+      reprehenderit earum repellat fugiat minima non consectetur eaque ea
+      perferendis optio inventore veritatis voluptatem sed! Architecto
+      laudantium error labore officia quaerat nobis, minima cupiditate aut enim
+      neque necessitatibus mollitia atque fugiat cumque magni cum, asperiores
+      natus incidunt non quis minus deserunt eaque nemo nostrum! Minus
+      consectetur aliquid consequuntur tenetur, possimus assumenda voluptatibus
+      dolore, sapiente quia sequi rem architecto esse delectus iste quaerat
+      atque vitae aspernatur officia labore expedita, veritatis corporis
+      quisquam reiciendis. Aliquam soluta vero labore cupiditate dolorem
+      assumenda tempora sint saepe laborum autem a praesentium fugiat deleniti,
+      qui illum consectetur voluptates. Assumenda saepe, quidem nulla eius
+      sapiente temporibus. Saepe totam officiis sequi deleniti qui voluptatum
+      eligendi iure assumenda rerum ipsum voluptates, harum ullam nemo placeat
+      eum consectetur delectus culpa, velit iusto quo. Quae corporis rerum,
+      mollitia sint odit, voluptatem quas amet recusandae, officiis illo
+      asperiores dicta eius reprehenderit omnis minus libero. Nulla praesentium,
+      quas quam modi porro natus corporis sequi omnis, accusamus perferendis
+      aspernatur accusantium, commodi laboriosam consectetur illo velit culpa
+      asperiores dolorem animi? Aliquid hic necessitatibus rerum eum eos iure
+      minima, voluptatibus, illum veniam ad deserunt? Laboriosam maxime at,
+      magnam ipsum fugit ex officiis. Alias voluptatibus id veniam maxime
+      consectetur commodi excepturi illo dolore! Blanditiis consectetur ex rem
+      sit praesentium repellendus rerum eos non voluptas ab eligendi possimus
+      illum magnam nulla quia soluta voluptate reprehenderit ullam dolor
+      molestias, autem recusandae. Totam doloribus vel architecto quae neque
+      accusantium consequatur? Veniam reprehenderit quaerat rem eaque error nisi
+      aliquam voluptas, sapiente ex doloribus asperiores hic. Commodi quae illo
+      totam veniam consequuntur, quia aperiam beatae nemo cumque fugiat non quas
+      accusantium modi incidunt culpa autem possimus nihil similique quod
+      architecto! Nostrum iusto accusantium excepturi sint porro itaque dolores
+      sed? Explicabo fugit qui ex eius saepe, optio rem atque laborum
+      necessitatibus odio et aliquid earum amet magnam sed excepturi. Corporis
+      ipsum magni repudiandae assumenda ea aliquam culpa, rem ex delectus
+      ducimus inventore non ad eligendi iusto porro quae maxime at aliquid
+      aspernatur? Quidem numquam, aliquam atque sapiente natus facilis
+      repudiandae eos beatae ipsa quas modi rerum veniam praesentium illo!
+      Corporis asperiores atque fugiat debitis, eum quisquam cumque, nisi modi
+      rem neque dolore dolor magni. Animi expedita velit repudiandae possimus
+      numquam veritatis esse maxime mollitia sunt quas tempore aspernatur sed
+      dicta eius impedit accusamus consectetur, nihil laudantium iusto commodi?
+      Voluptates amet laboriosam modi eum, fugit dignissimos ratione totam
+      maiores porro illo architecto numquam incidunt quis laborum itaque ducimus
+      hic dolor veritatis eaque maxime debitis iste autem in explicabo. Unde
+      quasi delectus rem quis at ex labore, aliquam obcaecati voluptate
+      consequatur ea doloremque praesentium sed animi consequuntur corporis
+      facere repudiandae perferendis doloribus ipsam ullam culpa libero
+      inventore. Quos obcaecati, perspiciatis eveniet ullam porro qui
+      consectetur. Nemo possimus eos ut, voluptate ea magnam atque illo porro
+      sequi aspernatur fuga laboriosam. Tempora possimus suscipit quaerat
+      commodi temporibus perspiciatis voluptate excepturi assumenda, sequi quod
+      impedit quisquam praesentium quae dolorum laboriosam. Quia, nobis veniam.
+      Commodi ea vitae corrupti odio quas quia atque, impedit quisquam rerum
+      porro eveniet similique libero corporis suscipit molestiae dolores. Sit
+      blanditiis error, doloremque, corrupti libero exercitationem totam ab
+      consectetur quasi sunt ad adipisci amet cum? Natus aspernatur
+      exercitationem placeat reiciendis eligendi cupiditate odit odio assumenda
+      sed, reprehenderit nesciunt officia nihil obcaecati quisquam rem, minima
+      amet. Deserunt, facilis. Voluptatem aliquam tempore totam labore et
+      voluptates esse? Repellat repellendus autem reiciendis eius molestiae
+      natus sapiente cum, quod, minus odit, corporis iste veritatis. Debitis
+      officia neque iusto minima nostrum eligendi non accusamus ab architecto.
+      Provident excepturi, facere voluptate pariatur corporis dolore neque
+      commodi, molestiae nobis amet ducimus illum ipsam optio ea odit nam itaque
+      accusamus eius. Iusto tempore nostrum, deleniti, reprehenderit suscipit
+      molestiae rem fugiat quam tenetur dolorum quis corrupti quia, harum
+      expedita officia. Blanditiis, facilis ipsam, doloremque facere perferendis
+      numquam rem eos iste odio quis dolor aliquam voluptatem sed similique
+      aspernatur perspiciatis eius? Similique optio voluptates delectus hic
+      quia, dolor libero doloremque rem eius animi, ad possimus sed accusamus
+      dignissimos, reiciendis mollitia error temporibus. Tempore modi magnam
+      iure? Corrupti minus optio expedita fuga rem accusantium esse blanditiis
+      fugit quidem reiciendis nobis porro quos, quaerat cupiditate incidunt
+      voluptas placeat non iusto! Saepe ex expedita impedit totam laudantium
+      debitis excepturi harum, quos nemo eaque dolorem neque vero velit
+      consequuntur eum aut ducimus amet, atque voluptatem obcaecati. Vitae
+      facere quidem aspernatur, sit pariatur temporibus ratione, necessitatibus
+      voluptatibus beatae, nihil est. Nobis sapiente fugiat eos saepe impedit,
+      vel earum voluptatum iste soluta in, explicabo voluptas numquam placeat
+      dolores, expedita modi. Minima itaque voluptatem laboriosam. Dolorum vel
+      doloremque ex, aliquam sapiente cumque deleniti nobis, suscipit
+      voluptatem, quas ipsam tempora amet incidunt in magni natus! Officia,
+      facilis. Commodi, ad tempora ipsum autem libero labore quod nostrum aut
+      blanditiis dolores? Fuga excepturi reprehenderit quia quisquam assumenda
+      sint iste reiciendis! Obcaecati, quaerat. Alias molestias dolorem ex saepe
+      vero obcaecati itaque? Placeat tempore earum, quam corporis vitae aperiam!
+      Est praesentium perferendis enim commodi sapiente beatae ab illum
+      voluptates eveniet reprehenderit porro velit, fugit corrupti excepturi
+      dolore voluptate debitis provident, nostrum iste sed magni, sunt
+      repudiandae aspernatur. Eum architecto perspiciatis possimus illo a?
+      Consectetur dignissimos alias veniam quas fugit mollitia fuga cupiditate
+      ipsa sunt? Voluptatem, ea! Sapiente enim suscipit iste. Error porro
+      debitis nam at sit eaque modi inventore deserunt ipsum, excepturi odit,
+      quis dolorem, delectus nostrum! Numquam nostrum dignissimos voluptate quam
+      suscipit repellendus libero fugiat dolor omnis natus asperiores, amet
+      veniam adipisci mollitia consequatur odio non excepturi iusto aperiam aut
+      accusantium modi. A deleniti sapiente tempora sunt possimus porro nisi
+      impedit, fugiat explicabo ratione doloremque ipsa, velit iure eos neque
+      distinctio eaque maiores quas autem reiciendis, voluptates ad! Quo aperiam
+      repellat quibusdam velit debitis accusantium labore esse, impedit
+      similique alias ad laboriosam, officia, voluptatibus fuga ducimus
+      voluptas.
+    </p>
   </div>
-</div>
+</section>

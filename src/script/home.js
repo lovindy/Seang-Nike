@@ -25,14 +25,14 @@ fetch("../components/navbar.html")
       overlayBG.classList.remove("hidden");
       textHid.classList.remove("invisible");
 
-      // men
+
     });
     menuList.addEventListener("mouseenter", () => {
       menuList.classList.add("h-[400px]");
       overlayBG.classList.remove("hidden");
       textHid.classList.remove("invisible");
 
-      // men
+
     });
     menuList.addEventListener("mouseleave", () => {
       menuList.classList.remove("h-[400px]");

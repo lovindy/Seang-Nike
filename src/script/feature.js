@@ -12,16 +12,20 @@ fetch("../components/feature.html")
     const filterItem = document.querySelector("#filter");
     const hideText = document.querySelector("#hide");
     const showText = document.querySelector("#show");
+    const rightContent = document.querySelector("#right-content");
 
     // function action
     filterBtn.addEventListener('click', () => {
       filterItem.classList.toggle("hidden");
+      rightContent.classList.add("w-[100%]");
       if (filterItem.classList.contains("hidden")) {
         filterBtn.innerHTML = '<span class="cursor-pointer">Show Filters</span><img class="size-[20px] cursor-pointer" src="../images/home-icon/newspaper.png" alt="">';
       } else {
         filterBtn.innerHTML = '<span class="cursor-pointer">Hide Filters</span><img class="size-[20px] cursor-pointer" src="../images/home-icon/newspaper.png" alt="">';
       }
     });
+
+
 
 
   })
