@@ -110,3 +110,6 @@ class CardComponent extends HTMLElement {
 }
 
 customElements.define("card-component", CardComponent);
+
+
+// job mg bro
