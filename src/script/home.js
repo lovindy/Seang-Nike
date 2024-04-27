@@ -18,20 +18,17 @@ fetch("../components/navbar.html")
     let menuList = document.getElementById("menu-list");
     let overlayBG = document.getElementById("overlay-bg");
     let textHid = document.getElementById("text-hid");
-    let navBar = document.getElementById("nav_bar");
 
     hoverBtn.addEventListener("mouseenter", () => {
       menuList.classList.add("h-[400px]");
       overlayBG.classList.remove("hidden");
       textHid.classList.remove("invisible");
 
-
     });
     menuList.addEventListener("mouseenter", () => {
       menuList.classList.add("h-[400px]");
       overlayBG.classList.remove("hidden");
       textHid.classList.remove("invisible");
-
 
     });
     menuList.addEventListener("mouseleave", () => {

@@ -6,8 +6,11 @@ fetch("../components/feature.html")
 
     // get button element
     const filterBtn = document.querySelector("#filter-btn");
+    const hide = document.querySelector("#hide");
+    const show = document.querySelector("#show");
+
     // get item element
-    const filterItem = document.querySelector("#filter");
+    const filterItem = document.querySelector("#filterItems");
     const rightContent = document.querySelector("#right-content");
 
     // function action
@@ -15,13 +18,30 @@ fetch("../components/feature.html")
       filterItem.classList.toggle("hidden");
       rightContent.classList.add("w-[100%]");
       if (filterItem.classList.contains("hidden")) {
-        filterBtn.innerHTML =
-          '<span class="cursor-pointer">Show Filters</span><img class="size-[20px] cursor-pointer" src="../images/home-icon/newspaper.png" alt="">';
+        filterBtn.textContent = "Hide Filters";
       } else {
-        filterBtn.innerHTML =
-          '<span class="cursor-pointer">Hide Filters</span><img class="size-[20px] cursor-pointer" src="../images/home-icon/newspaper.png" alt="">';
+        filterBtn.innerHTML = "Show Filters";
+  
       }
     });
+
+     // responvie filter
+    const resBTN = document.querySelector("#responsive-btn");
+    const resItem = document.querySelector("#responsive-filter");
+    const resPick = document.querySelector("#responsive-pick");
+    const closeFilter = document.querySelector("#close-filter");
+    resBTN.addEventListener("click", () => {
+      // alert("Clicked!");
+      resItem.classList.toggle("hidden");
+      resItem.classList.add("top-0")
+      resPick.classList.add("z-[2]")
+    });
+
+    closeFilter.addEventListener("click", () => {
+      resItem.classList.toggle("hidden");
+      
+    })
+
     // create card component
     // create array object
     const arrayCard = [
@@ -78,7 +98,7 @@ fetch("../components/feature.html")
     // create function to loop over the array card
     const createCardComponent = () => {
       return `
-      <div id="right-content" class="grid md:grid-cols-3 grid-cols-2 md:grid-rows3 grid-rows-2 gap-4 md:px-4 px-0">
+      <div id="right-content" class="z-[3] grid lg:grid-cols-3 grid-cols-2 lg:grid-rows3 grid-rows-2 gap-4 lg:px-4 px-0">
                     ${arrayCard
                       .map((card) => {
                         return `
