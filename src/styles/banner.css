@@ -1,0 +1,72 @@
+ @import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;700&display=swap");
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+.slide-container {
+  position: relative;
+  background-color: antiquewhite;
+}
+.text-wrapper {
+  position: relative;
+  width: 1000px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 20px;
+  text-align: center;
+  background-color: teal;
+}
+
+.text-wrapper > p {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 15px;
+}
+
+.text-wrapper > p:not(.active) {
+  left: -100%;
+} */
+
+@keyframes nextOut {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes nextIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes prevOut {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes prevIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+} 
