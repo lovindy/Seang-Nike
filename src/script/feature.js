@@ -98,7 +98,7 @@ fetch("../components/feature.html")
     // create function to loop over the array card
     const createCardComponent = () => {
       return `
-      <div id="right-content" class="z-[3] grid lg:grid-cols-3 grid-cols-2 lg:grid-rows3 grid-rows-2 gap-4 lg:px-4 px-0">
+      <div id="right-content" class="z-[3] grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 lg:px-4 px-0">
                     ${arrayCard
                       .map((card) => {
                         return `
@@ -113,7 +113,7 @@ fetch("../components/feature.html")
                         `;
                       })
                       .join("")}
-                      </div>       
+                      </div>        
         `;
     };
 

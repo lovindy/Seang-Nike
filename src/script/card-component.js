@@ -95,9 +95,6 @@ const createCardComponent = () => {
                 </div>
                     `
                 }).join("")}
-
-
-               
             </div>
         </section>
     `;
@@ -108,8 +105,4 @@ class CardComponent extends HTMLElement {
     this.innerHTML = createCardComponent();
   }
 }
-
 customElements.define("card-component", CardComponent);
-
-
-// job mg bro

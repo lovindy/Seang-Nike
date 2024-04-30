@@ -11,25 +11,15 @@
     <div>
       <a href="../../src/pages/home.html">
         <img
-          class="nav-logo w-[65px]"
+          class="nav-logo max-w-[65px]"
           src="https://www.edigitalagency.com.au/wp-content/uploads/nike-logo-png-black-icon-white-background-large.png"
           alt=""
       /></a>
     </div>
-    <!-- <div>
-      <a href="../../src/pages/home.html">
-        <img
-          class="nav-logo w-[80px] ml-[40px] flex lg:hid"
-          src="https://www.edigitalagency.com.au/wp-content/uploads/nike-logo-png-black-icon-white-background-large.png"
-          alt=""
-      /></a>
-    </div> -->
-    <!-- mid pages -->
-
     <ul class="flex justify-center items-center gap-6 text-[16px] lg:ml-[130px] ">
       <li id="feature_btn">
         <a class="p-1"  href="../pages/feature.html"
-          ><span class="hover:text-gray-300 hidden lg:flex"
+          ><span class="hover:text-gray-300 hidden sm:flex"
             >Featured</span
           ></a
         >
@@ -58,7 +48,7 @@
       </li>
       <li>
         <a class="p-4" href=""
-          ><span class="hover:text-gray-300 hidden xl:flex">Sale</span></a
+          ><span class="hover:text-gray-300 hidden sm:flex">Sale</span></a
         >
       </li>
     </ul>
@@ -74,51 +64,30 @@
           type="Search"
           placeholder="Search" />
       </div>
-      <a href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
-      <a href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
+      <a class="hidden md:flex" href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
+      <a class="hidden md:flex" href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
     </div>
 
     <!-- Responsive sm -->
-    <div class="flex sm:hidden gap-[20px] px-[15px]">
+    <div class="flex sm:hidden gap-[20px] ">
       <a href="#"><i class="fa-solid fa-magnifying-glass text-[23px]"></i></i></a>
       <a href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
       <a href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
       <a id="burger-btn" href="#"><i class="fa-solid fa-bars text-[23px]"></i></a>
     </div>
-    <div
-    id="burger-menu"
-    class="bg-white hidden text-white w-[200px] h-[200px] justify-center ">
-    <div class="bg-white max-w-[1850px] flex justify-between">
-    
-        <ul class="px-[80px]">
-          <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New Markdowns</a></li>
-          <li><a class="text-[14px] text-gray-400" href="#">Sale: Up to 50% off 🛍️</a></li>
-        </ul>
-
-      <ul class="px-[80px]">
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New & Featured</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">New Arrival</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">Best Sellers</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">Member Product</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">New & Upcoming Drop</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">SNKRS Launch Calendar</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">New in ACG</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">Retro Running</a></li>
-        <li><a class="text-[14px] text-gray-400" href="#">Add to Bag to See Price 🚨</a></li>
-      </ul>
-    </div> 
   </nav>
+</div>
 
+  <!-- dropdown -->
   <div
     id="menu-list"
     class="bg-white text-white w-full h-[0px] flex justify-center duration-300 fixed z-50 top-[105px]">
     <!-- Menu bottom -->
     <div id="text-hid" class=" invisible bg-white max-w-[1850px] flex justify-between">
-    
-        <ul class="px-[80px]">
-          <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New Markdowns</a></li>
-          <li><a class="text-[14px] text-gray-400" href="#">Sale: Up to 50% off 🛍️</a></li>
-        </ul>
+      <ul class="px-[80px]">
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New Markdowns</a></li>
+        <li><a class="text-[14px] text-gray-400" href="#">Sale: Up to 50% off 🛍️</a></li>
+      </ul>
 
       <ul class="px-[80px]">
         <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New & Featured</a></li>
@@ -154,10 +123,6 @@
       </ul>
     </div>
   </div>
-  <!-- burger menu -->
-
-</div>
+ 
 <!-- overlay bg -->
-<div id="overlay-bg" class="hidden w-full h-screen bg-black opacity-40 fixed">
-
-</div>
+<div id="overlay-bg" class="hidden w-full h-screen bg-black opacity-40 fixed"></div>
