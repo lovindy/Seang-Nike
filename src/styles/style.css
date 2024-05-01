@@ -1,6 +1,12 @@
 .title {
   font-family: "Libre Baskerville", serif;
 }
+.titlekid {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* grid */
 .slider {
