@@ -151,9 +151,6 @@ fetch("../components/navbar.html")
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
-// banner section
-
-
 // body section
 const body = document.querySelector(".bodyhome-layout");
 fetch("../components/bodyhome.html")
@@ -255,9 +252,8 @@ fetch("../components/bodyhome.html")
     classicNext.addEventListener("click", nextclassic);
   })
   .catch((error) => console.error("Error fetching included file:", error));
-
+  
 // menu bottom
-
 const menu_bottom = document.querySelector(".menu-bottom-layout");
 fetch("../components/footer.html")
   .then((res) => res.text())
