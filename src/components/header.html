@@ -1,8 +1,9 @@
 <!-- header section -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<div class=".header-layout bg-gray-100 flex items-center justify-center">
-  <header class="head-bar px-6 items-center justify-between w-full max-w-[1850px] h-[36px] hidden md:flex">
+<section class=".header-layout bg-gray-100 flex items-center justify-center">
+  <header
+    class="head-bar px-6 items-center justify-between w-full max-w-[1850px] h-[36px] hidden md:flex">
     <!-- logo nike -->
     <div class="imgage-logo size-[50px] flex items-center justify-between">
       <a class="jordan-logo" href=""
@@ -24,24 +25,42 @@
       </a>
     </div>
     <!-- right side text -->
-    <div >
-      <ul class="flex justify-center items-center gap-2 text-[12px] ">
+    <div class="">
+      <ul class="flex justify-center items-center gap-2 text-[12px]">
         <li>
-          <a href="#"><span class="hover:text-sky-300">Find a Store</span></a>
+          <a href="../pages/findaStore.html"
+            ><span class="hover:text-gray-300">Find a Store</span></a
+          >
+        </li>
+        <div class="h-[18px] w-[1px] bg-black"></div>
+        <li class="group">
+          <a href="#"><span id="help" class="hover:text-gray-300">Help</span></a>
+          <!-- top-[100%] -->
+          <ul
+            id="header-dropdown"
+            class="duration-300 leading-8 w-[200px] items-start flex flex-col z-[3] rounded-xl fixed top-[-400px] group-hover:top-[38px] bg-white text-[#616161] text-[13px] pl-4">
+            <h1 class="text-[16px] text-black">Help</h1>
+            <p class="font-light hover:text-black">Order Status</p>
+            <p class="font-light hover:text-black">Shipping & Delivery</p>
+            <p class="font-light hover:text-black">Returns</p>
+            <p class="font-light hover:text-black">Order Cancellation</p>
+            <p class="font-light hover:text-black">Size Charts</p>
+            <p class="font-light hover:text-black">Contacts Us</p>
+            <p class="font-light hover:text-black">Membership</p>
+            <p class="font-light hover:text-black">Promotions & Discounts</p>
+            <p class="font-light hover:text-black">Product Advice</p>
+            <p class="font-light hover:text-black">Send Us Feedback</p>
+          </ul>
         </li>
         <div class="line h-[18px] w-[1px] bg-black"></div>
         <li>
-          <a href="#"><span class="hover:text-sky-300">Help</span></a>
+          <a href="#"><span class="hover:text-gray-300">About Us</span></a>
         </li>
         <div class="line h-[18px] w-[1px] bg-black"></div>
         <li>
-          <a href="#"><span class="hover:text-sky-300">About Us</span></a>
-        </li>
-        <div class="line h-[18px] w-[1px] bg-black"></div>
-        <li>
-          <a href="#"><span class="hover:text-sky-300">Sign In</span></a>
+          <a href="#"><span class="hover:text-gray-300">Sign In</span></a>
         </li>
       </ul>
     </div>
   </header>
-</div>
+</section>

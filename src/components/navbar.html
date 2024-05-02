@@ -4,9 +4,9 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 <div id="nav_bar"
-  class="md:my-0 my-2 navbar-layout bg-white flex flex-col items-center justify-center">
+  class="md:my-0 w-full my-2 navbar-layout bg-white flex flex-col items-center justify-center">
   <nav
-    class="nav-bar flex items-center justify-between w-full max-w-[1850px] px-6 ">
+    class="nav-bar flex items-center justify-between w-full max-w-[1850px] px-6">
     <!-- logo image -->
     <div>
       <a href="../../src/pages/home.html">
@@ -16,7 +16,7 @@
           alt=""
       /></a>
     </div>
-    <ul class="flex justify-center items-center gap-6 text-[16px] lg:ml-[130px] ">
+    <ul class="flex justify-center items-center gap-6 text-[17px] lg:ml-[150px] ">
       <li id="feature_btn">
         <a class="p-1"  href="../pages/feature.html"
           ><span class="hover:text-gray-300 hidden sm:flex"
@@ -42,13 +42,13 @@
       <li id="acc_btn">
         <a class="p-1"  href=""
           ><span class="hover:text-gray-300 hidden sm:flex"
-            >Accessories</span
+            >Sale</span
           ></a
         >
       </li>
       <li>
-        <a class="p-4" href=""
-          ><span class="hover:text-gray-300 hidden sm:flex">Sale</span></a
+        <a class="p-1" href=""
+          ><span class="hover:text-gray-300 hidden sm:flex">Jordan</span></a
         >
       </li>
     </ul>
@@ -67,23 +67,29 @@
       <a class="hidden md:flex" href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
       <a class="hidden md:flex" href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
     </div>
-
     <!-- Responsive sm -->
-    <div class="flex sm:hidden gap-[20px] ">
+    <div class="flex sm:hidden gap-4">
       <a href="#"><i class="fa-solid fa-magnifying-glass text-[23px]"></i></i></a>
       <a href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
       <a href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
-      <a id="burger-btn" href="#"><i class="fa-solid fa-bars text-[23px]"></i></a>
+      <button id="burger-btn" href="#"><i class="fa-solid fa-bars text-[23px]"></i></button>
     </div>
+    <!-- menu content -->
+    <aside>
+      <div>
+        
+      </div>
+    </aside>
+
   </nav>
 </div>
 
   <!-- dropdown -->
   <div
     id="menu-list"
-    class="bg-white text-white w-full h-[0px] flex justify-center duration-300 fixed z-50 top-[105px]">
+    class="bg-white text-white w-full h-0 flex justify-center duration-300 fixed z-50 top-[105px]">
     <!-- Menu bottom -->
-    <div id="text-hid" class=" invisible bg-white max-w-[1850px] flex justify-between">
+    <div id="text-hid" class="text-nowrap invisible bg-white max-w-[1850px] flex justify-between">
       <ul class="px-[80px]">
         <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New Markdowns</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Sale: Up to 50% off 🛍️</a></li>
