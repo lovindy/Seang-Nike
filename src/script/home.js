@@ -167,15 +167,6 @@ fetch("../components/navbar.html")
       overlaySm.classList.add("hidden");
     });
 
-    // rotate icon
-    // const rotateIcon = document.querySelector("#rotate-icon");
-    // const rotateText = document.querySelector("#rotate-text");
-
-    // rotateText.addEventListener("click", () => {
-    //   rotateIcon.classList.toggle("rotate-180");
-    //   rotateIcon.classList.toggle("rotate-360");
-    // });
-
     const rotateIcons = document.querySelectorAll(".rotate-icon");
     const rotateTexts = document.querySelectorAll(".rotate-text");
 

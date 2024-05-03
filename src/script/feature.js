@@ -124,5 +124,52 @@ fetch("../components/feature.html")
       }
     }
     customElements.define("featured-component", CardComponent);
+
+    // sort by btn
+    const sortBTN = document.querySelector("#sort-btn");
+    const sortContent = document.querySelector("#sort-content");
+    const sortImg = document.querySelector("#sort-img");
+
+    sortBTN.addEventListener("click", () => {
+      sortContent.classList.toggle("opacity-0");
+      sortContent.classList.toggle("opacity-100");
+      sortImg.classList.toggle("rotate-180");
+      sortImg.classList.toggle("rotate-360");
+    })
+
+    // moveplaceHolder
+    const inputBox = document.querySelector("#locationInput");
+    const locationMove = document.querySelector("#location-move");
+    function moveUp() {
+      locationMove.classList.add("top-[38%]", "text-xs", "left-14");
+      locationMove.innerHTML = "Location";
+    }
+    function moveDown() {
+      locationMove.classList.remove("top-[38%]", "text-xs", "left-14");
+      locationMove.innerHTML = "Search Location";
+    }
+    inputBox.addEventListener("focus", () => {
+      moveUp();
+    });
+
+    inputBox.addEventListener("focusout", () => {
+      inputLength = inputBox.value.length;
+      // check if value > 0 => moveUp else moveDown
+      if (inputLength == 0) {
+        moveDown();
+      }
+    });
+
+    const pickUpBTN = document.querySelector("#toggle-example");
+    const closeBTN = document.querySelector("#close-btn");
+
+    pickUpBTN.addEventListener("click", () => {
+      alert("Pick-Up");
+    })
+
+    closeBTN.addEventListener("click", () => {
+      alert("clicked")
+    })
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
