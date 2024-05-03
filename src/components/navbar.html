@@ -1,12 +1,9 @@
-<script src="https://cdn.tailwindcss.com"></script>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
+<script src="../script/btn.js"></script>
+<!-- nav bar -->
 <div id="nav_bar"
-  class="md:my-0 w-full my-2 navbar-layout bg-white flex flex-col items-center justify-center">
-  <nav
-    class="nav-bar flex items-center justify-between w-full max-w-[1850px] px-6">
+  class="md:my-0 w-full my-2 navbar-layout hidden sm:flex items-center justify-center">
+  <div
+    class="nav-bar flex items-center mx-auto justify-between w-full max-w-[1850px] px-6">
     <!-- logo image -->
     <div>
       <a href="../../src/pages/home.html">
@@ -16,43 +13,43 @@
           alt=""
       /></a>
     </div>
-    <ul class="flex justify-center items-center gap-6 text-[17px] lg:ml-[150px] ">
-      <li id="feature_btn">
-        <a class="p-1"  href="../pages/feature.html"
-          ><span class="hover:text-gray-300 hidden sm:flex"
-            >Featured</span
-          ></a
-        >
-      </li>
-      <li id="men_btn">
-        <a class="p-1"  href="../pages/men.html"
-          ><span class="hover:text-gray-300 hidden sm:flex">Men</span></a
-        >
-      </li>
-      <li id="women_btn" >
-        <a class="p-1" href=""
-          ><span class="hover:text-gray-300 hidden sm:flex">Women</span></a
-        >
-      </li>
-      <li id="kid_btn">
-        <a class="p-1"  href="../pages/kid.html"
-          ><span class="hover:text-gray-300 hidden sm:flex">Kids</span></a
-        >
-      </li>
-      <li id="acc_btn">
-        <a class="p-1"  href=""
-          ><span class="hover:text-gray-300 hidden sm:flex"
-            >Sale</span
-          ></a
-        >
-      </li>
-      <li>
-        <a class="p-1" href=""
-          ><span class="hover:text-gray-300 hidden sm:flex">Jordan</span></a
-        >
-      </li>
-    </ul>
-
+    
+      <ul class="flex gap-6 text-[17px] lg:ml-[150px]">
+        <li id="feature_btn">
+          <a class="p-1"  href="../pages/feature.html"
+            ><span class="group hover:text-gray-300 hidden sm:flex"
+              >Featured</span
+            ></a
+          >
+        </li>
+        <li id="men_btn">
+          <a class="p-1"  href="../pages/men.html"
+            ><span class="hover:text-gray-300 hidden sm:flex">Men</span></a
+          >
+        </li>
+        <li id="women_btn" >
+          <a class="p-1" href=""
+            ><span class="hover:text-gray-300 hidden sm:flex">Women</span></a
+          >
+        </li>
+        <li id="kid_btn">
+          <a class="p-1"  href="../pages/kid.html"
+            ><span class="hover:text-gray-300 hidden sm:flex">Kids</span></a
+          >
+        </li>
+        <li id="acc_btn">
+          <a class="p-1"  href=""
+            ><span class="hover:text-gray-300 hidden sm:flex"
+              >Sale</span
+            ></a
+          >
+        </li>
+        <li>
+          <a class="p-1" href=""
+            ><span class="hover:text-gray-300 hidden sm:flex">Jordan</span></a
+          >
+        </li>
+      </ul>
     <!-- right side icon -->
     <div
       class="nav-right bg-white items-center justify-center gap-[15px] hover:inline-flex hidden sm:flex ">
@@ -60,43 +57,214 @@
         <i
           class="fa-solid fa-magnifying-glass absolute text-[25px] left-[10px] top-[8px]"></i>
         <input
-          class="search pl-[40px] hover:bg-gray-100 h-[35px] w-[160px] rounded-[20px]"
+          class="search pl-[40px] hover:bg-gray-100 h-[35px] max-w-[160px] rounded-[20px]"
           type="Search"
           placeholder="Search" />
       </div>
       <a class="hidden md:flex" href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
       <a class="hidden md:flex" href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
     </div>
-    <!-- Responsive sm -->
-    <div class="flex sm:hidden gap-4">
-      <a href="#"><i class="fa-solid fa-magnifying-glass text-[23px]"></i></i></a>
-      <a href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
-      <a href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
-      <button id="burger-btn" href="#"><i class="fa-solid fa-bars text-[23px]"></i></button>
-    </div>
-    <!-- menu content -->
-    <aside>
-      <div>
-        
-      </div>
-    </aside>
+  </div>
+</div>
 
-  </nav>
+<!-- responsive -->
+<div class="w-full flex justify-between items-center py-2 px-4 sm:hidden gap-4">
+  <div>
+    <a href="../../src/pages/home.html">
+      <img
+        class="nav-logo max-w-[65px]"
+        src="https://www.edigitalagency.com.au/wp-content/uploads/nike-logo-png-black-icon-white-background-large.png"
+        alt=""
+    /></a>
+  </div>
+ <div class="space-x-2">
+  <a href="#"><i class="fa-solid fa-magnifying-glass text-[23px]"></i></i></a>
+  <a href="#"><i class="fa-regular fa-heart text-[23px]"></i></a>
+  <a href="#"><i class="fa-solid fa-bag-shopping text-[23px]"></i></a>
+  <button id="hamburger-btn" href="#"><i class="fa-solid fa-bars text-[23px]"></i></button>
+</div>
+</div>
+
+ <!-- hamburger content -->
+ <div id="hamburger-content" class=" bg-white duration-300 top-0 fixed left-[100%] z-[10] w-[400px] h-[200vh] sm:opacity-0 opacity-100">
+  <div class="max-w-screen-sm overflow-y-scroll h-screen mx-auto px-4">
+    <span class="flex justify-start pt-6 pl-[240px]"><img id="hamburger-close-btn" class="size-[15px] cursor-pointer" src="../images/home-icon/close.png" alt=""></span>
+    
+    <div class="transition">
+      <!-- header -->
+      <div
+        class="accordion-header rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+        <h3 id="rotate-text" class="text-[24px]">New & Featured</h3>
+        <img id="rotate-icon" class="rotate-icon size-[20px] mr-[75px] rotate-180" src="../images/home-icon/down-arrow.png" alt="">
+      </div>
+      <!-- Content -->
+      <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+        <ul class="leading-8 text-[#616161] font-light pl-9">
+          <p class="hover:text-black">Air Force 1</p>
+          <p class="hover:text-black">Jordan 1</p>
+          <p class="hover:text-black">Kyrie Flytrap</p>
+          <p class="hover:text-black">Zoom Fly</p>
+          <p class="hover:text-black">VaporMax</p>
+          <p class="hover:text-black">Joyride</p>
+          <p class="hover:text-black">Flyknit Racer</p>
+          <p class="hover:text-black">SB Dunk</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transition">
+      <!-- header -->
+      <div
+        class="accordion-header rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+        <h3 id="rotate-text" class=" text-[24px]">Men</h3>
+        <img id="rotate-icon" class="rotate-icon size-[20px] mr-[75px] rotate-180" src="../images/home-icon/down-arrow.png" alt="">
+      </div>
+      <!-- Content -->
+      <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+        <ul class="leading-8 text-[#616161] font-light pl-9">
+          <p class="hover:text-black">Air Force 1</p>
+          <p class="hover:text-black">Jordan 1</p>
+          <p class="hover:text-black">React Runner</p>
+          <p class="hover:text-black">Zoom Fly</p>
+          <p class="hover:text-black">VaporMax</p>
+          <p class="hover:text-black">Joyride</p>
+          <p class="hover:text-black">Flyknit Racer</p>
+          <p class="hover:text-black">Zoom Freak</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transition">
+      <!-- header -->
+      <div
+        class="accordion-header rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+        <h3 id="rotate-text" class=" text-[24px]">Women</h3>
+        <img id="rotate-icon" class="rotate-icon size-[20px] mr-[75px] rotate-180" src="../images/home-icon/down-arrow.png" alt="">
+      </div>
+      <!-- Content -->
+      <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+        <ul class="leading-8 text-[#616161] font-light pl-9">
+          <p class="hover:text-black">Air Force 1</p>
+          <p class="hover:text-black">Jordan 1</p>
+          <p class="hover:text-black">Kyrie Flytrap</p>
+          <p class="hover:text-black">Zoom Fly</p>
+          <p class="hover:text-black">VaporMax</p>
+          <p class="hover:text-black">Joyride</p>
+          <p class="hover:text-black">Flyknit Racer</p>
+          <p class="hover:text-black">SB Dunk</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transition">
+      <!-- header -->
+      <div
+        class="accordion-header rotate-text  cursor-pointer transition flex px-5 items-center justify-between h-12">
+        <h3 id="rotate-text" class="text-[24px]">Kids</h3>
+        <img id="rotate-icon" class="rotate-icon size-[20px] mr-[75px] rotate-180" src="../images/home-icon/down-arrow.png" alt="">
+      </div>
+      <!-- Content -->
+      <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+        <ul class="leading-8 text-[#616161] font-light pl-9">
+          <p class="hover:text-black">Star Runner</p>
+          <p class="hover:text-black">Team Hustle</p>
+          <p class="hover:text-black">Court Borough</p>
+          <p class="hover:text-black">Flex Runner</p>
+          <p class="hover:text-black">Revolution Flex</p>
+          <p class="hover:text-black">Sunray Protect</p>
+          <p class="hover:text-black">Pico</p>
+          <p class="hover:text-black">Downshifter</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transition">
+      <!-- header -->
+      <div
+        class="accordion-header rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+        <h3 id="rotate-text" class=" text-[24px]">Sale</h3>
+        <img id="rotate-icon" class="rotate-icon size-[20px] mr-[75px] rotate-180" src="../images/home-icon/down-arrow.png" alt="">
+      </div>
+      <!-- Content -->
+      <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+        <ul class="leading-8 text-[#616161] font-light pl-9">
+          <p class="hover:text-black">Sportswear Tech</p>
+          <p class="hover:text-black">Pro Compression</p>
+          <p class="hover:text-black">Dry Training</p>
+          <p class="hover:text-black">Yoga Essential</p>
+          <p class="hover:text-black">Pro Hyperwarm</p>
+          <p class="hover:text-black">Epic Luxe</p>
+          <p class="hover:text-black">Pro Compression</p>
+          <p class="hover:text-black">Dry Training</p>
+          <p class="hover:text-black">Yoga Essential</p>
+        </ul>
+      </div>
+    </div>
+
+    <div class="transition">
+      <!-- header -->
+      <div
+        class="accordion-header rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+        <h3 id="rotate-text" class="text-[24px]">Jordan</h3>
+        <img id="rotate-icon" class="rotate-icon size-[20px] mr-[75px] rotate-180" src="../images/home-icon/down-arrow.png" alt="">
+      </div>
+      <!-- Content -->
+      <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+        <ul class="leading-8 text-[#616161] font-light pl-9">
+          <p class="hover:text-black">Air Force 1</p>
+          <p class="hover:text-black">Jordan 1</p>
+          <p class="hover:text-black">React Runner</p>
+          <p class="hover:text-black">Zoom Fly</p>
+          <p class="hover:text-black">VaporMax</p>
+          <p class="hover:text-black">Joyride</p>
+          <p class="hover:text-black">Flyknit Racer</p>
+          <p class="hover:text-black">Zoom Freak</p>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-12 px-4 space-y-6">
+      <span class="flex items-center gap-6"><img class="size-[35px]" src="../images/home-icon/nikeball.png" alt="">Jordan</span>
+      <span class="flex items-center gap-6"><img class="size-[35px]" src="../images/home-icon/fashion.png" alt="">Converse</span>
+    </div>
+
+    <div class="pt-20 max-w-[280px] px-4">
+      <p class="text-[#707072] pb-8">
+        Become a Nike Member for the best products, inspiration and stories in sport.
+        <span class="inline-block">
+          <a
+            href="#"
+            class="text-black text-[20px] hover:underline underline-offset-2 flex items-center gap-1">
+            Learn more
+          </a> </span
+        >
+      </p>
+      <btn-component title="Join Us" customClass="bg-black"></btn-component>
+      <button class=" px-4 py-2 hover:border-black rounded-full border-[1px] text-black">Sign In</button>
+    </div>
+
+    <div class="pt-12 px-4 space-y-6 pb-10">
+      <span class="flex items-center gap-6"><img class="size-[20px]" src="../images/home-icon/shopping-bag.png" alt="">Jordan</span>
+      <span class="flex items-center gap-6"><img class="size-[20px]" src="../images/home-icon/checkout.png" alt="">Converse</span>
+      <span class="flex items-center gap-6"><img class="size-[20px]" src="../images/home-icon/store.png" alt="">Jordan</span>
+      <span class="flex items-center gap-6"><img class="size-[20px]" src="../images/home-icon/question.png" alt="">Converse</span>
+    </div>
+  </div>
 </div>
 
   <!-- dropdown -->
   <div
     id="menu-list"
-    class="bg-white text-white w-full h-0 flex justify-center duration-300 fixed z-50 top-[105px]">
+    class="group-hover: bg-white text-white w-full h-0 flex justify-center duration-300 fixed z-50 top-[105px]">
     <!-- Menu bottom -->
     <div id="text-hid" class="text-nowrap invisible bg-white max-w-[1850px] flex justify-between">
       <ul class="px-[80px]">
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New Markdowns</a></li>
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-gray-300" href="#">New Markdowns</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Sale: Up to 50% off 🛍️</a></li>
       </ul>
 
       <ul class="px-[80px]">
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New & Featured</a></li>
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-gray-300" href="#">New & Featured</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">New Arrival </a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Best Sellers</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Member Product</a></li>
@@ -108,7 +276,7 @@
       </ul>
 
       <ul class="px-[80px]">
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">Shop Classics</a></li>
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-gray-300" href="#">Shop Classics</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Air Jordan 1</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Air force</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Dunk</a></li>
@@ -117,13 +285,13 @@
       </ul>
 
       <ul class="px-[80px]">
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New For Men</a></li>
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-gray-300" href="../pages/men.html">New For Men</a></li>
         <li><a class="text-[14px] text-gray-400"href="#">Shoes</a></li>
         <li><a class="text-[14px] text-gray-400 align-text-bottom" href="#">Clothing</a></li>
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New For Women</a></li>
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-gray-300" href="#">New For Women</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Shoes</a></li>
         <li><a class="text-[14px] text-gray-400 align-text-bottom" href="#">Clothing</a></li>
-        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-sky-300" href="#">New For Kids</a></li>
+        <li><a class="font-medium text-gray-900 align-text-bottom hover:text-gray-300" href="../pages/kid.html">New For Kids</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Shoes</a></li>
         <li><a class="text-[14px] text-gray-400" href="#">Clothing</a></li>
       </ul>
@@ -132,3 +300,4 @@
  
 <!-- overlay bg -->
 <div id="overlay-bg" class="hidden w-full h-screen bg-black opacity-40 fixed"></div>
+<div id="overlay-bg-sm" class="hidden w-full h-screen top-0 z-[9] bg-black sm:opacity-0 opacity-60 fixed"></div>

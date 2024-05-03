@@ -148,6 +148,44 @@ fetch("../components/navbar.html")
       overlayBG.classList.add("hidden");
       textHid.classList.add("invisible");
     });
+
+    // hamburger button
+    const hamburgerBTN = document.querySelector("#hamburger-btn");
+    const hamburgerContent = document.querySelector("#hamburger-content");
+    const hamburgerClose = document.querySelector("#hamburger-close-btn");
+    const overlaySm = document.querySelector("#overlay-bg-sm");
+
+    hamburgerBTN.addEventListener("click", () => {
+      hamburgerContent.classList.add("left-[40%]");
+      hamburgerContent.classList.add("opacity-100");
+      overlaySm.classList.remove("hidden");
+    });
+
+    hamburgerClose.addEventListener("click", () => {
+      hamburgerContent.classList.remove("left-[40%]");
+      hamburgerContent.classList.remove("opacity-100");
+      overlaySm.classList.add("hidden");
+    });
+
+    // rotate icon
+    // const rotateIcon = document.querySelector("#rotate-icon");
+    // const rotateText = document.querySelector("#rotate-text");
+
+    // rotateText.addEventListener("click", () => {
+    //   rotateIcon.classList.toggle("rotate-180");
+    //   rotateIcon.classList.toggle("rotate-360");
+    // });
+
+    const rotateIcons = document.querySelectorAll(".rotate-icon");
+    const rotateTexts = document.querySelectorAll(".rotate-text");
+
+    rotateTexts.forEach((rotateText, index) => {
+      rotateText.addEventListener("click", () => {
+        rotateIcons[index].classList.toggle("rotate-180");
+        rotateIcons[index].classList.toggle("rotate-360");
+      });
+    });
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -252,7 +290,7 @@ fetch("../components/bodyhome.html")
     classicNext.addEventListener("click", nextclassic);
   })
   .catch((error) => console.error("Error fetching included file:", error));
-  
+
 // menu bottom
 const menu_bottom = document.querySelector(".menu-bottom-layout");
 fetch("../components/footer.html")
