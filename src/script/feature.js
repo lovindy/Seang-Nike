@@ -21,11 +21,10 @@ fetch("../components/feature.html")
         filterBtn.textContent = "Hide Filters";
       } else {
         filterBtn.innerHTML = "Show Filters";
-  
       }
     });
 
-     // responvie filter
+    // responvie filter
     const resBTN = document.querySelector("#responsive-btn");
     const resItem = document.querySelector("#responsive-filter");
     const resPick = document.querySelector("#responsive-pick");
@@ -33,14 +32,39 @@ fetch("../components/feature.html")
     resBTN.addEventListener("click", () => {
       // alert("Clicked!");
       resItem.classList.toggle("hidden");
-      resItem.classList.add("top-0")
-      resPick.classList.add("z-[2]")
+      resItem.classList.add("top-0");
+      resPick.classList.add("z-[2]");
     });
 
     closeFilter.addEventListener("click", () => {
       resItem.classList.toggle("hidden");
-      
-    })
+    });
+
+    // toggle
+    const toggleBTN = document.querySelector("#toggle-btn");
+    const toggleCircle = document.querySelector("#toggle-circle");
+
+    toggleBTN.addEventListener("click", () => {
+      // toggleCircle.classList.toggle("")
+      toggleCircle.classList.toggle("translate-x-[100%]");
+      if (toggleCircle.classList.contains("translate-x-[100%]")) {
+        toggleBTN.classList.add("bg-blue-400");
+      } else {
+        toggleBTN.classList.remove("bg-blue-400");
+      }
+    });
+    const toggleBTN1 = document.querySelector("#toggle-btn-1");
+    const toggleCircle1 = document.querySelector("#toggle-circle-1");
+
+    toggleBTN1.addEventListener("click", () => {
+      // toggleCircle.classList.toggle("")
+      toggleCircle1.classList.toggle("translate-x-[100%]");
+      if (toggleCircle1.classList.contains("translate-x-[100%]")) {
+        toggleBTN1.classList.add("bg-blue-400");
+      } else {
+        toggleBTN1.classList.remove("bg-blue-400");
+      }
+    });
 
     // create card component
     // create array object
@@ -135,7 +159,7 @@ fetch("../components/feature.html")
       sortContent.classList.toggle("opacity-100");
       sortImg.classList.toggle("rotate-180");
       sortImg.classList.toggle("rotate-360");
-    })
+    });
 
     // moveplaceHolder
     const inputBox = document.querySelector("#locationInput");
@@ -160,16 +184,24 @@ fetch("../components/feature.html")
       }
     });
 
-    const pickUpBTN = document.querySelector("#toggle-example");
+    const pickUpBTN = document.querySelector("#toggle-btn");
     const closeBTN = document.querySelector("#close-btn");
+    const pickUpContent = document.querySelector("#pickup-content");
+
+    toggleBTN1.addEventListener("click", () => {
+      pickUpContent.classList.toggle("invisible");
+      toggleCircle1.classList.toggle("translate-x-[100%]");
+    });
 
     pickUpBTN.addEventListener("click", () => {
-      alert("Pick-Up");
-    })
+      pickUpContent.classList.toggle("invisible");
+    });
 
     closeBTN.addEventListener("click", () => {
-      alert("clicked")
-    })
-
+      pickUpContent.classList.add("invisible");
+      toggleCircle.classList.toggle("translate-x-[100%]");
+      toggleBTN.classList.remove("bg-blue-400");
+      toggleBTN1.classList.remove("bg-blue-400");
+    });
   })
   .catch((error) => console.error("Error fetching included file:", error));

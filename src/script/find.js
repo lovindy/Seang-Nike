@@ -1,4 +1,4 @@
-const find_a_store = document.querySelector(".find-a-store-layout");
+const find_a_store = document.querySelector("find-a-store-layout");
 fetch("../components/findastore.html")
   .then((res) => res.text())
   .then((data) => {
@@ -302,14 +302,14 @@ fetch("../components/findastore.html")
     });
 
     // moveplaceHolder
-    const inputBox = document.querySelector("#locationInput");
-    const locationMove = document.querySelector("#location-move");
+    const inputBox = document.querySelector("#locationInput1");
+    const locationMove = document.querySelector("#location-move1");
     function moveUp() {
-      locationMove.classList.add("top-[-10%]", "text-xs", "left-2");
+      locationMove.classList.add("top-[35%]", "text-xs", "left-12");
       locationMove.innerHTML = "Location";
     }
     function moveDown() {
-      locationMove.classList.remove("top-[-10%]", "text-xs", "left-2");
+      locationMove.classList.remove("top-[35%]", "text-xs", "left-2");
       locationMove.innerHTML = "Search Location";
     }
     inputBox.addEventListener("focus", () => {

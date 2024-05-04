@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="../styles/style.css" />
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css" />
+<script src="../script/btn.js"></script>
+
 <header
   id="responsive-pick"
   class="sticky top-0 z-[5] bg-white max-w-[1850px] mx-auto px-6 py-4 flex items-center justify-between">
@@ -50,10 +49,9 @@
 <hr class="flex lg:hidden h-[1px] bg-gray-200 border-0" />
 <div class="flex lg:hidden justify-between py-2 items-center px-6">
   <p class="text-[16px]">Pick Up Today</p>
-  <label class="switch">
-    <input type="checkbox" />
-    <span class="slider"></span>
-  </label>
+  <div id="toggle-btn-1" class="relative  bg-[#cacacb] flex items-center cursor-pointer w-[40px] h-[20px] border-[1px] mr-10 rounded-full">
+    <div id="toggle-circle-1" class="absolute translate-x-[0%] duration-300 w-[20px] h-[20px] rounded-full bg-gray-200"></div>
+  </div>
 </div>
 <hr class="flex lg:hidden h-[1px] mb-4 bg-gray-200 border-0" />
 
@@ -65,14 +63,8 @@
     <div class="hidden lg:flex lg:flex-col">
       <div class="flex justify-between items-center">
         <p>Pick Up Today</p>
-        <div class="max-w-lg mx-auto">
-          <label
-            for="toggle-example"
-            class="flex items-center cursor-pointer relative">
-            <input type="checkbox" id="toggle-example" class="sr-only" />
-            <div
-              class="toggle-bg bg-gray-200 border-2 border-gray-200 h-6 w-11 rounded-full"></div>
-          </label>
+        <div id="toggle-btn" class="relative bg-[#cacacb] flex items-center cursor-pointer w-[40px] h-[20px] border-[1px] mr-10 rounded-full">
+          <div id="toggle-circle" class="absolute translate-x-[0%] duration-300 w-[20px] h-[20px] rounded-full bg-gray-200"></div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
@@ -483,14 +475,15 @@
 </section>
 
 <!-- pick-up content -->
-<div
-  class="z-[200] hidden fixed top-0 bg-blue-300 w-[500px] rounded-2xl h-[700px]">
+<div  id="pickup-content" class="z-[100] bg-black/20 backdrop-blur-sm invisible fixed w-full h-screen flex justify-center items-center top-0">
+  <div
+  class="bg-white w-[500px] relative z-50 rounded-2xl h-[700px]">
   <div class="flex items-center justify-between px-10 pt-10">
     <h1 class="text-[26px]">Filter by Store</h1>
-    <span class="w-[35px] p-2 rounded-full border-[1px] bg-gray-50"
+    <span class="p-2 rounded-full bg-gray-100"
       ><img
         id="close-btn"
-        class="size-[15px] cursor-pointer"
+        class="size-[15px] z-[151] cursor-pointer"
         src="../images/home-icon/close.png"
         alt=""
     /></span>
@@ -513,6 +506,15 @@
       src="../images/home-icon/search.png"
       alt="" />
   </div>
+  <div class="justify-between items-start w-full flex flex-col px-10 pt-6">
+    <h1 class="text-[20px]">No Nike Stores Available</h1>
+    <p class="pt-6">We couldn't find any Nike stores within 50 mi of your location.</p>
+  </div>
+  <div class="flex items-end justify-end px-10 pt-80">
+    <btn-component title="Select" customClass="bg-[#e5e5e5] hover:bg-gray-100 text-[#707072]"></btn-component>
+  </div>
+
+</div>
 </div>
 
 <!-- responsive filter -->
