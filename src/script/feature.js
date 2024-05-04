@@ -21,11 +21,10 @@ fetch("../components/feature.html")
         filterBtn.textContent = "Hide Filters";
       } else {
         filterBtn.innerHTML = "Show Filters";
-  
       }
     });
 
-     // responvie filter
+    // responvie filter
     const resBTN = document.querySelector("#responsive-btn");
     const resItem = document.querySelector("#responsive-filter");
     const resPick = document.querySelector("#responsive-pick");
@@ -33,14 +32,39 @@ fetch("../components/feature.html")
     resBTN.addEventListener("click", () => {
       // alert("Clicked!");
       resItem.classList.toggle("hidden");
-      resItem.classList.add("top-0")
-      resPick.classList.add("z-[2]")
+      resItem.classList.add("top-0");
+      resPick.classList.add("z-[2]");
     });
 
     closeFilter.addEventListener("click", () => {
       resItem.classList.toggle("hidden");
-      
-    })
+    });
+
+    // toggle
+    const toggleBTN = document.querySelector("#toggle-btn");
+    const toggleCircle = document.querySelector("#toggle-circle");
+
+    toggleBTN.addEventListener("click", () => {
+      // toggleCircle.classList.toggle("")
+      toggleCircle.classList.toggle("translate-x-[100%]");
+      if (toggleCircle.classList.contains("translate-x-[100%]")) {
+        toggleBTN.classList.add("bg-blue-400");
+      } else {
+        toggleBTN.classList.remove("bg-blue-400");
+      }
+    });
+    const toggleBTN1 = document.querySelector("#toggle-btn-1");
+    const toggleCircle1 = document.querySelector("#toggle-circle-1");
+
+    toggleBTN1.addEventListener("click", () => {
+      // toggleCircle.classList.toggle("")
+      toggleCircle1.classList.toggle("translate-x-[100%]");
+      if (toggleCircle1.classList.contains("translate-x-[100%]")) {
+        toggleBTN1.classList.add("bg-blue-400");
+      } else {
+        toggleBTN1.classList.remove("bg-blue-400");
+      }
+    });
 
     // create card component
     // create array object
@@ -124,5 +148,60 @@ fetch("../components/feature.html")
       }
     }
     customElements.define("featured-component", CardComponent);
+
+    // sort by btn
+    const sortBTN = document.querySelector("#sort-btn");
+    const sortContent = document.querySelector("#sort-content");
+    const sortImg = document.querySelector("#sort-img");
+
+    sortBTN.addEventListener("click", () => {
+      sortContent.classList.toggle("opacity-0");
+      sortContent.classList.toggle("opacity-100");
+      sortImg.classList.toggle("rotate-180");
+      sortImg.classList.toggle("rotate-360");
+    });
+
+    // moveplaceHolder
+    const inputBox = document.querySelector("#locationInput");
+    const locationMove = document.querySelector("#location-move");
+    function moveUp() {
+      locationMove.classList.add("top-[38%]", "text-xs", "left-14");
+      locationMove.innerHTML = "Location";
+    }
+    function moveDown() {
+      locationMove.classList.remove("top-[38%]", "text-xs", "left-14");
+      locationMove.innerHTML = "Search Location";
+    }
+    inputBox.addEventListener("focus", () => {
+      moveUp();
+    });
+
+    inputBox.addEventListener("focusout", () => {
+      inputLength = inputBox.value.length;
+      // check if value > 0 => moveUp else moveDown
+      if (inputLength == 0) {
+        moveDown();
+      }
+    });
+
+    const pickUpBTN = document.querySelector("#toggle-btn");
+    const closeBTN = document.querySelector("#close-btn");
+    const pickUpContent = document.querySelector("#pickup-content");
+
+    toggleBTN1.addEventListener("click", () => {
+      pickUpContent.classList.toggle("invisible");
+      toggleCircle1.classList.toggle("translate-x-[100%]");
+    });
+
+    pickUpBTN.addEventListener("click", () => {
+      pickUpContent.classList.toggle("invisible");
+    });
+
+    closeBTN.addEventListener("click", () => {
+      pickUpContent.classList.add("invisible");
+      toggleCircle.classList.toggle("translate-x-[100%]");
+      toggleBTN.classList.remove("bg-blue-400");
+      toggleBTN1.classList.remove("bg-blue-400");
+    });
   })
   .catch((error) => console.error("Error fetching included file:", error));
