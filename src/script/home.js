@@ -293,6 +293,7 @@ fetch("../components/footer.html")
 
 const footer_res = document.querySelector(".footer-res-layout");
 fetch("../components/footerRes.html")
+fetch("../components/bodymember.html")
   .then((res) => res.text())
   .then((data) => {
     footer_res.innerHTML = data;

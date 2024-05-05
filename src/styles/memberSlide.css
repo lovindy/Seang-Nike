@@ -1,0 +1,81 @@
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.images {
+  overflow: hidden;
+  padding-top: 100px;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.images:before,
+.images:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.images:hover .images-slide {
+  animation-play-state: paused;
+}
+
+.images-slide {
+  display: flex;
+  animation: 35s slide infinite linear;
+}
+
+.images-slide img {
+  height: 300px;
+  width: 100%;
+  margin: 0 5px;
+}
+
+/* bottom image slider */
+.images-2 {
+  overflow: hidden;
+  padding-top: 10px;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.images-2 {
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  position: relative;
+}
+
+.images-2:before,
+.images-2:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.images-2:hover .images-slide-2 {
+  animation-play-state: paused;
+}
+
+.images-slide-2 {
+  display: flex;
+  animation: 50s slide infinite linear;
+}
+
+.images-slide-2 img {
+  height: 300px;
+  margin: 0 5px;
+}
