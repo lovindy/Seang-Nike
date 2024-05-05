@@ -1,0 +1,476 @@
+<script src="../script/btn.js"></script>
+<script src="../script/autosilder.js"></script>
+<link rel="stylesheet" href="../styles/memberSlide.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+  rel="stylesheet" />
+
+<section class="sticky top-0 z-[10] bg-white member-content-layout">
+  <header class="w-full items-center lg:justify-center justify-between flex">
+    <div
+      class="lg:items-center lg:relative lg:justify-start justify-between w-full max-w-[1850px] py-[20px] flex lg:flex-row flex-col p-6">
+      <!-- logo nike -->
+      <div class="flex items-center justify-start">
+        <p class="text-[26px]">Nike Membership</p>
+      </div>
+
+      <!-- right side text -->
+      <div class="lg:absolute lg:flex items-center lg:justify-center w-full">
+        <ul class="grid grid-cols-3 gap-8 text-[16px]">
+          <li>
+            <a href="#"
+              ><span class="hover:text-gray-300">Explore the Nike App</span></a
+            >
+          </li>
+
+          <li>
+            <a href="#"
+              ><span class="hover:text-gray-300">Member Product</span></a
+            >
+          </li>
+
+          <li>
+            <a href="#"><span class="hover:text-gray-300">Sign Up</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+</section>
+
+<!-- hero section -->
+<section>
+  <div class="relative flex justify-center items-center">
+    <video
+      class="w-full"
+      autoplay
+      muted
+      loop
+      src="../images/home-picture/memberNike.mp4"></video>
+    <div class="absolute text-white sm:text-center">
+      <h1 class="titlemember sm:text-[60px] text-[30px]">
+        IT'S BETTER AS <br />
+        A MEMBER
+      </h1>
+      <p class="">Move, Shop, Customize and Celebrate with the best of Nike.</p>
+      <btn-component
+        title="Sign Up"
+        customClass="bg-white text-black mt-6"></btn-component>
+    </div>
+  </div>
+</section>
+
+<!-- member benefits -->
+<section class="member px-4 pb-4 pt-12">
+  <div
+    class="w-full pt-6 pb-4 max-w-[1600px] mx-auto flex justify-between items-center">
+    <p class="text-[26px]">Membership</p>
+    <span class="space-x-2">
+      <button
+        id="prev-shop"
+        class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button
+        id="next-shop"
+        class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
+        <i class="fa-solid fa-chevron-right"></i></button
+    ></span>
+  </div>
+
+  <div class="max-w-[1600px] flex mx-auto overflow-x-hidden">
+    <div class="flex gap-2 text-center duration-300" id="shop-slider">
+      <!-- original card -->
+      <div class="w-full" id="card-shop">
+        <div class="relative w-[400px]">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/m1.jpeg"
+            alt="" />
+          <div class="absolute bottom-10 left-10 flex flex-col items-start">
+            <p class="text-white">Member Product</p>
+            <p class="text-white text-[24px] pb-4">Your Exclusive Access</p>
+            <button class="px-4 py-2 rounded-full bg-white hover:bg-gray-300">Shop</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop">
+        <div class="relative w-[400px]">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/m2.jpeg"
+            alt="" />
+          <div class="absolute bottom-10 left-10 flex flex-col items-start">
+            <p class="text-white">Member Rewards</p>
+            <p class="text-white text-[24px] pb-4">How We Say Thank You</p>
+            <button class="px-4 py-2 rounded-full bg-white hover:bg-gray-300">Celebration</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop">
+        <div class="relative w-[400px]">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/m3.jpeg"
+            alt="" />
+          <div class="absolute bottom-10 left-10 flex flex-col items-start">
+            <p class="text-white">Sports & Wellness Apps</p>
+            <p class="text-white text-[24px] pb-4">Movement Where</p>
+            <button class="px-4 py-2 rounded-full bg-white hover:bg-gray-300">Move</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop">
+        <div class="relative w-[400px]">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/m4.jpeg"
+            alt="" />
+          <div class="absolute bottom-10 left-10 flex flex-col items-start">
+            <p class="text-white">Nike By You</p>
+            <p class="text-white text-[24px] pb-4">
+              Your Customizztion Service
+            </p>
+            <button class="px-4 py-2 rounded-full bg-white hover:bg-gray-300">Customize</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop">
+        <div class="relative w-[400px]">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/m5.jpeg"
+            alt="" />
+          <div class="absolute bottom-10 left-10 flex flex-col items-start">
+            <p class="text-white">Your Ultimate</p>
+            <p class="text-white text-[24px] pb-4">Sneaker Community</p>
+            <button class="px-4 py-2 rounded-full bg-white hover:bg-gray-300">Explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- member also get -->
+<section class="member px-4 pb-4 pt-6">
+  <div
+    class="w-full pt-6 pb-4 max-w-[1600px] mx-auto hidden sm:flex justify-between items-center">
+    <p class="text-[26px]">Members Also Get</p>
+    <span class="space-x-2">
+      <button
+        id="prev-shop-1"
+        class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button
+        id="next-shop-1"
+        class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
+        <i class="fa-solid fa-chevron-right"></i></button
+    ></span>
+  </div>
+
+  <div class="max-w-[1600px] hidden sm:flex mx-auto overflow-x-hidden">
+    <div class="flex gap-2 text-center duration-300" id="shop-slider-1">
+      <!-- original card -->
+      <div class="w-full" id="card-shop-1">
+        <div class="relative w-[528px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mem1.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Free Shipping</h1>
+            <p class="pt-6">Members score free delivery on every</p>
+            <p>$50+ order.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop-1">
+        <div class="relative w-[528px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mem2.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Wear Test</h1>
+            <p class="pt-6">Not sure? Try it for 60 days-return if it's</p>
+            <p>not a fit</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop-1">
+        <div class="relative w-[528px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mem3.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Receiptless</h1>
+            <p class="pt-6">Return or exchange receipt-free in-store</p>
+            <p>or in the Nike App.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop-1">
+        <div class="relative w-[528px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mem4.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Member Experiences</h1>
+            <p class="pt-6">Join your community for live, Member-</p>
+            <p>only events.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full" id="card-shop-1">
+        <div class="relative w-[528px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mem5.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Nike Experts</h1>
+            <p class="pt-6">Members score free delivery on every</p>
+            <p>$50+ order.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- responsive -->
+<section>
+  <h1 class="text-[26px] px-4 flex sm:hidden">Members Also Get</h1>
+  <div class="flex sm:hidden flex-col items-center justify-center">
+    <div class="w-full flex justify-center items-center" id="card-shop-1">
+      <div class="relative w-[300px] flex justify-center items-center">
+        <img
+          class="w-full h-full object-cover"
+          src="../images/home-picture/mem1.jpeg"
+          alt="" />
+        <div class="absolute flex flex-col items-center">
+          <h1 class="text-[26px] pt-6">Free Shipping</h1>
+          <p class="pt-6">Members score free delivery on every</p>
+          <p>$50+ order.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center items-center" id="card-shop-1">
+      <div class="relative w-[300px] flex justify-center items-center">
+        <img
+          class="w-full h-full object-cover"
+          src="../images/home-picture/mem2.jpeg"
+          alt="" />
+        <div class="absolute flex flex-col items-center">
+          <h1 class="text-[26px] pt-6">Wear Test</h1>
+          <p class="pt-6">Not sure? Try it for 60 days-return if it's</p>
+          <p>not a fit</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center items-center" id="card-shop-1">
+      <div class="relative w-[300px] flex justify-center items-center">
+        <img
+          class="w-full h-full object-cover"
+          src="../images/home-picture/mem4.jpeg"
+          alt="" />
+        <div class="absolute flex flex-col items-center">
+          <h1 class="text-[26px] pt-6">Member Experiences</h1>
+          <p class="pt-6">Join your community for live, Member-</p>
+          <p>only events.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex justify-center items-center" id="card-shop-1">
+      <div class="relative w-[300px] flex justify-center items-center">
+        <img
+          class="w-full h-full object-cover"
+          src="../images/home-picture/mem5.jpeg"
+          alt="" />
+        <div class="absolute flex flex-col items-center">
+          <h1 class="text-[26px] pt-6">Nike Experts</h1>
+          <p class="pt-6">Members score free delivery on every</p>
+          <p>$50+ order.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- nike red line -->
+<section>
+  <img class="w-full hidden md:flex" src="../images/home-picture/memline.jpeg" alt="" />
+  <img class="w-full flex md:hidden" src="../images/home-picture/nikelineSm.jpeg" alt="" />
+</section>
+
+<!-- connect through membership -->
+<section class="member px-4 pb-4 pt-6">
+  <div
+    class="w-full pt-6 pb-4 max-w-[1600px] mx-auto justify-between items-center">
+    <p class="text-[26px]">Connect Through Membership</p>
+  </div>
+
+  <div class="max-w-[1600px] mx-auto overflow-x-hidden">
+    <div class="gap-2 flex flex-col md:flex-row text-center duration-300">
+      <!-- original card -->
+      <div class="w-full">
+        <div class="relative max-w-[428px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mlogo1.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Nike App</h1>
+            <p class="pt-3">Keep up daily with the bes of Nike,</p>
+            <p>personalized for you</p>
+            <button class="underline underline-offset-2 pt-10 hover:text-gray-300">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="relative max-w-[428px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mlogo2.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Nike Run Club</h1>
+            <p class="pt-3">Run with us in the</p>
+            <p>Nike Run Club App</p>
+            <button class="underline underline-offset-2 pt-10 hover:text-gray-300">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="relative max-w-[428px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mlogo3.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Nike Training Club</h1>
+            <p class="pt-3">Move with the best in the</p>
+            <p>Nike Training Club App.</p>
+            <button class="underline underline-offset-2 pt-10 hover:text-gray-300">Explore</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="relative max-w-[428px] flex justify-center items-center">
+          <img
+            class="w-full h-full object-cover"
+            src="../images/home-picture/mlogo4.jpeg"
+            alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">SNKRS</h1>
+            <p class="pt-3">Find the freshest drops in the</p>
+            <p>SNKRS App.</p>
+            <button class="underline underline-offset-2 pt-10 hover:text-gray-300">Explore</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- autoslider -->
+<section>
+  <auto-slide-component></auto-slide-component>
+</section>
+
+<!-- footer accordion -->
+<section class="w-full max-w-[1600px] mx-auto pt-20 pb-10">
+  <h1 class="text-[26px] px-4">Frequently Asked Questions</h1>
+  <div class="transition">
+    <!-- header -->
+    <div
+      class="accordion-header pt-20 rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+      <h3 class="text-[20px]">What is Nike Membership?</h3>
+      <img
+        class="rotate-icon size-[20px] rotate-360"
+        src="../images/home-icon/down-arrow.png"
+        alt="" />
+    </div>
+    <!-- Content -->
+    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+      <ul>
+        <p class="py-10 text-[18px]">
+          Nike Membership is access to the very best of Nike through any of our
+          apps, exclusive products, and Member-only experiences. Nike Members
+          also enjoy free shipping on orders of $50 or more, 60-day Wear Test,
+          and receipt-less returns. It’s free and easy to join. <span class="underline underline-offset-4 text-[20px]">Sign Up.</span>
+        </p>
+      </ul>
+    </div>
+  </div>
+  <hr class="flex border-[1px] my-10 bg-black"></hr>
+  
+  <div class="transition">
+    <!-- header -->
+    <div
+      class="accordion-header pt-10 rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+      <h3 class="text-[20px]">Am I a Nike Member?</h3>
+      <img
+        class="rotate-icon size-[20px] rotate-360"
+        src="../images/home-icon/down-arrow.png"
+        alt="" />
+    </div>
+    <!-- Content -->
+    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+      <ul>
+        <p class="py-10 text-[18px]">
+          Maybe! If you’ve ever logged into a Nike app, then yes, yes you are.
+          Welcome back! If not, let’s change that. <span class="underline underline-offset-4 text-[20px]">Sign Up.</span>
+        </p>
+      </ul>
+    </div>
+  </div>
+  <hr class="flex border-[1px] my-10 bg-black"></hr>
+
+  <div class="transition">
+    <!-- header -->
+    <div
+      class="accordion-header pt-10 rotate-text cursor-pointer transition flex px-5 items-center justify-between h-12">
+      <h3 class="text-[20px]">Is Nike Membership free?</h3>
+      <img
+        class="rotate-icon size-[20px] rotate-360"
+        src="../images/home-icon/down-arrow.png"
+        alt="" />
+    </div>
+    <!-- Content -->
+    <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
+      <ul>
+        <p class="py-10 text-[18px]">
+          100% yes. Members enjoy all the benefits of Nike Membership at no cost, because once you’re in, we got you. Zero money gets you access to all of it.<span class="underline underline-offset-4 text-[20px]">Sign Up.</span>
+        </p>
+      </ul>
+    </div>
+  </div>
+  <hr class="flex border-[1px] my-10 bg-black"></hr>
+
+</section>
+
+<!-- image of footer -->
+<section>
+  <img class="hidden md:flex" src="../images/home-picture/nikemembership .jpeg" alt="">
+  <img class="flex md:hidden" src="../images/home-picture/nikeSM.jpeg" alt="">
+</section>
