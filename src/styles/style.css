@@ -17,3 +17,8 @@
   transition: max-height 0.4s ease-out, padding 0.4s ease;
   max-height: 0;
 }
+
+.accordion-content-feature {
+  transition: max-height 0.4s ease-out, padding 0.4s ease;
+  max-height: 0;
+}
