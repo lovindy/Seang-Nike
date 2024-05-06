@@ -12,3 +12,8 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.accordion-content {
+  transition: max-height 0.4s ease-out, padding 0.4s ease;
+  max-height: 0;
+}
