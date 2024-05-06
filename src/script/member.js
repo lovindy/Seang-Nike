@@ -85,8 +85,8 @@ fetch("../components/bodymember.html")
       });
     });
 
-    const rotateIcons = document.querySelectorAll(".rotate-icon");
-    const rotateTexts = document.querySelectorAll(".rotate-text");
+    const rotateIcons = document.querySelectorAll(".rotate-icon-1");
+    const rotateTexts = document.querySelectorAll(".rotate-text-1");
 
     rotateTexts.forEach((rotateText, index) => {
       rotateText.addEventListener("click", () => {
