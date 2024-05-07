@@ -8,20 +8,14 @@ fetch("../components/feature.html")
     const filterBtn = document.querySelector("#filter-btn");
     const hide = document.querySelector("#hide");
     const show = document.querySelector("#show");
-
     // get item element
     const filterItem = document.querySelector("#filterItems");
-    const rightContent = document.querySelector("#right-content");
-
     // function action
     filterBtn.addEventListener("click", () => {
-      filterItem.classList.toggle("hidden");
-      rightContent.classList.add("w-[100%]");
-      if (filterItem.classList.contains("hidden")) {
-        hide.innerHTML = "Hide Filters";
-      } else {
-        show.innerHTML = "Show Filters";
-      }
+      filterItem.classList.toggle("sticky");
+      filterItem.classList.toggle("top-16");
+      filterItem.classList.toggle("fixed");
+      filterItem.classList.toggle("translate-x-[-300%]");
     });
 
     // responvie filter
@@ -29,21 +23,31 @@ fetch("../components/feature.html")
     const resItem = document.querySelector("#responsive-filter");
     const resPick = document.querySelector("#responsive-pick");
     const closeFilter = document.querySelector("#close-filter");
-    
+    const productContent = document.querySelector(".product-content");
+    const footerResLayout = document.querySelector(".footer-res-layout");
+    const menuBottomLayout = document.querySelector(".menu-bottom-layout"); 
+
     resBTN.addEventListener("click", () => {
       resItem.classList.toggle("opacity-0");
       resItem.classList.toggle("opacity-100");
       resItem.classList.toggle("pointer-events-none");
       resItem.classList.add("top-[0%]");
       resPick.classList.add("z-[2]");
-      rightContent.classList.toggle("hidden")
+      productContent.classList.toggle("hidden");
+      filterItem.classList.toggle("hidden");
+      footerResLayout.classList.toggle("hidden");
+      menuBottomLayout.classList.toggle("hidden");
     });
-
+    
     closeFilter.addEventListener("click", () => {
       resItem.classList.toggle("opacity-0");
       resItem.classList.toggle("opacity-100");
       resItem.classList.toggle("pointer-events-none");
       resItem.classList.remove("top-[0%]");
+      productContent.classList.toggle("hidden");
+      filterItem.classList.toggle("hidden");
+      footerResLayout.classList.toggle("hidden");
+      menuBottomLayout.classList.toggle("hidden");
     });
 
     // toggle
@@ -128,7 +132,7 @@ fetch("../components/feature.html")
     // create function to loop over the array card
     const createCardComponent = () => {
       return `
-      <div id="right-content" class="z-[3] grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 lg:px-4 px-0">
+      <div id="right-content" class="z-[3] grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
                     ${arrayCard
                       .map((card) => {
                         return `
