@@ -1,4 +1,3 @@
-<script src="../script/btn.js"></script>
 <!-- nav bar -->
 <div id="nav_bar"
   class="md:my-0 w-full my-2 navbar-layout hidden sm:flex items-center justify-center">
@@ -86,7 +85,7 @@
 </div>
 
  <!-- hamburger content -->
- <div id="hamburger-content" class=" bg-white duration-300 top-0 fixed left-[100%] z-[10] w-[400px] h-[200vh] sm:opacity-0 opacity-100">
+ <div id="hamburger-content" class=" bg-white duration-300 top-0 fixed left-[100%] z-[13] w-[400px] h-[200vh] sm:opacity-0 opacity-100">
   <div class="max-w-screen-sm overflow-y-scroll h-screen mx-auto px-4">
     <span class="flex justify-start pt-6 pl-[240px]"><img id="hamburger-close-btn" class="size-[15px] cursor-pointer" src="../images/home-icon/close.png" alt=""></span>
     
@@ -239,7 +238,7 @@
           </a> </span
         >
       </p>
-      <btn-component title="Join Us" customClass="bg-black"></btn-component>
+      <btn-component title="Join Us" customClass="bg-black text-white"></btn-component>
       <button class=" px-4 py-2 hover:border-black rounded-full border-[1px] text-black">Sign In</button>
     </div>
 
@@ -255,7 +254,7 @@
   <!-- dropdown -->
   <div
     id="menu-list"
-    class="group-hover: bg-white text-white w-full h-0 flex justify-center duration-300 fixed z-50 top-[105px]">
+    class=" bg-white text-white w-full flex justify-center duration-300  z-50 top-[105px] h-0 absolute overflow-hidden">
     <!-- Menu bottom -->
     <div id="text-hid" class="text-nowrap invisible bg-white max-w-[1850px] flex justify-between">
       <ul class="px-[80px]">
@@ -299,5 +298,5 @@
   </div>
  
 <!-- overlay bg -->
-<div id="overlay-bg" class="hidden w-full h-screen bg-black opacity-40 fixed"></div>
-<div id="overlay-bg-sm" class="hidden w-full h-screen top-0 z-[9] bg-black sm:opacity-0 opacity-60 fixed"></div>
+<div id="overlay-bg" class="hidden w-full h-screen bg-black opacity-40 z-[10] fixed"></div>
+<div id="overlay-bg-sm" class="hidden w-full h-screen top-0 z-[12] bg-black sm:opacity-0 opacity-60 fixed"></div>
