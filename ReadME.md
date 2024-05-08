@@ -77,7 +77,7 @@ The goal of this project is to replicate the functionality and design of the Nik
   How to use it ?
   Following Step:
   ### Tailwind CDN : Tailwind content delivery network.
-  1. **Add the Play CDN script to your HTML**
+  **1. Add the Play CDN script to your HTML**
   Add the Play CDN script tag to the **`<head>`** of your HTML file, and start using Tailwind’s utility classes to style your content.
   
   **2. Try customizing your config**
@@ -86,7 +86,7 @@ The goal of this project is to replicate the functionality and design of the Nik
   **3. Try adding some custom CSS**
   Use **`type="text/tailwindcss"`** to add custom CSS that supports all of Tailwind's CSS features.
 
-  1. **Try using a first-party plugin**
+  **4. Try using a first-party plugin**
   Enable first-party plugins, like forms and typography, using the **`plugins`** query parameter.
 
 
