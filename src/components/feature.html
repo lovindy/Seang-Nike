@@ -1,18 +1,26 @@
-<link rel="stylesheet" href="../styles/style.css" />
-<script src="../script/btn.js"></script>
-
 <header
   id="responsive-pick"
-  class="sticky top-0 z-[5] bg-white max-w-[1850px] mx-auto px-6 py-4 flex items-center justify-between">
+  class="sticky top-0 z-[5] bg-white max-w-[1850px] transition duration-300 mx-auto px-6 py-4 flex items-center justify-between">
   <div class="imgage-logo flex items-center justify-between">
     <p class="lg:text-[26px] text-[20px]">New Releases (2271)</p>
   </div>
   <!-- right side text -->
   <div>
-    <ul class="flex justify-center items-center gap-8 text-[16px] pr-4">
+    <ul class="flex justify-center items-center gap-8 text-[16px]">
       <li id="filter-btn" class="hidden lg:flex items-center gap-2">
-        <span class="cursor-pointer">Hide Filters</span
-        ><img
+        <span
+          id="hide"
+          class="cursor-pointer"
+          onclick="document.getElementById('show').classList.toggle('hidden'); document.getElementById('hide').classList.toggle('hidden');"
+          >Hide Filters</span
+        >
+        <span
+          id="show"
+          class="cursor-pointer hidden"
+          onclick="document.getElementById('hide').classList.toggle('hidden'); document.getElementById('show').classList.toggle('hidden');"
+          >Show Filters</span
+        >
+        <img
           class="size-[20px] cursor-pointer"
           src="../images/home-icon/newspaper.png"
           alt="" />
@@ -30,7 +38,7 @@
         <span class="cursor-pointer">Sort By</span>
         <img
           id="sort-img"
-          class="size-[20px] rotate-180 cursor-pointer"
+          class="size-[20px] rotate-180 mr-4 cursor-pointer"
           src="../images/home-icon/down-arrow.png"
           alt="" />
         <span
@@ -49,28 +57,36 @@
 <hr class="flex lg:hidden h-[1px] bg-gray-200 border-0" />
 <div class="flex lg:hidden justify-between py-2 items-center px-6">
   <p class="text-[16px]">Pick Up Today</p>
-  <div id="toggle-btn-1" class="relative  bg-[#cacacb] flex items-center cursor-pointer w-[40px] h-[20px] border-[1px] mr-10 rounded-full">
-    <div id="toggle-circle-1" class="absolute translate-x-[0%] duration-300 w-[20px] h-[20px] rounded-full bg-gray-200"></div>
+  <div
+    id="toggle-btn-1"
+    class="relative bg-[#cacacb] flex items-center cursor-pointer w-[40px] h-[20px] border-[1px] mr-10 rounded-full">
+    <div
+      id="toggle-circle-1"
+      class="absolute translate-x-[0%] duration-300 w-[20px] h-[20px] rounded-full bg-gray-200"></div>
   </div>
 </div>
 <hr class="flex lg:hidden h-[1px] mb-4 bg-gray-200 border-0" />
 
 <!-- sidebar -->
-<section class="max-w-[1850px] flex mx-auto px-6">
+<section class="max-w-[1850px] bg-white flex mx-auto px-6">
   <aside
     id="filterItems"
-    class="sticky top-16 lg:w-[20%] h-screen lg:overflow-y-scroll overflow-hidden">
+    class="sticky top-16 mr-4 bg-white z-10 translate-x-[0%] duration-500 lg:w-[20%] h-screen lg:overflow-y-scroll overflow-hidden">
     <div class="hidden lg:flex lg:flex-col">
-      <div class="flex justify-between items-center">
-        <p>Pick Up Today</p>
-        <div id="toggle-btn" class="relative bg-[#cacacb] flex items-center cursor-pointer w-[40px] h-[20px] border-[1px] mr-10 rounded-full">
-          <div id="toggle-circle" class="absolute translate-x-[0%] duration-300 w-[20px] h-[20px] rounded-full bg-gray-200"></div>
+      <div class="flex justify-between items-center pt-4">
+        <p class="font-medium">Pick Up Today</p>
+        <div
+          id="toggle-btn"
+          class="relative bg-[#cacacb] flex items-center cursor-pointer w-[40px] h-[20px] border-[1px] mr-10 rounded-full">
+          <div
+            id="toggle-circle"
+            class="absolute translate-x-[0%] duration-300 w-[20px] h-[20px] rounded-full bg-gray-200"></div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- goods -->
-      <div class="">
+      <div class="font-medium">
         <p>Shoes</p>
         <p class="pt-2">Tops & T-Shirts</p>
         <p class="pt-2">Shorts</p>
@@ -87,382 +103,392 @@
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- gender -->
-      <div class="">
-        <div class="flex justify-between items-center">
-          <p class="font-medium">Gender</p>
-          <img
-            class="size-[20px]"
-            src="../images/home-icon/upload.png"
-            alt="" />
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Men</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Women</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Unisex</p>
+      <div class="transition">
+        <div class="accordion-header-feature">
+          <div class="rotate-text-2 flex justify-between items-center">
+            <p class="font-medium">Gender</p>
+            <img
+              class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+              src="../images/home-icon/upload.png"
+              alt="" />
+          </div>
+          <div class="accordion-content-feature overflow-hidden">
+            <div class="flex items-center gap-2 pt-4">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Men</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Women</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Unisex</p>
+            </div>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- kids -->
-      <div class="">
-        <div class="flex justify-between items-center">
-          <p class="font-medium">Kids</p>
-          <img
-            class="size-[20px]"
-            src="../images/home-icon/upload.png"
-            alt="" />
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Boys</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Girls</p>
+      <div class="transition">
+        <div class="accordion-header-feature">
+          <div class="rotate-text-2 flex justify-between items-center">
+            <p class="font-medium">Kids</p>
+            <img
+              class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+              src="../images/home-icon/upload.png"
+              alt="" />
+          </div>
+          <div class="accordion-content-feature overflow-hidden">
+            <div class="flex items-center gap-2 pt-4">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Boys</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Girls</p>
+            </div>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- Shop by Price -->
-      <div class="">
-        <div class="flex justify-between items-center">
-          <p class="font-medium">Shop by Price</p>
-          <img
-            class="size-[20px]"
-            src="../images/home-icon/upload.png"
-            alt="" />
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">$0 - $25</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">$25 - $50</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">$50 - $100</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">$100 - $150</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Over $150</p>
+      <div class="transition">
+        <div class="accordion-header-feature">
+          <div class="rotate-text-2 flex justify-between items-center">
+            <p class="font-medium">Sale & Offers</p>
+            <img
+              class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+              src="../images/home-icon/upload.png"
+              alt="" />
+          </div>
+          <div class="accordion-content-feature overflow-hidden">
+            <div class="flex items-center gap-2 pt-4">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Price in Bag</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+              <p class="pt-2">Sale</p>
+            </div>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- Color -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Color</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 size-[18px] mr-4"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
         <!-- grid color -->
-        <div class="grid grid-cols-3 grid-rows-4 gap-3 pt-6">
-          <div class="flex flex-col items-center">
-            <div
-              class="w-[26px] h-[26px] rounded-full bg-purple-500 mb-2"></div>
-            <p class="text-center">Purple</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-black mb-2"></div>
-            <p class="text-center">Black</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-red-500 mb-2"></div>
-            <p class="text-center">Red</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="w-[26px] h-[26px] rounded-full bg-orange-500 mb-2"></div>
-            <p class="text-center">Orange</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-blue-500 mb-2"></div>
-            <p class="text-center">Blue</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-white mb-2"></div>
-            <p class="text-center">White</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="w-[26px] h-[26px] rounded-full bg-yellow-700 mb-2"></div>
-            <p class="text-center">Brown</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-green-600 mb-2"></div>
-            <p class="text-center">Green</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div
-              class="w-[26px] h-[26px] rounded-full bg-yellow-500 mb-2"></div>
-            <p class="text-center">Yellow</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-lime-500 mb-2"></div>
-            <p class="text-center">Lime</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-gray-500 mb-2"></div>
-            <p class="text-center">Gray</p>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-[26px] h-[26px] rounded-full bg-pink-500 mb-2"></div>
-            <p class="text-center">Pink</p>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="grid grid-cols-3 grid-rows-4 gap-3 pt-6">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-purple-500 mb-2"></div>
+              <p class="text-center text-[12px]">Purple</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-[26px] h-[26px] rounded-full bg-black mb-2"></div>
+              <p class="text-center text-[12px]">Black</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-[26px] h-[26px] rounded-full bg-red-500 mb-2"></div>
+              <p class="text-center text-[12px]">Red</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-orange-500 mb-2"></div>
+              <p class="text-center text-[12px]">Orange</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-blue-500 mb-2"></div>
+              <p class="text-center text-[12px]">Blue</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full border-[1px] bg-white mb-2"></div>
+              <p class="text-center text-[12px]">White</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-yellow-700 mb-2"></div>
+              <p class="text-center text-[12px]">Brown</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-green-600 mb-2"></div>
+              <p class="text-center text-[12px]">Green</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-yellow-500 mb-2"></div>
+              <p class="text-center text-[12px]">Yellow</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-lime-500 mb-2"></div>
+              <p class="text-center text-[12px]">Lime</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-gray-500 mb-2"></div>
+              <p class="text-center text-[12px]">Gray</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-[26px] h-[26px] rounded-full bg-pink-500 mb-2"></div>
+              <p class="text-center text-[12px]">Pink</p>
+            </div>
           </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- Sports & Activities -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Sports & Activities</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 size-[18px] mr-4"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Lifestyle</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Running</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Training & Gym</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Yoga</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Football</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Basketball</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Voleyball</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Golf</p>
-        </div>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Lifestyle</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Running</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Training & Gym</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Yoga</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Football</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Basketball</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Voleyball</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Golf</p>
+          </div>
 
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Tennis</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Swimming</p>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Tennis</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Swimming</p>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- athletes -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Athletes</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">LeBron James</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Kevin Durant</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Serena Williams</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Rafael Nadal</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Giannis</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Lyhour</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Zion Williamson</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Russell Westbrook</p>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">LeBron James</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Kevin Durant</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Serena Williams</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Rafael Nadal</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Giannis</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Lyhour</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Zion Williamson</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Russell Westbrook</p>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- brand -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Brand</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Nike Sportswear</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Jordan</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Nike By You</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Converse</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">NikeLab</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">ACG</p>
-        </div>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Nike Sportswear</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Jordan</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Nike By You</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Converse</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">NikeLab</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">ACG</p>
+          </div>
 
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Nike Pro</p>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Nike Pro</p>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- Collections -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Collections</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Air Force 1</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Air Max</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Alpha Huarache</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Cortez</p>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2" pt-4>
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Air Force 1</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Air Max</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Alpha Huarache</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Cortez</p>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- Collaborator -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Collaborator</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Nike x MMW</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">
-            Doernbecher <br />
-            Freestyle
-          </p>
-        </div>
-      </div>
-      <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-      <!-- Sale & Offers -->
-      <div class="">
-        <div class="flex justify-between items-center">
-          <p class="font-medium">Sale & Offers</p>
-          <img
-            class="size-[20px]"
-            src="../images/home-icon/upload.png"
-            alt="" />
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Price in Bag</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Sale</p>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2" pt-4>
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Nike x MMW</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">
+              Doernbecher <br />
+              Freestyle
+            </p>
+          </div>
         </div>
       </div>
       <hr class="h-[1px] my-4 bg-gray-200 border-0" />
 
       <!-- Best For -->
-      <div class="">
-        <div class="flex justify-between items-center">
+      <div class="transition">
+        <div
+          class="rotate-text-2 accordion-header-feature flex justify-between items-center">
           <p class="font-medium">Best For</p>
           <img
-            class="size-[20px]"
+            class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
             src="../images/home-icon/upload.png"
             alt="" />
         </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Wet Weather</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Cold Weather</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-          <p class="pt-2">Dry Weather</p>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Wet Weather</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Cold Weather</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Dry Weather</p>
+          </div>
         </div>
       </div>
     </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
   </aside>
-  <div class="flex flex-col">
+
+  <!-- product content -->
+  <div class="product-content flex flex-col">
     <featured-component></featured-component>
     <featured-component></featured-component>
     <featured-component></featured-component>
@@ -475,415 +501,477 @@
 </section>
 
 <!-- pick-up content -->
-<div  id="pickup-content" class="z-[100] bg-black/20 backdrop-blur-sm invisible fixed w-full h-screen flex justify-center items-center top-0">
-  <div
-  class="bg-white w-[500px] relative z-50 rounded-2xl h-[700px]">
-  <div class="flex items-center justify-between px-10 pt-10">
-    <h1 class="text-[26px]">Filter by Store</h1>
-    <span class="p-2 rounded-full bg-gray-100"
-      ><img
-        id="close-btn"
-        class="size-[15px] z-[151] cursor-pointer"
-        src="../images/home-icon/close.png"
-        alt=""
-    /></span>
-  </div>
+<div
+  id="pickup-content"
+  class="z-[100] bg-black/20 backdrop-blur-sm invisible fixed w-full h-screen flex justify-center items-center top-0">
+  <div class="bg-white w-[500px] relative z-50 rounded-2xl h-[700px]">
+    <div class="flex items-center justify-between px-10 pt-10">
+      <h1 class="text-[26px]">Filter by Store</h1>
+      <span class="p-2 rounded-full bg-gray-100"
+        ><img
+          id="close-btn"
+          class="size-[15px] z-[151] cursor-pointer"
+          src="../images/home-icon/close.png"
+          alt=""
+      /></span>
+    </div>
 
-  <div class="relative justify-between items-center w-full flex px-10 pt-10">
-    <input
-      type="text"
-      id="locationInput"
-      class="w-full outline-4 px-4 py-3 text-[18px] border-[1px] rounded-lg border-black" />
-    <!-- left-6 top-5 -->
-    <!-- top-[-10%] text-xs left-2 Location-->
-    <span
-      id="location-move"
-      class="pointer-events-none absolute left-12 top-15 duration-300 px-1 text-[#838385] bg-white"
-      >Search Location</span
-    >
-    <img
-      class="cursor-pointer absolute right-12 size-[40px]"
-      src="../images/home-icon/search.png"
-      alt="" />
+    <div class="relative justify-between items-center w-full flex px-10 pt-10">
+      <input
+        type="text"
+        id="locationInput"
+        class="w-full outline-4 px-4 py-3 text-[18px] border-[1px] rounded-lg border-black" />
+      <!-- left-6 top-5 -->
+      <!-- top-[-10%] text-xs left-2 Location-->
+      <span
+        id="location-move"
+        class="pointer-events-none absolute left-12 top-15 duration-300 px-1 text-[#838385] bg-white"
+        >Search Location</span
+      >
+      <img
+        class="cursor-pointer absolute right-12 size-[40px]"
+        src="../images/home-icon/search.png"
+        alt="" />
+    </div>
+    <div class="justify-between items-start w-full flex flex-col px-10 pt-6">
+      <h1 class="text-[20px]">No Nike Stores Available</h1>
+      <p class="pt-6">
+        We couldn't find any Nike stores within 50 mi of your location.
+      </p>
+    </div>
+    <div class="flex items-end justify-end px-10 pt-80">
+      <btn-component
+        title="Select"
+        customClass="bg-[#e5e5e5] hover:bg-gray-100 text-[#707072]"></btn-component>
+    </div>
   </div>
-  <div class="justify-between items-start w-full flex flex-col px-10 pt-6">
-    <h1 class="text-[20px]">No Nike Stores Available</h1>
-    <p class="pt-6">We couldn't find any Nike stores within 50 mi of your location.</p>
-  </div>
-  <div class="flex items-end justify-end px-10 pt-80">
-    <btn-component title="Select" customClass="bg-[#e5e5e5] hover:bg-gray-100 text-[#707072]"></btn-component>
-  </div>
-
-</div>
 </div>
 
 <!-- responsive filter -->
-<div
-  id="responsive-filter"
-  class="bg-white z-[4] w-full hidden absolute top-100 transition-all duration-300 transform px-4">
-  <div class="flex justify-between items-center mt-4">
-    <p>Pick Up Today</p>
-    <img
-      id="close-filter"
-      class="size-[20px] cursor-pointer"
-      src="../images/home-icon/close.png"
-      alt="" />
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+<section class="block lg:hidden">
+  <div
+    id="responsive-filter"
+    class="bg-white z-[90] w-full pointer-events-none opacity-0 absolute bottom-0 top-[100%] duration-500 px-4">
+    <div class="flex justify-between items-center mt-10">
+      <p>Filter</p>
+      <button
+        id="close-filter"
+        class="text-white mr-2 size-[30px] rounded-full text-[18px] font-extrabold bg-black border-[1px]">
+        X
+      </button>
+    </div>
 
-  <!-- goods -->
-  <div class="">
-    <p>Shoes</p>
-    <p class="pt-2">Tops & T-Shirts</p>
-    <p class="pt-2">Shorts</p>
-    <p class="pt-2">Hoodies & Pullovers</p>
-    <p class="pt-2">Jackets & Vests</p>
-    <p class="pt-2">Pants & Tights</p>
-    <p class="pt-2">Swimming</p>
-    <p class="pt-2">Socks</p>
-    <p class="py-2">
-      Accessories & <br />
-      Equipment
-    </p>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- gender -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Gender</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Men</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Women</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Unisex</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- kids -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Kids</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Boys</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Girls</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Shop by Price -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Shop by Price</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">$0 - $25</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">$25 - $50</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">$50 - $100</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">$100 - $150</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Over $150</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Color -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Color</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <!-- grid color -->
-    <div class="grid grid-cols-3 grid-rows-4 gap-3 pt-6">
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-purple-500 mb-2"></div>
-        <p class="text-center">Purple</p>
+    <!-- goods -->
+    <div class="">
+      <h1 class="font-medium py-4">Sort By</h1>
+      <div class="flex items-center gap-2">
+        <input
+          class="rounded-full h-5 w-5 cursor-pointer border-[1px] border-gray-300 appearance-none checked:bg-black checked:border-transparent checked:ring-2 checked:ring-gray-300 p-2"
+          type="checkbox"
+          id="featured-checkbox" />
+        <label for="featured-checkbox" class="pt-2">Featured</label>
       </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-black mb-2"></div>
-        <p class="text-center">Black</p>
+      <div class="flex items-center gap-2 pt-3">
+        <input
+          class="rounded-full h-5 w-5 cursor-pointer border-[1px] border-gray-300 appearance-none checked:bg-black checked:border-transparent checked:ring-2 checked:ring-gray-300 p-2"
+          type="checkbox"
+          id="newest-checkbox" />
+        <label for="newest-checkbox" class="pt-2">Newest</label>
       </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-red-500 mb-2"></div>
-        <p class="text-center">Red</p>
+      <div class="flex items-center gap-2 pt-3">
+        <input
+          class="rounded-full h-5 w-5 cursor-pointer border-[1px] border-gray-300 appearance-none checked:bg-black checked:border-transparent checked:ring-2 checked:ring-gray-300 p-2"
+          type="checkbox"
+          id="high-low-checkbox" />
+        <label for="high-low-checkbox" class="pt-2">Price: High-Low</label>
       </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-orange-500 mb-2"></div>
-        <p class="text-center">Orange</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-blue-500 mb-2"></div>
-        <p class="text-center">Blue</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div
-          class="w-[26px] border-[1px] h-[26px] rounded-full bg-white mb-2"></div>
-        <p class="text-center">White</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-yellow-700 mb-2"></div>
-        <p class="text-center">Brown</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-green-600 mb-2"></div>
-        <p class="text-center">Green</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-yellow-500 mb-2"></div>
-        <p class="text-center">Yellow</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-lime-500 mb-2"></div>
-        <p class="text-center">Lime</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-gray-500 mb-2"></div>
-        <p class="text-center">Gray</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <div class="w-[26px] h-[26px] rounded-full bg-pink-500 mb-2"></div>
-        <p class="text-center">Pink</p>
+      <div class="flex items-center gap-2 pt-3">
+        <input
+          class="rounded-full h-5 w-5 cursor-pointer border-[1px] border-gray-300 appearance-none checked:bg-black checked:border-transparent checked:ring-2 checked:ring-gray-300 p-2"
+          type="checkbox"
+          id="low-high-checkbox" />
+        <label for="low-high-checkbox" class="pt-2">Price: Low-High</label>
       </div>
     </div>
+
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- gender -->
+    <div class="transition bg-white">
+      <div class="accordion-header-feature">
+        <div class="rotate-text-2 flex justify-between items-center">
+          <p class="font-medium">Gender</p>
+          <img
+            class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+            src="../images/home-icon/upload.png"
+            alt="" />
+        </div>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Men</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Women</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Unisex</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- kids -->
+    <div class="transition bg-white">
+      <div class="accordion-header-feature">
+        <div class="rotate-text-2 flex justify-between items-center">
+          <p class="font-medium">Kids</p>
+          <img
+            class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+            src="../images/home-icon/upload.png"
+            alt="" />
+        </div>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Boys</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Girls</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- Shop by Price -->
+    <div class="transition bg-white">
+      <div class="accordion-header-feature">
+        <div class="rotate-text-2 flex justify-between items-center">
+          <p class="font-medium">Sale & Offers</p>
+          <img
+            class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+            src="../images/home-icon/upload.png"
+            alt="" />
+        </div>
+        <div class="accordion-content-feature overflow-hidden">
+          <div class="flex items-center gap-2 pt-4">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Price in Bag</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+            <p class="pt-2">Sale</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- Color -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Color</p>
+        <img
+          class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <!-- grid color -->
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="grid grid-cols-3 grid-rows-4 gap-3 pt-6">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-[26px] h-[26px] rounded-full bg-purple-500 mb-2"></div>
+            <p class="text-center text-[12px]">Purple</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-black mb-2"></div>
+            <p class="text-center text-[12px]">Black</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-red-500 mb-2"></div>
+            <p class="text-center text-[12px]">Red</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-[26px] h-[26px] rounded-full bg-orange-500 mb-2"></div>
+            <p class="text-center text-[12px]">Orange</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-blue-500 mb-2"></div>
+            <p class="text-center text-[12px]">Blue</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-[26px] h-[26px] border-[1px] rounded-full bg-white mb-2"></div>
+            <p class="text-center text-[12px]">White</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-[26px] h-[26px] rounded-full bg-yellow-700 mb-2"></div>
+            <p class="text-center text-[12px]">Brown</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-green-600 mb-2"></div>
+            <p class="text-center text-[12px]">Green</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-[26px] h-[26px] rounded-full bg-yellow-500 mb-2"></div>
+            <p class="text-center text-[12px]">Yellow</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-lime-500 mb-2"></div>
+            <p class="text-center text-[12px]">Lime</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-gray-500 mb-2"></div>
+            <p class="text-center text-[12px]">Gray</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-[26px] h-[26px] rounded-full bg-pink-500 mb-2"></div>
+            <p class="text-center text-[12px]">Pink</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- Sports & Activities -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Sports & Activities</p>
+        <img
+          class="rotate-icon-2 rotate-180 size-[18px] mr-4"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="flex items-center gap-2 pt-4">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Lifestyle</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Running</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Training & Gym</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Yoga</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Football</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Basketball</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Voleyball</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Golf</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Tennis</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Swimming</p>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- athletes -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Athletes</p>
+        <img
+          class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="flex items-center gap-2 pt-4">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">LeBron James</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Kevin Durant</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Serena Williams</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Rafael Nadal</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Giannis</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Lyhour</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Zion Williamson</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Russell Westbrook</p>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- brand -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Brand</p>
+        <img
+          class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="flex items-center gap-2 pt-4">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Nike Sportswear</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Jordan</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Nike By You</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Converse</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">NikeLab</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">ACG</p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Nike Pro</p>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- Collections -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Collections</p>
+        <img
+          class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="flex items-center gap-2" pt-4>
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Air Force 1</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Air Max</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Alpha Huarache</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Cortez</p>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- Collaborator -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Collaborator</p>
+        <img
+          class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="flex items-center gap-2" pt-4>
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Nike x MMW</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">
+            Doernbecher <br />
+            Freestyle
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
+
+    <!-- Best For -->
+    <div class="transition bg-white">
+      <div
+        class="rotate-text-2 accordion-header-feature flex justify-between items-center">
+        <p class="font-medium">Best For</p>
+        <img
+          class="rotate-icon-2 rotate-180 mr-4 size-[18px]"
+          src="../images/home-icon/upload.png"
+          alt="" />
+      </div>
+      <div class="accordion-content-feature overflow-hidden">
+        <div class="flex items-center gap-2 pt-4">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Wet Weather</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Cold Weather</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input class="w-[16px] h-[16px] cursor-pointer" type="checkbox" />
+          <p class="pt-2">Dry Weather</p>
+        </div>
+      </div>
+    </div>
+    <hr class="h-[1px] my-4 bg-gray-200 border-0" />
   </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Sports & Activities -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Sports & Activities</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Lifestyle</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Running</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Training & Gym</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Yoga</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Football</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Basketball</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Voleyball</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Golf</p>
-    </div>
-
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Tennis</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Swimming</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- athletes -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Athletes</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">LeBron James</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Kevin Durant</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Serena Williams</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Rafael Nadal</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Giannis</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Lyhour</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Zion Williamson</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Russell Westbrook</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- brand -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Brand</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Nike Sportswear</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Jordan</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Nike By You</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Converse</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">NikeLab</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">ACG</p>
-    </div>
-
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Nike Pro</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Collections -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Collections</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Air Force 1</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Air Max</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Alpha Huarache</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Cortez</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Collaborator -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Collaborator</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Nike x MMW</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">
-        Doernbecher <br />
-        Freestyle
-      </p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Sale & Offers -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Sale & Offers</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Price in Bag</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Sale</p>
-    </div>
-  </div>
-  <hr class="h-[1px] my-4 bg-gray-200 border-0" />
-
-  <!-- Best For -->
-  <div class="">
-    <div class="flex justify-between items-center">
-      <p class="font-medium">Best For</p>
-      <img class="size-[20px]" src="../images/home-icon/upload.png" alt="" />
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Wet Weather</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Cold Weather</p>
-    </div>
-    <div class="flex items-center gap-2">
-      <input class="w-[20px] h-[20px] cursor-pointer" type="checkbox" />
-      <p class="pt-2">Dry Weather</p>
-    </div>
-  </div>
-</div>
+</section>
