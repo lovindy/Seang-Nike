@@ -1,7 +1,5 @@
 logs
 *.log
 
-DS_store
-node_modules
 .vscode
 text.txt
