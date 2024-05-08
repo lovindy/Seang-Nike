@@ -1,234 +1,313 @@
-![Git-flow-strategy](/uploads/23d07c043450555bcd052e89a1916906/Git-flow-strategy.png)
+# Seang-Makaramarady
 
-1. **Understanding Git-Flow**
+**Nike.com**
 
-    This is a git branching strategy diagram. The diagram shows a main branch, develop branch, and feature branches. The feature branches are branched off from the develop branch. The develop branch is branched off from the main branch. The feature branches are merged into the develop branch. The develop branch is merged into the main branch. The main branch is tagged with a version number.
+**Link of the file project** :
 
-2. **Git-Flow Branching Strategy**
+- Flow planning :
 
-    The Git-Flow branching strategy is designed to manage feature development, bug fixes, and releases in a structured manner. It involves several types of branches: 
+[https://www.figma.com/file/r91fufaOK6Rc9J6HRWKM5s/Process-Flow-Diagram-(nike.com%2FCloned)?type=whiteboard&node-id=0%3A1&t=i7KVq1iiN0vRVNjg-1](https://www.figma.com/file/r91fufaOK6Rc9J6HRWKM5s/Process-Flow-Diagram-(nike.com%2FCloned)?type=whiteboard&node-id=0%3A1&t=i7KVq1iiN0vRVNjg-1)
 
-    **Main Branch:** 
+- Figma UI Design :
 
-    - The main branch represents the stable version of the codebase. It contains production code. 
-    - Developers should avoid making changes to the main branch. 
+[https://www.figma.com/file/puPUg2voWAKmXKzlH5uiTt/Seang-Makaramarady?type=design&node-id=0%3A1&mode=design&t=ECpsCdkcf8fHmO3U-1](https://www.figma.com/file/puPUg2voWAKmXKzlH5uiTt/Seang-Makaramarady?type=design&node-id=0%3A1&mode=design&t=ECpsCdkcf8fHmO3U-1)
 
+GitLab link repository: 
 
-    **Feature Branches:**
+[https://git.clp.kr/anbschool/2nd/hexcode/seang-makaramarady/seang-makaramarady-nike.com](https://git.clp.kr/anbschool/2nd/hexcode/seang-makaramarady/seang-makaramarady-nike.com)
 
-    - When working on a new feature or bug fix, developers create a feature branch from the main branch. 
-    - 
-    - Each feature branch focuses on a specific task, issue or feature. 
-    - 
-    - Developers collaborate and make changes on their own feature branches.
- 
+# GOAL
 
-    **Development (Develop) Branch:**  
+The goal of this project is to replicate the functionality and design of the Nike.com website as closely as possible. This involves recreating the layout, features, and user experience of the original website.
 
-    - Once a feature is complete, it is merged into the development branch. 
-    - The development branch waits for upcoming releases.
- 
+# Project Objective
 
-    **Release Branches:** 
+1. Develop a simplified version of the  Nike website, focusing on key elements such as the header, navigation menu, and footer.
+2. Ensure basic responsiveness for the demo homepage to showcase adaptability across different screen sizes.
+3. Include dummy content and images to simulate the appearance of a live website.
+4. Implement clickable links to additional functions (e.g., Pick-up, Dropdown menu, Filter items.) for demonstration purposes.
 
-    - QA testing, bug fixes, and final adjustments occur in the release branch. 
-    - Once everything is stable, the release branch is merged back into both master and development branches. 
+# Task
 
+1. Research and analyze the structure and functionality of the Nike.
+2. Plan and design the layout of the cloned homepage with simplicity in mind.
+3. Develop frontend components using HTML, CSS, and JavaScript, focusing on essential features.
+4. Implement basic  functionality using ECMAScript programming language and Tailwind framework.
+5. Test and debug to ensure the website pages work correctly and consistently.
+6. Document the development process, including code comments and Convention Guides.
+7. Prepare a presentation and demonstration of the cloned website pages for School Portfolio.
 
-    **Bugfix Branch:**
+# Website-Pages
 
-    - A bugfix branch is created specifically to address bugs, defects, or critical issues in the codebase. 
-    - It allows developers to work on fixing a specific problem without affecting other ongoing development work.
- 
+1. **Main Pages:**
+    - Home Page:
+    - New & Featured:
+    - Men Page:
+    - Women Page:
+    - Kids Page:
+    - Nike Member Page:
+2. Components: 
+    - Header section
+    - Navigation section
+    - Footer section
+    - Footer Responsive section
+    - Footer Bottom section
+    - AutoSlider Image
 
-    **Hotfix Branch:**  
+# Timeline
 
-    - In case of bugs of security issues in the production code, a hotfix branch is created from the main branch. 
-    - After testing, the hotfix branch is merged back into both main and develop.
+- Research and Planning: [18/April/2024] to [19/April/2024]
+- Design and Development: [20/April/2024] to [30/April/2024]
+- Testing and Debugging: [01/May/2024] to [4/May/2024]
+- Optimization and Documentation: [05/May/2024] to [08/May/2024]
+- Deploy Project: [09/May/2024]
 
-3. **Git Flow Scenario**
+# Resource and Tools
 
+- Development tools (Visual Studio Code , Gitlab Repository, Figma):
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled.png)
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%201.png)
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%202.png)
+    
+- HTML, CSS, JavaScript(DOM):
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%203.png)
+    
+    HTML :
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%204.png)
+    
+    CSS :
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%205.png)
+    
+    JavaScript :
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%206.png)
+    
+- Web development using Tailwind CSS framework:
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%207.png)
+    
+    What is TailwindCss ?
+    
+    It is an utility-first CSS framework packed with classes like **`flex`**, **`pt-4`**, **`text-center`** and **`rotate-90`** that can be composed to build any design, directly in your markup.
+    
+    How to use it ?
+    
+    Following Step:
+    
+    ### Tailwind CDN : Tailwind content delivery network.
+    
+    1. **Add the Play CDN script to your HTML**
+    
+    Add the Play CDN script tag to the **`<head>`** of your HTML file, and start using Tailwind’s utility classes to style your content.
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%208.png)
+    
+    **2. Try customizing your config**
+    
+    Edit the **`tailwind.config`** object to **[customize your configuration](https://tailwindcss.com/docs/configuration)** with your own design tokens.
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%209.png)
+    
+    **3. Try adding some custom CSS**
+    
+    Use **`type="text/tailwindcss"`** to add custom CSS that supports all of Tailwind's CSS features.
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%2010.png)
+    
+    1. **Try using a first-party plugin**
+    
+    Enable first-party plugins, like forms and typography, using the **`plugins`** query parameter.
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%2011.png)
+    
+
+# GIT-FLOW STRATEGY
+
+1. **Git-flow Branching Strategy**
+    - A team typically works using Git/Github, with team members creating Local repositories and Team Leaders creating Remote repositories. Team Leaders usually assign tasks for team members to complete.
+    - The Main Branch is the primary container for production code. It is the initial branch that Git checks out locally when someone clones the repository, and it serves as the base for the production release.
+    - The Develop Branch branches off the Main Branch, serving as a backup. It contains the latest work in progress and represents stable production code.
+    - We create Feature branches in the Develop branch, where we work until it is ready to be merged into the Develop branch. These branches allow developers to work on particular features without affecting the main codebase.
+    - A Release branch is created after development work is completed, serving as a temporary branch created to prepare for a new production release.
+    - Bug-fix is started in the Release branch to ensure that the upcoming release is stable and free from critical issues.
+    - Hot-fix is a branch used to solve critical issues or bugs in the live production version.
+2. **Details of the Git-flow Processing and Command**
+    - This section explains the process of creating a Remote repository, a Local repository, a Git-flow, a Feature branch, a Release branch, a Bug-fix branch from the Release branch, and a Hot-fix branch.
+3. **Process of Git-Flow Strategy**
+    - This section details the process of creating a Remote Repository, a Local Repository, and starting to work on the Feature branch, the Release branch and Bug-fix, and the Hot-fix branch.
+4. **Track Branch Method**
+    - This method is used to set up tracking for branches that have been created using Git Flow's feature, release, bug-fix, or hot-fix commands.
+5. **Merge Branch Method**
+    - Merging is a way to integrate changes from one branch into another. When a branch is merged into another branch, Git combines the changes from the source branch into the target branch.
+6. **Rebase Branch Method**
+    - Rebasing involves moving or "replaying" a series of commits from one branch into another branch's tip.
+7. **Reset/Revert Branch Method**
+    - First, get the hash of the branch, then use the command `git reset <hash>` to reset.
+8. **Remote Alias, Commit History Method**
+    - Use `git remote -v` to show the alias of the repository (fetch, origin).
+    - Use `git log` to show the commit history.
+
+# Conclusion
+
+- The Git-Flow branching strategy offers a clear and organized approach to managing feature development, releases, and bug fixes. By utilizing branches such as main, develop, feature, release, bug-fix, and hot-fix, the project maintains a well-defined structure, enabling seamless integration of changes and ensuring the stability and reliability of the codebase.
+
+# Name Convention
+
+1. Git/GitHub:
+    1. Remote Repository:
+        - Creating Issue and choosing label:
+            - Feature branch:
+                - Feature-Issue : issue description.
+                - Details : describe about the problem in detail
+            - Release branch:
+                - Release-version : release description.
+                - Details : describe about the problem in detail
+            - Bug-fix branch:
+                - Bug : issue description
+                - Details : describe about the problem in detail
+            - Hot-fix branch:
+                - Hot : issue description
+                - Details : describe about the problem in detail
+        - Workspace setup:
+            - Assign the one who work on the issue.
+            - Set the situation of the issue.
+            - Match the project.
+            - After finish, assign the reviewer
+            - Make a code review.
         
-    While we’re doing work using Git/Github, we normally work as a team. Team members usually create Local repositories while Team Leaders create Remote repositories. Team Leaders usually assign some tasks for team members to complete.
+        <aside>
+        💡 Note: Pay attention to all aspects of the issue (title message, detail description, assigner, reviewer, label, project)
+        
+        </aside>
+        
+    2. Local Repository:
+        - Branching the branch:
+            - Name the branch according to the actual problem and what to do with that branch.
+            - Feature branch:
+                - command e.g : git flow feature start nav-bar
+                    - result of naming : feature/nav-bar
+            - Release branch:
+                - command e.g : git flow release start 1.0
+                    - result of naming : release/1.0
+            - Bug-fix branch:
+                - command e.g : git flow bugfix start {the actual problem} release/{name of the release branch}
+                    - result of naming : bugfix/{bugfix branch name}
+            - Hot-fix branch:
+                - command e.g : git flow hotfix start {name of the released version (tag)}, e.g : 1.1
+                    - result of naming : hotfix/1.1
+        
+        <aside>
+        💡 Note: Everyone should name the branch according to the actual problem and what to do with that branch.
+        
+        </aside>
+        
+        - Commit message :
+            - Commit branch :
+                - feature : { describe about the problem in detail, which part you’ve worked on }
+                    - feature : home-page, add a menu button to nav-bar of home page.
+                - release : { describe about the release version in detail }
+                    - release : release team website version 1.0
+                - bugfix : { describe about the bug on the pre-release version }
+                    - bugfix : fixed the bug on pre-release version 1.0, error on register user account.
+                - hotfix : { describe about the problem in detail, which part you’ve worked on and fixed }
+                    - hotfix : home-page, quick fix on released version 1.0, error on nav-bar and hero section.
+        
+        <aside>
+        💡 Note: Give a meaningful commit message.
+        
+        </aside>
+        
+    3. Folder Structure :
+        - We keep all the source of the project in one folder called “src”.
+        - Inside the “src” folder contains
+            - components : contain all the contents (file.html).
+            - images : divided into two more folders for storing icons and pictures.
+            - pages : contain the main pages linked to all the components, (file.html).
+            - scripts : contain the JavaScript file, the behaviors of the website function.
+            - styles : contain the CSS file, For styling on the content if needed.
+        
+        <aside>
+        💡 Note: Developers only work on the specify file or the assigned file from the team in order to avoid any errors or confusion in the team. Make sure to discuss with the team before start working on any files of the project folder.
+        
+        </aside>
+        
+    4. Function convention :
+        - JavaScript : function should be named :
+            - function firstName() { }
+        - Variable :
+            - const firstName
+            - let firstName
 
-    Regarding the Git-Flow, as we can see that we start off from the Main Branch. Main branch serves as the main container for our production code. It is displayed when anyone visits our repository on GitHub and also the initial branch that Git checks out locally when someone clones the repository. The Main branch is the base which will be used for the production release.
+# Website Development / Design Styles
 
-    Develop Branch that branches off the Main branch is like a back-up branch, it represents stable production code and contains the latest work in progress. It serves as a staging area for ongoing development. We can integrate changes from various feature branches before they’re ready for production.
+1. Screen size using tailwind :
 
-    In the Develop branch, we create feature branches as our own personal branches. During the development of features, there will be a lot of things that we need to modify. Since many people are working in the same repository, the code we’re working on is unstable and may cause breaking changes to other developers. So we develop our own branches, work on it until it is ready / can be merged into the develop branch. As seen in our diagram, we create three different features that work by different member, in each branch has different type of commits with a well-written messages that inform other developers our purpose of commit, this acts as a historical record of changes made in codebase and as well as communication tools that help with our work progress to continue with problems or conflicts. When each feature branch of one member is published, pull request and approved by the Leader, it will merge into the develop branch. The other members repeat the same process of work while making different commits.
+| Class | Properties |
+| --- | --- |
+| max-w-screen-sm | max-width: 640px; |
+| max-w-screen-md | max-width: 768px; |
+| max-w-screen-lg | max-width: 1024px; |
+| max-w-screen-xl | max-width: 1280px; |
+| max-w-screen-2xl | max-width: 1536px; |
+1. Screen responsive using tailwind :
 
-    Feature branch allows developers to work on particular features without affecting the main codebase. Changes made in the feature branch can be committed, staged, and pushed to the remote repository. It keeps our works separate, preventing conflicts with our ongoing development. Moreover, developers can open pull requests for Code reviews or Feedback.
-
-    After development work is completed, there is a release branch that branches out to deploy a new version . It’s a temporary branch that was created to prepare for a new production release. It forked off from the develop branch (when features are completed/merged into develop branch). The goal of using the release branch to stabilize code for the upcoming release or do the testing before release of the code/production. In some cases, if the release is already made and pushed to a remote repository, the other members that wanna use the same release can use git Track to track the release branch to continue our work. We can also use git Rebase in order to move the changes from one branch into another branch while reapplying commits on top of another base branch.
-
-    Normally, before releasing our code/production, we need to test it first if there’s any issues in it. During the testing phase, there are some issues or defects that arise, we need to fix it by starting the process in the release branch and it is called Bugfix. It ensures that the upcoming release is stable and free from critical issues. When the fixing process is done in bugfix, it’ll merge into develop and main branch. While it merges into the main branch, we tag it with the release version(ex. Tag 1.0).
-
-    We can assume that the production version is causing problems to the users due to server bugs, as developers we need to fix it by starting a branch called Hotfix. Hotfix is a type of branch that is used to solve critical issues or bugs in the live production version. Since the problems arise when we already launched our software/product., we need to checkout to the main branch to fix the issues and commit changes. Once everything is completed, it’ll merge into the main branch to ensure the fix is deployed to production, then tag it and merge to develop the branch to include the fix in the next regular release.
-
-4. **Git-Flow Strategy: A Step-by-Step Guide**
-
-    **Create a remote repository on GitHub :**
-
-    1. Sign in to your GitHub account at GitHub. 
-    1. Click on your profile icon in the top right corner and select “Your repositories” from the dropdown menu. 
-    1. Click the green “New” button to create a new repository. 
-    1. Fill in the repository details: 
-    1. Repository name. 
-    1. Description of the repository. 
-    1. Choose visibility (public or private). 
-    1. Initialize the repository with a README. 
-    1. Click the “Create Repository” button. 
-
-    **Create Local Repository :**
-
-    1. **Start with Visual Studio Code :**
+| Breakpoint prefix | Minimum width | CSS |
+| --- | --- | --- |
+| sm | 640px | @media (min-width: 640px) { ... } |
+| md | 768px | @media (min-width: 768px) { ... } |
+| lg | 1024px | @media (min-width: 1024px) { ... } |
+| xl | 1280px | @media (min-width: 1280px) { ... } |
+| 2xl | 1536px | @media (min-width: 1536px) { ... } |
+1. Website Styling :
+- Colors :
     
-    - Launch the VS Code and create a new folder for the project.
-    - Open the terminal in vs code.
-
-    2. **Start the command git:**
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%2012.png)
     
-    + `git init` (start the git work)
-    + `git remote add origin <repository_URL>` (copy the link from the repository).
-    + `git config user.name “username”`
-    + `git config user.email “email”`
-    3. Add files, Commit and Push:
-    + `git push -u origin main`
-    + `git status` (verify changes).
-    4. Start Git-flow work : 
-    - Command:
-        + `git flow init -d` (start the gitflow work, and automatically create the develop branch).
-        + `git push origin develop` (push the develop branch to the remote repository in the GitHub).
-
-5. **Start Working on Feature branch**
-    1. **Feature branch(1) :** 
-    + `git checkout develop`
-    + `git flow feature start issue_1`
-    + `git flow feature start issue_2`
-    + `git flow feature start issue_3`
-    - add changes, commit, push:
-    + `git status`
-    + `git flow feature publish issue_1`
-    + create the pull request and wait for the approval from the team.
-        + `git flow feature finish issue_1` (automatically merge into develop branch and delete branch itself).
-        + `git push origin develop.`
-    2. **Feature branch(2) :**
-    - Command:
-    + `git checkout feature/issue_2`
-    + `git pull origin develop` (get changes from the develop branch).
-    - add changes, commit, push:
-    + `git status` 
-    + `git flow feature publish issue_2`
-    + create the pull request and wait for the approval from the team.
-    + `git flow feature finish issue_2` (automatically merge into develop branch and delete branch itself).
-    + `git push origin develop`.
-    3. **Feature branch(3) :** 
-    - Command:
-    + `git checkout feature/issue_3`
-    + `git pull origin develop` (get changes from the develop branch).
-    - add changes, commit, push:
-    + `git status` 
-    + `git flow feature publish issue_3`
-    + create the pull request and wait for the approval from the team.
-    + `git flow feature finish issue_3` (automatically merge into develop branch and delete branch itself).
-    + `git push origin develop`.
-
-    **Start Working on Release branch and Bugfix**
-
-    3. **Release branch(1) :** 
-    - Command:
-    + `git checkout develop`
-    + `git flow release start 1.0`
-    + `git flow release publish 1.0`
-    + `git flow bugfix start bug-1 release/1.0`
-    - add changes, commit, push:
-    + `git status`
-    + `git flow publish bugfix bug-1`
-    + create the pull request and wait for the approval from the team.
-    + `git checkout release/1.0`
-    + `git pull origin release/1.0`
-    + `git checkout bugfix/bug-1`
-    + `git flow bugfix finish bug-1`
-    + `git checkout develop`
-    + `git pull origin develop`
-    + `git checkout main`
-    + `git pull origin main`
-    + `git checkout release/1.0`
-    + `git flow release finish 1.0`(automatically merge into develop branch, also main branch, and delete branch itself)
-    + `git push origin develop`
-    + `git push origin main`
-    + `git tag`
-    + `git push –tag`
-
-    **Start Working on Hotfix branch**
-
-    4. **Hotfix branch(1):**
-    - Command:
-    + `git checkout main`
-    + `git flow hotfix start 1.1`
-    -  add changes, commit, push: 
-    + `git flow hotfix publish 1.1`
-    + create the pull request and wait for the approval from the team.
-    + `git checkout main`
-    + `git pull origin main`
-    + `git pull origin develop`
-    + `git checkout hotfix/1.1`
-    + `git flow hotfix finish 1.1` (automatically merge into develop branch, also main branch, and delete branch itself)
-    + `git push origin main`
-    + `git push origin develop`
-    + `git tag`
-    + `git push –tag`
-
-    **Method of Track branch**
-
-    The git flow track command is used in Git Flow to set up tracking for branches that have been created using Git Flow's feature, release, bugfix, or hotfix commands. We would typically use git flow track when we want to establish a connection between our local branch and its corresponding branch on the remote repository.
-
-    **Track the branch from repository using command**
-    1. Feature branch : 
-        + `git flow feature track <feature_name>`
-    2. Release branch:
-        + `git flow release track <release_name>`
-    3. Bugfix branch:
-        + `git flow bugfix track <bugfix_name>`
-    4. Hotfix branch:
-        + `git flow hotfix track <hotfix_name>`
-
-    **Method of Merge branch**
-
-    Merging is a straightforward way to integrate changes from one branch into another. When we merge a branch into another branch, Git combines the changes from the source branch into the target branch, creating a new commit that represents the combined history of both branches.
-    - Command : (e.g merge main and develop)
-    + `git checkout main`
-    + `git merge develop`
-
-    **Method of Rebase branch**
-
-    Rebasing involves moving or "replaying" a series of commits from one branch into another branch's tip. It essentially rewrites the commit history by placing the commits from the source branch on top of the commits from the target branch. This results in a linear history, making it appear as if the changes were made directly on top of the target branch.
-    - Command : (rebase feature from develop)
-    + `git checkout feature/issue_2`
-    + `git rebase develop`
-
-    **Method of Reset/Revert branch**
-
-    - First get the hash of the branch
-    + `git log` (to check the history commit and the hash of the branch)
-    - `git checkout develop`
-    - `git reset <hash>`
-
-    **Method of remote alias, commit history**
-
-
-    - `git remote -v` (this will show the alias of our repository (fetch, origin))
-    - `git log` (this command can also show the commit history)
-
-    **Conclusion**
-
-
-    The Git-Flow branching strategy employed in this project offers a clear and organized approach to managing feature development, releases, and bug fixes. By utilizing branches such as main, develop, feature, release, bugfix, and hotfix, the project maintains a well-defined structure, enabling seamless integration of changes and ensuring the stability and reliability of the codebase.	
-
-
-
-
-
-
-
- 
+    **Background Colors:**
+    
+    - #ffffff
+    - #f7f7f7
+    - #f5f5f5
+    - #e5e7eb
+    - #d1d5db
+    - #000000
+    
+    ### Text Colors:
+    
+    - #ffffff
+    - #9ca3af
+    - #757575
+    - #747476
+    - #707072
+    - #616161
+    - #11827
+    - #000000
+    
+    ### Fill Colors:
+    
+    - #111111
+    
+    ### Border Colors:
+    
+    - #e5e7eb
+- Fonts :
+    
+    Font-Style : Libre Baskerville, Alfa Slab One.
+    
+    ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%2013.png)
+    
+    Font Size
+    
+    Title : [60px]
+    
+    Heading : [26px]
+    
+    Description : [16px]
+    
+    Paragraph : [14px]
