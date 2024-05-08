@@ -234,9 +234,9 @@ The goal of this project is to replicate the functionality and design of the Nik
 
 1. Website Styling :
 
-- Colors :
+  ### Colors :
   ![Screenshot_2024-05-08_at_10.09.29_in_the_morning](/uploads/b863a05c07eb8e5d52d3f8e296e7687b/Screenshot_2024-05-08_at_10.09.29_in_the_morning.png)
-  **Background Colors:**
+  ### Background Colors:
   - #ffffff
   - #f7f7f7
   - #f5f5f5
@@ -256,7 +256,7 @@ The goal of this project is to replicate the functionality and design of the Nik
   - #111111
   ### Border Colors:
   - #e5e7eb
-- Fonts :
+  ### Fonts :
   Font-Style : Libre Baskerville, Alfa Slab One.
   ![Screenshot_2024-05-08_at_10.07.28_in_the_morning](/uploads/3377e1c2746844d1cf515b2a6aa0e40f/Screenshot_2024-05-08_at_10.07.28_in_the_morning.png)
   Font Size
