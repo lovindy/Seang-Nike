@@ -156,13 +156,19 @@ fetch("../components/navbar.html")
     const overlaySm = document.querySelector("#overlay-bg-sm");
 
     hamburgerBTN.addEventListener("click", () => {
-      hamburgerContent.classList.add("left-[40%]");
+      hamburgerContent.classList.add("left-[50%]");
       hamburgerContent.classList.add("opacity-100");
       overlaySm.classList.remove("hidden");
     });
 
     hamburgerClose.addEventListener("click", () => {
-      hamburgerContent.classList.remove("left-[40%]");
+      hamburgerContent.classList.remove("left-[50%]");
+      hamburgerContent.classList.remove("opacity-100");
+      overlaySm.classList.add("hidden");
+    });
+
+    overlaySm.addEventListener("click", () => {
+      hamburgerContent.classList.remove("left-[50%]");
       hamburgerContent.classList.remove("opacity-100");
       overlaySm.classList.add("hidden");
     });
