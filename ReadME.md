@@ -12,7 +12,7 @@
 
 [https://www.figma.com/file/puPUg2voWAKmXKzlH5uiTt/Seang-Makaramarady?type=design&node-id=0%3A1&mode=design&t=ECpsCdkcf8fHmO3U-1](https://www.figma.com/file/puPUg2voWAKmXKzlH5uiTt/Seang-Makaramarady?type=design&node-id=0%3A1&mode=design&t=ECpsCdkcf8fHmO3U-1)
 
-GitLab link repository:
+- GitLab link repository :
 
 [https://git.clp.kr/anbschool/2nd/hexcode/seang-makaramarady/seang-makaramarady-nike.com](https://git.clp.kr/anbschool/2nd/hexcode/seang-makaramarady/seang-makaramarady-nike.com)
 
@@ -70,7 +70,7 @@ The goal of this project is to replicate the functionality and design of the Nik
   HTML :
   CSS :
   JavaScript :
-  
+
 - Web development using Tailwind CSS framework:
   What is TailwindCss ?
   It is an utility-first CSS framework packed with classes like **`flex`**, **`pt-4`**, **`text-center`** and **`rotate-90`** that can be composed to build any design, directly in your markup.
@@ -79,16 +79,16 @@ The goal of this project is to replicate the functionality and design of the Nik
   ### Tailwind CDN : Tailwind content delivery network.
   1. **Add the Play CDN script to your HTML**
   Add the Play CDN script tag to the **`<head>`** of your HTML file, and start using Tailwind’s utility classes to style your content.
-  ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%208.png)
+  
   **2. Try customizing your config**
   Edit the **`tailwind.config`** object to **[customize your configuration](https://tailwindcss.com/docs/configuration)** with your own design tokens.
-  ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%209.png)
+ 
   **3. Try adding some custom CSS**
   Use **`type="text/tailwindcss"`** to add custom CSS that supports all of Tailwind's CSS features.
-  ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%2010.png)
+
   1. **Try using a first-party plugin**
   Enable first-party plugins, like forms and typography, using the **`plugins`** query parameter.
-  ![Untitled](Seang-Makaramarady%207ac90c56ab654c60804d3d9ba91411d3/Untitled%2011.png)
+
 
 # GIT-FLOW STRATEGY
 
