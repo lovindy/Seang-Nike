@@ -182,7 +182,6 @@ fetch("../components/navbar.html")
         rotateIcons[index].classList.toggle("rotate-360");
       });
     });
-
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
