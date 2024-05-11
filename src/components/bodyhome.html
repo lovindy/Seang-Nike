@@ -1,43 +1,42 @@
-<script src="../script/carousel.js"></script>
-
 <!-- hero section -->
-<div class="bodyhome hidden md:flex">
-  <img class="w-full" src="../images/home-picture/cama.jpeg" alt="" />
-</div>
-
-<div class="flex md:hidden px-[10px]">
-  <img class="w-full" src="../images/home-picture/homenikeres.jpeg" alt="" />
-</div>
+<section class="">
+  <img class="w-full hidden sm:block" src="../images/home-picture/cama.jpeg" alt="" />
+  <img class="w-full  block sm:hidden" src="../images/home-picture/homenikeres.jpeg" alt="" />
+</section>
 
 <!-- slogan -->
-<div class="container w-full max-w-[1850px] mx-auto">
+<section class="container w-full max-w-[1850px] mx-auto">
   <div class="text-center pt-[50px] pb-[20px]">
     <p class="font-medium">Step into the unreal</p>
     <h1 class="title font-extrabold md:text-[60px] text-[26px]">
       GEAR-UP FOR <br />
       THE CHAMPIONS
     </h1>
-    <p class="m-2 hidden sm:block">Dynamic Camavinga -- everywhere all at once.</p>
+    <p class="m-2 hidden sm:block">
+      Dynamic Camavinga -- everywhere all at once.
+    </p>
     <p class="m-2 block sm:hidden">Erling haaland -- Classic all at once.</p>
     <button
       class="bg-black hover:bg-gray-500 text-white py-2 px-4 rounded-full sm:mt-6 mt-3">
       Shop the Collection
     </button>
   </div>
-</div>
+</section>
 
-
-
-<!-- trending head -->
+<!-- trending -->
+<section>
+  <!-- trending head -->
 <div class="bg-white flex justify-between w-full max-w-[1600px] mx-auto py-4">
   <div class="w-full flex justify-between mx-4">
     <p class="text-[26px]">Trending</p>
     <div class="gap-4">
-      <button id="prev-btn"
+      <button
+        id="prev-btn"
         class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button id="next-btn"
+      <button
+        id="next-btn"
         class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
@@ -48,7 +47,7 @@
 <!-- trending image -->
 <div class="px-[20px]">
   <div class="w-full max-w-[1600px] flex mx-auto overflow-x-hidden">
-    <div class="flex gap-2 text-center duration-300 " id="slider">
+    <div class="flex gap-2 text-center duration-300" id="slider">
       <div class="w-full" id="card-slider">
         <div class="w-[530px]">
           <img
@@ -96,17 +95,18 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
+</section>
 
 <!-- feature head -->
-<div class="p-[20px] pt-10">
+<section class="p-[20px] pt-10">
   <div
     class="flex max-w-[1600px] mx-auto text-[26px] justify-between items-center">
     <p class="py-[20px]">Featured</p>
   </div>
   <!-- images -->
-  <div class="flex gap-2 justify-center max-w-[1600px] mx-auto">
-    <div class="relative hidden md:flex">
+  <div class="flex gap-2 sm:flex-row flex-col justify-center max-w-[1600px] mx-auto">
+    <div class="relative">
       <div class="image-shop1">
         <img src="../images//home-picture/nike-just-do-it.jpg" alt="" />
       </div>
@@ -123,8 +123,7 @@
         </button>
       </div>
     </div>
-
-    <div class="relative hidden md:flex">
+    <div class="relative">
       <div class="image-shop2">
         <img src="../images/home-picture/nike_lyhour.jpeg" alt="" />
       </div>
@@ -141,57 +140,28 @@
         </button>
       </div>
     </div>
-
-  <!-- responsive -->
   </div>
+</section>
 
-  <div class="relative flex md:hidden">
-    <div class="image-shop1">
-      <img src="../images//home-picture/nike-just-do-it.jpg" alt="" />
-    </div>
-    <div class="btn-shop1 absolute left-16 bottom-20 leading-8">
-      <p><span class="text-white">Nike Alphafly 3</span></p>
-      <p>
-        <span class="text-[26px] text-white">Push Beyond What's Possible</span>
-      </p>
-      <button
-        class="mt-2 bg-white h-[35px] w-[70px] rounded-full hover:bg-gray-300">
-        Shop
-      </button>
-    </div>
-  </div>
-  <div class="relative flex md:hidden mt-[8px]">
-    <div class="image-shop2">
-      <img src="../images/home-picture/nike_lyhour.jpeg" alt="" />
-    </div>
-    <div class="btn-shop2 absolute left-16 bottom-20 leading-8">
-      <p><span class="text-white">Jordan New Arrivals</span></p>
-      <p>
-        <span class="text-[26px] text-white">Air Jordan 4 'Vivid Sulfur'</span>
-      </p>
-      <button
-        class="mt-2 bg-white h-[35px] w-[70px] rounded-full hover:bg-gray-300">
-        Shop
-      </button>
-    </div>
-  </div>
-
-  <!-- Shop by sport -->
+<!-- Shop by sport -->
+<section>
   <div
     class="w-full pt-10 pb-4 max-w-[1600px] mx-auto flex justify-between items-center">
     <p class="text-[26px]">Shop By Sport</p>
     <span class="space-x-2">
-      <button id="prev-shop"
+      <button
+        id="prev-shop"
         class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button id="next-shop"
+      <button
+        id="next-shop"
         class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
         <i class="fa-solid fa-chevron-right"></i></button
     ></span>
   </div>
   <div class="">
-    <div class="max-w-[1600px] flex mx-auto overflow-x-hidden ">
+    <div class="max-w-[1600px] flex mx-auto overflow-x-hidden">
       <div class="flex gap-2 text-center duration-300" id="shop-slider">
         <div class="w-full" id="card-shop">
           <div class="w-[400px]">
@@ -271,18 +241,22 @@
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Classic  spotlight -->
+<!-- Classic  spotlight -->
+<section>
   <div class="pt-10">
     <div
       class="w-full pt-6 pb-4 max-w-[1600px] mx-auto flex justify-between items-center">
       <p class="text-[26px]">Classic Spotlight</p>
       <span class="space-x-2">
-        <button id="classic-prev"
+        <button
+          id="classic-prev"
           class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
-        <button id="classic-next"
+        <button
+          id="classic-next"
           class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
           <i class="fa-solid fa-chevron-right"></i></button
       ></span>
@@ -352,4 +326,4 @@
       </div>
     </div>
   </div>
-</div>
+</section>
