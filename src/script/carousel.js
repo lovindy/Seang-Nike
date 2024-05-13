@@ -29,7 +29,7 @@ const carousel = (imgUrl, title, description, price) => {
             </div>
         </div>
 
-        <div class="w-full max-w-[1600px] flex mx-auto overflow-x-hidden">
+        <div class="w-full max-w-[1600px] flex mx-auto overflow-x-scroll">
             <div class="flex gap-2 text-center duration-300" id="slider">
             ${imgUrl.map((img) => {
         return `
@@ -58,23 +58,23 @@ class Carousel extends HTMLElement {
         const price = this.getAttribute('price') || '$100';
         this.innerHTML = carousel(imgUrl, title, description, price);
 
+        const prevBtn = this.querySelector('#prev-btn');
+        const nextBtn = this.querySelector('#next-btn');
+
+        const slideLeft = () => {
+            const slider = this.querySelector('#slider');
+            slider.scrollLeft -= 500;
+        }
+
+        const slideRight = () => {
+            const slider = this.querySelector('#slider');
+            slider.scrollLeft += 500;
+        }
+
+        prevBtn.addEventListener("click", alert("click"));
+        nextBtn.addEventListener("click", alert("click"));
     }
 }
 customElements.define('carousel-component', Carousel);
 
-// get the all ID for the slideleft and slideright function
-const prevBtn = this.querySelector('#prev-btn');
-const nextBtn = this.querySelector('#next-btn');
 
-// create function slide left right
-const slideLeft = (cardId) => {
-    const slider = this.querySelector(`#${cardId}`);
-    slider.scrollLeft -= 500;
-}
-const slideRight = (cardId) => {
-    const slider = this.querySelector(`#${cardId}`);
-    slider.scrollLeft += 500;
-}
-// create function slide left right
-prevBtn.addEventListener('click', () => slideLeft('slider'));
-nextBtn.addEventListener('click', () => slideRight('slider'));
