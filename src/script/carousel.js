@@ -1,6 +1,6 @@
-const carousel = (imgUrl, title, description, price) => {
+const carousel = (data, title) => {
     return `
-        <div class="bg-white flex justify-between w-full max-w-[1600px] mx-auto py-4">
+        <div class="bg-white flex justify-between w-full px-4 max-w-[1600px] mx-auto py-4">
             <div class="w-full flex justify-between">
                 <p class="text-[26px]">${title}</p>
                 <div class="gap-4">
@@ -19,17 +19,17 @@ const carousel = (imgUrl, title, description, price) => {
         </div>
 
         <div class="w-full max-w-[1600px] flex mx-auto overflow-hidden">
-            <div class="flex gap-2 text-center duration-300" id="slider">
-            ${imgUrl.map((img) => {
+            <div class="flex gap-3 text-center duration-300" id="slider">
+            ${data.map((item) => {
         return `
                     <div class="w-full" id="card-slider">
-                        <div class="w-[500px]">
+                        <div class="w-[300px] md:w-[400px] lg:w-[500px]">
                         <img
-                            class="w-full h-[400px] object-cover"
-                            src="${img}"
+                            class="w-full object-cover rounded-lg"
+                            src="${item.img}"
                             alt="" />
-                        <p class="">${description}</p>
-                        <p class="">${price}</p>
+                        <p class="text-sm md:text-base lg:text-lg p-2">${item.description}</p>
+                        <p class="text-sm md:text-base lg:text-lg font-medium p-2">${item.price}</p>
                         </div>
                     </div>
                 `
@@ -41,46 +41,41 @@ const carousel = (imgUrl, title, description, price) => {
 
 class Carousel extends HTMLElement {
     connectedCallback() {
-        const imgUrl = JSON.parse(this.getAttribute('imgUrl')) || ['../images/home-picture/black1.jpeg'];
+        const data = JSON.parse(this.getAttribute('data')) || [];
         const title = this.getAttribute('title') || 'Trending';
-        const description = this.getAttribute('description') || 'Nike apparel merges fashion, function.';
-        const price = this.getAttribute('price') || '$100';
-        this.innerHTML = carousel(imgUrl, title, description, price);
+        console.log(data);
+        this.innerHTML = carousel(data, title);
 
-        const prevBtn = this.querySelector('#prev-btn');
-        const nextBtn = this.querySelector('#next-btn');
-        const slider = this.querySelector('#slider');
+        const cardPrev = document.querySelector("#prev-card");
+        const cardNext = document.querySelector("#next-card");
+        const cardImage = document.querySelector("#card-slider");
+        const cardSlider = document.querySelectorAll("#card-img");
 
-        let currentIndex = 0;
-        const cardWidth = () => document.querySelector('#card-slider').offsetWidth;
+        let currentIndexCard = 0;
 
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateSlider();
+        function nextCard() {
+            if (currentIndexCard < 4) {
+                currentIndexCard = (currentIndexCard + 1) % cardSlider.length;
+                updateCard();
             }
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < imgUrl.length - 3) {
-                currentIndex++;
-                updateSlider();
-            }
-        });
-
-        const cardSliders = this.querySelectorAll('#slider #card-slider');
-
-        cardSliders.forEach((cardSlider, index) => {
-            cardSlider.addEventListener('click', () => {
-                currentIndex = index;
-                updateSlider();
-            });
-        });
-
-        function updateSlider() {
-            const offset = -currentIndex * cardWidth();
-            slider.style.transform = `translateX(${offset}px)`;
         }
+
+        function prevCard() {
+            if (currentIndexCard > 0) {
+                currentIndexCard =
+                    (currentIndexCard - 1 + cardSlider.length) %
+                    cardSlider.length;
+                updateCard();
+            }
+        }
+
+        function updateCard() {
+            const offset = -currentIndexCard * 450; // Adjust this value as needed
+            cardImage.style.transform = `translateX(${offset}px)`;
+        }
+
+        cardPrev.addEventListener("click", prevCard);
+        cardNext.addEventListener("click", nextCard);
     }
 }
 customElements.define('carousel-component', Carousel);
