@@ -1,14 +1,3 @@
-// switch (option) {
-//     case "style-1":
-//         // code block
-//         break;
-//     case "style-2":
-//         // code block
-//         break;
-//     default:
-//     // code block
-// }  
-
 const carousel = (imgUrl, title, description, price) => {
     return `
         <div class="bg-white flex justify-between w-full max-w-[1600px] mx-auto py-4">
@@ -29,14 +18,14 @@ const carousel = (imgUrl, title, description, price) => {
             </div>
         </div>
 
-        <div class="w-full max-w-[1600px] flex mx-auto overflow-x-scroll">
+        <div class="w-full max-w-[1600px] flex mx-auto overflow-hidden">
             <div class="flex gap-2 text-center duration-300" id="slider">
             ${imgUrl.map((img) => {
         return `
                     <div class="w-full" id="card-slider">
-                        <div class="w-[530px]">
+                        <div class="w-[500px]">
                         <img
-                            class="w-full h-full object-cover"
+                            class="w-full h-[400px] object-cover"
                             src="${img}"
                             alt="" />
                         <p class="">${description}</p>
@@ -44,7 +33,7 @@ const carousel = (imgUrl, title, description, price) => {
                         </div>
                     </div>
                 `
-    })}
+    }).join(" ")}
             </div>
         </div>
     `
@@ -60,21 +49,39 @@ class Carousel extends HTMLElement {
 
         const prevBtn = this.querySelector('#prev-btn');
         const nextBtn = this.querySelector('#next-btn');
+        const slider = this.querySelector('#slider');
 
-        const slideLeft = () => {
-            const slider = this.querySelector('#slider');
-            slider.scrollLeft -= 500;
+        let currentIndex = 0;
+        const cardWidth = () => document.querySelector('#card-slider').offsetWidth;
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < imgUrl.length - 3) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+
+        const cardSliders = this.querySelectorAll('#slider #card-slider');
+
+        cardSliders.forEach((cardSlider, index) => {
+            cardSlider.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+
+        function updateSlider() {
+            const offset = -currentIndex * cardWidth();
+            slider.style.transform = `translateX(${offset}px)`;
         }
-
-        const slideRight = () => {
-            const slider = this.querySelector('#slider');
-            slider.scrollLeft += 500;
-        }
-
-        prevBtn.addEventListener("click", alert("click"));
-        nextBtn.addEventListener("click", alert("click"));
     }
 }
 customElements.define('carousel-component', Carousel);
-
 

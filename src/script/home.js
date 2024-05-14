@@ -199,27 +199,33 @@ fetch("../components/bodyhome.html")
 
     let currentIndex = 0;
 
-    function nextSlide() {
-      if (currentIndex < 2) {
-        currentIndex = (currentIndex + 1) % cardSlider.length;
-        updateSlider();
-      }
-    }
+    const cardWidth = document.querySelector('#card-slider').offsetWidth; // Get the width of each card
 
-    function prevSlide() {
-      if (currentIndex > 0) {
-        currentIndex =
-          (currentIndex - 1 + cardSlider.length) % cardSlider.length;
-        updateSlider();
-      }
-    }
+    prevBTN.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        }
+    });
+
+    nextBTN.addEventListener('click', () => {
+        if (currentIndex < cardSlider.length - 1) {
+            currentIndex++;
+            updateSlider();
+        }
+    });
+
+    cardSlider.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+    });
 
     function updateSlider() {
-      const offset = -currentIndex * 538; // Adjust this value as needed
-      sliderImg.style.transform = `translateX(${offset}px)`;
+        const offset = -currentIndex * cardWidth; // Move by card width
+        sliderImg.style.transform = `translateX(${offset}px)`;
     }
-    prevBTN.addEventListener("click", prevSlide);
-    nextBTN.addEventListener("click", nextSlide);
 
     // shop slider
     const shopPrev = document.querySelector("#prev-shop");
