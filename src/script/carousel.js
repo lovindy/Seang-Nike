@@ -62,7 +62,7 @@ class Carousel extends HTMLElement {
         const updateCard = () => {
             const cardWidth = cardSlider[0].clientWidth + parseInt(window.getComputedStyle(cardSlider[0]).marginRight); // Card width plus margin
             const offset = -currentIndexCard * cardWidth;
-            cardImage.style.transform = `translateX(${offset}px)`;
+            cardImage.style.transform = `translateX(${offset + 50}px)`;
 
             // Update button states
             cardPrev.disabled = currentIndexCard === 0;
