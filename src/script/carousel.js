@@ -17,7 +17,7 @@ const carousel = (data, title) => {
         <div class="carousel-content w-full max-w-[1600px] flex mx-auto overflow-hidden">
             <div class="slider flex gap-3 text-center transition-transform duration-300">
                 ${data.map((item) => `
-                    <div class="card-slider flex-shrink-0 w-72 md:w-96 lg:w-[30rem]">
+                    <div class="card-slider flex-shrink-0 w-72 md:w-[24rem]">
                         <div class="bg-white rounded-lg overflow-hidden">
                             <img class="w-full object-cover" src="${item.img}" alt="" />
                             <div class="p-4">
@@ -46,7 +46,7 @@ class Carousel extends HTMLElement {
         let currentIndexCard = 0;
 
         const nextCard = () => {
-            if (currentIndexCard < cardSlider.length - 3) {
+            if (currentIndexCard < cardSlider.length - 4) {
                 currentIndexCard++;
                 updateCard();
             }
@@ -62,7 +62,7 @@ class Carousel extends HTMLElement {
         const updateCard = () => {
             const cardWidth = cardSlider[0].clientWidth + parseInt(window.getComputedStyle(cardSlider[0]).marginRight); // Card width plus margin
             const offset = -currentIndexCard * cardWidth;
-            cardImage.style.transform = `translateX(${offset + 50}px)`;
+            cardImage.style.transform = `translateX(${offset}px)`;
 
             // Update button states
             cardPrev.disabled = currentIndexCard === 0;

@@ -1,26 +1,14 @@
-<!-- hero section -->
-<section>
-  <div class="hidden md:flex">
-    <img class="w-full" src="../images/home-picture/hallanddddd.jpeg" alt="" />
-  </div>
-
-  <div class="flex md:hidden px-[10px]">
-    <img class="w-full" src="../images/home-picture/hallen2.jpeg" alt="" />
-  </div>
-
-  <!-- slogan -->
-  <div class="container w-full max-w-[1850px] mx-auto">
-    <div class="text-center pt-[50px] pb-[20px]">
-      <p>Step into the unreal</p>
-      <h1 class="title font-bold md:text-[60px] text-[26px]">AIR MAX DN</h1>
-      <p class="m-2">Dynamic Style of Sha'Carri Richardson</p>
-      <button
-        class="bg-black hover:bg-gray-500 text-white py-2 px-4 rounded-full mt-6">
-        Shop
-      </button>
-    </div>
-  </div>
-</section>
+<!-- Hero section -->
+<hero-section-component
+  imgURL_1="../images/home-picture/hallanddddd.jpeg"
+  imgURL_2="../images/home-picture/hallen2.jpeg"
+  miniTitle="Step into the unreal"
+  title_1="AIR MAX DN"
+  title_2=""
+  description="Dynamic Style of Sha'Carri Richardson"
+  button="Shop"
+>
+</hero-section-component>
 
 <!-- Shop the Essential -->
 <section class="w-full px-4 max-w-[1850px] pt-12 mx-auto">
@@ -439,130 +427,5 @@
   </section>
 
 <!-- membership -->
-<section class="pb-4 pt-6">
-  <div
-    class="w-full pt-6 pb-4 px-4 max-w-[1850px] mx-auto flex justify-between items-center">
-    <p class="text-[26px]">Membership</p>
-    <span class="space-x-2">
-      <button
-        id="prev-shop"
-        class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <button
-        id="next-shop"
-        class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
-        <i class="fa-solid fa-chevron-right"></i></button
-    ></span>
-  </div>
-
-  <div class="max-w-[1850px] px-4 flex mx-auto overflow-x-hidden">
-    <div class="flex gap-2 text-center duration-300" id="shop-slider">
-      <!-- original card -->
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m1.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Member Product</p>
-            <p class="text-white text-[24px] pb-4">Your Exclusive Access</p>
-            <button class="px-4 py-2 rounded-full bg-white">Shop</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m2.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Member Rewards</p>
-            <p class="text-white text-[24px] pb-4">How We Say Thank You</p>
-            <button class="px-4 py-2 rounded-full bg-white">Celebration</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m3.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Sports & Wellness Apps</p>
-            <p class="text-white text-[24px] pb-4">Movement Where</p>
-            <button class="px-4 py-2 rounded-full bg-white">Move</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m4.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Nike By You</p>
-            <p class="text-white text-[24px] pb-4">
-              Your Customizztion Service
-            </p>
-            <button class="px-4 py-2 rounded-full bg-white">Customize</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m5.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Your Ultimate</p>
-            <p class="text-white text-[24px] pb-4">Sneaker Community</p>
-            <button class="px-4 py-2 rounded-full bg-white">Explore</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m6.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Member Interest</p>
-            <p class="text-white text-[24px] pb-4">Shop Your Way</p>
-            <button class="px-4 py-2 rounded-full bg-white">
-              Add Interest
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full" id="card-shop">
-        <div class="relative w-[400px]">
-          <img
-            class="w-full h-full object-cover"
-            src="../images/home-picture/m7.jpeg"
-            alt="" />
-          <div class="absolute bottom-10 left-10 flex flex-col items-start">
-            <p class="text-white">Be Alive With Nike</p>
-            <p class="text-white text-[24px] pb-4">
-              Rise above, shine with Nike.
-            </p>
-            <button class="px-4 py-2 rounded-full bg-white">Shop</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<membership-component></membership-component>
 
