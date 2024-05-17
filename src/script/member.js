@@ -4,37 +4,6 @@ fetch("../components/bodymember.html")
   .then((res) => res.text())
   .then((data) => {
     member_content.innerHTML = data;
-    // shop of membeer
-    const shopPrev = document.querySelector("#prev-shop");
-    const shopNext = document.querySelector("#next-shop");
-    const shopImage = document.querySelector("#shop-slider");
-    const shopSlider = document.querySelectorAll("#card-shop");
-
-    let currentIndexShop = 0;
-
-    function nextShop() {
-      if (currentIndexShop < 1) {
-        currentIndexShop = (currentIndexShop + 1) % shopSlider.length;
-        updateShop();
-      }
-    }
-
-    function prevShop() {
-      if (currentIndexShop > 0) {
-        currentIndexShop =
-          (currentIndexShop - 1 + shopSlider.length) % shopSlider.length;
-        updateShop();
-      }
-    }
-
-    function updateShop() {
-      const offset = -currentIndexShop * 408; // Adjust this value as needed
-      shopImage.style.transform = `translateX(${offset}px)`;
-    }
-
-    shopPrev.addEventListener("click", prevShop);
-    shopNext.addEventListener("click", nextShop);
-
     // member also get
     const shopPrev1 = document.querySelector("#prev-shop-1");
     const shopNext1 = document.querySelector("#next-shop-1");

@@ -1,41 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nike.com</title>
-    <link rel="stylesheet" href="../styles/output.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="shortcut icon"
-      type="x-icon"
-      href="../images/home-icon/nike.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  </head>
-  <body>
-    <!-- header section -->
-    <header-layout class="header-layout"></header-layout>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike.com</title>
+  <link rel="stylesheet" href="../styles/output.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <!-- header section -->
+  <header-component></header-component>
 
-    <!-- nav-bar section -->
-    <navbar-layout class="navbar-layout"></navbar-layout>
+  <!-- nav-bar section -->
+  <nav-component></nav-component>
 
-    <!-- banner seciton -->
-    <slide-container class="slide-container"></slide-container>
+  <!-- banner seciton -->
+  <slide-container class="slide-container"></slide-container>
 
-    <!-- body section -->
-    <kid-content-layout class="kid-content-layout"></kid-content-layout>
+  <!-- body section -->
+  <!-- header section -->
+  <section class="kid-content-layout">
+    <header class="w-full items-center justify-center flex">
+      <div class="lg:items-center justify-between w-full max-w-[1850px] py-[36px] flex lg:flex-row flex-col p-6">
+        <!-- logo nike -->
+        <div class="flex items-center justify-between">
 
-    <!-- footer responsive -->
-    <footer-res-layout class="footer-res-layout sm:hidden"></footer-res-layout>
+          <p class="text-[26px]">Kids</p>
 
-    <!-- footer section -->
-    <menu-bottom-layout class="menu-bottom-layout"></menu-bottom-layout>
-  </body>
-  <!-- script link component home page -->
-  <script src="../script/home.js"></script>
-  <script src="../script/kids.js"></script>
-  <script src="../script/btn.js"></script>
-  <script src="../script/slider.js"></script>
+        </div>
+        <!-- right side text -->
+        <div>
+          <ul class="grid grid-cols-6 gap-8 text-nowrap text-[16px]">
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Shoes</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Clothing</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Sport</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Mini</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">New</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Sale</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- hero section -->
+  <section>
+    <div class="w-full px-4">
+      <!-- image -->
+      <div class="w-full relative mx-auto">
+        <img class="w-full hidden sm:flex" src="../images/home-picture/k1.jpeg" alt="" />
+
+      </div>
+      <div
+        class="w-full h-full flex rounded-md justify-between sm:hidden px-4 bg-gradient-to-r from-gray-900 via-gray-600 to-black">
+        <span class="max-w-screen-sm mx-auto py-6">
+          <video autoplay muted loop class="rounded-[25px] rotate-2 max-h-[500px] shadow-lg"
+            src="../images/home-picture/Skate.mp4"></video>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- slogan promotion -->
+  <section>
+    <div class="w-full max-w-screen-2xl mx-auto pt-10">
+      <div class="sm:text-center text-start sm:px-0 px-4">
+        <h1 class="titlekid sm:text-[60px] text-[36px] font-bold">
+          NIKE SB DAY ONE
+        </h1>
+        <p class="pb-6">Made to skate. Designed to support you from the start.</p>
+        <btn-component title="Shop" customClass="bg-black text-white"></btn-component>
+      </div>
+    </div>
+  </section>
+
+  <!-- title -->
+  <div class="w-full max-w-[1600px] px-4 pt-10 mx-auto justify-between items-center">
+    <p class="text-[26px] pb-4">Sizes for All</p>
+  </div>
+  <!-- sizes for All -->
+  <section class="w-full max-w-[1600px] mx-auto grid md:grid-cols-2 grid-flow-cols-1 gap-3 px-4">
+    <!-- left content -->
+    <div class="max-w-[1600px]">
+      <div class="w-full">
+        <div class="relative">
+          <img class="w-full h-full object-cover" src="../images/home-picture/h1.jpeg" alt="" />
+          <div class="md:absolute md:mb-0 mb-10 bottom-10 left-10 flex flex-col items-start">
+            <p class="text-black text-[24px] md:pt-0 pt-4">Big Kids</p>
+            <p class="text-black md:pb-4 pb-5 md:pt-0 pt-4">
+              Explore apparel (XS-XL) and shoes (3.5-7Y).
+            </p>
+            <btn-component title="Shop" customClass="bg-black text-white"></btn-component>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mt-4">
+        <div class="relative">
+          <img class="w-full h-full object-cover" src="../images/home-picture/h3.jpeg" alt="" />
+          <div class="md:absolute md:mb-0 mb-10 bottom-10 left-10 flex flex-col items-start">
+            <p class="text-black text-[24px] md:pt-0 pt-4">Little Kids</p>
+            <p class="text-black md:pb-4 pb-5md:pt-1 pt-3 hidden md:flex">
+              Explore apparel (4-7) <br />
+              and shoes (10.5C-3Y).
+            </p>
+            <p class="text-black pb-5 pt-3 flex md:hidden">
+              Explore apparel (4-7) and shoes (10.5C-3Y).
+            </p>
+            <btn-component title="Shop" customClass="bg-black text-white"></btn-component>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right content -->
+    <div class="max-w-[1600px]">
+      <div class="w-full">
+        <div class="relative">
+          <img class="w-full h-full object-cover" src="../images/home-picture/h2.jpeg" alt="" />
+          <div class="md:absolute md:mb-0 mb-10 bottom-10 left-10 flex flex-col items-start">
+            <p class="text-black text-[24px] md:pt-0 pt-4">Babies and Toddlers</p>
+            <p class="text-black md:pb-4 pb-5md:pt-1 pt-3 hidden md:flex">
+              Explore apparel (0M-4T) <br />
+              and shoes (0C-10C)
+            </p>
+            <p class="text-black pb-4 pt-3 flex md:hidden">
+              Explore apparel (0M-4T) and shoes (0C-10C)
+            </p>
+            <btn-component title="Shop" customClass="bg-black text-white"></btn-component>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full mt-4">
+        <div class="relative">
+          <img class="w-full h-full object-cover" src="../images/home-picture/h4.jpeg" alt="" />
+          <div class="md:absolute md:mb-0 mb-10 bottom-10 left-10 flex flex-col items-start">
+            <p class="text-black text-[24px] md:pt-0 pt-4">Teen Essentials</p>
+            <p class="text-black md:pb-4 pb-5 md:pt-1 pt-3">
+              Explore apparel (XS-XL) and shoes (3.5-5Y)
+            </p>
+            <btn-component title="Shop" customClass="bg-black text-white"></btn-component>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Rigth Now -->
+  <carousel-component title="Popular Rigth Now" align_text="text-start" data='[
+ {
+ "img": "../images/home-picture/ws1.png",
+ "description": "Run with unstoppable comfort",
+ "price": "$130"
+ },
+ {
+ "img": "../images/home-picture/ws3.png",
+ "description": "Style meets athletic prowess",
+ "price": "$140"
+ },
+ {
+ "img": "../images/home-picture/ws2.png",
+ "description": "Elevate your game today",
+ "price": "$150"
+ },
+ {
+ "img": "../images/home-picture/ws4.png",
+ "description": "Push beyond your limits",
+ "price": "$160"
+ },
+ {
+ "img": "../images/home-picture/ws5.png",
+ "description": "Innovate your performance wear",
+ "price": "$170"
+ },
+ {
+ "img": "../images/home-picture/ky2.jpeg",
+ "description": "Iconic style, unbeatable performance",
+ "price": "$180"
+ },
+ {
+ "img": "../images/home-picture/f3.png",
+ "description": "Embrace the future, excel",
+ "price": "$190"
+ },
+ {
+ "img": "../images/home-picture/ws1.png",
+ "description": "Fuel your every step",
+ "price": "$200"
+ }
+ ]'>
+  </carousel-component>
+
+  <!-- feature -->
+  <feature-design-component imgFeatured_1="../images/home-picture/kt2.jpeg"
+    imgFeatured_2="../images/home-picture/kt1.jpeg" des_1="The Lastest Air Max" title_1="Desgin Crew Collection"
+    des_2="Jordan Summer Styles" title_2="Expression in Motion">
+  </feature-design-component>
+
+  <!-- More to Explore -->
+  <section>
+    <div class="flex max-w-[1600px] px-4 mx-auto pt-12 justify-between items-center">
+      <p class="text-[26px] pb-4">More to Explore</p>
+    </div>
+    <div class="w-full max-w-[1600px] px-4 flex mx-auto overflow-x-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-start duration-300">
+        <div class="w-full">
+          <div class="max-w-[600px]">
+            <img class="w-full h-full object-cover" src="../images/home-picture/ky1.jpeg" alt="" />
+            <h1 class="text-[20px] pt-2">Shoes $70 & Under</h1>
+            <button class="hover:underline text-black pt-6">Shop</button>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <div class="max-w-[600px]">
+            <img class="w-full h-full object-cover" src="../images/home-picture/ky2.jpeg" alt="" />
+            <h1 class="text-[20px] pt-2">NEw from Nike Basketball</h1>
+            <button class="hover:underline text-black pt-6">Shop</button>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <div class="max-w-[600px]">
+            <img class="w-full h-full object-cover" src="../images/home-picture/ky3.jpeg" alt="" />
+            <h1 class="text-[20px] pt-2">Easy On & Off Shoes</h1>
+            <button class="hover:underline text-black pt-6">Shop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Classic  spotlight -->
+  <carousel-component title="Classic  Spotlight" data='[
+  {
+    "img": "../images/home-picture/shoes1.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+
+  {
+    "img": "../images/home-picture/shoes2.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+  {
+    "img": "../images/home-picture/shoes3.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+  {
+    "img": "../images/home-picture/shoes4.png",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+  {
+    "img": "../images/home-picture/shoes5.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+  {
+    "img": "../images/home-picture/shoes6.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+  {
+    "img": "../images/home-picture/shoes7.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  },
+  {
+    "img": "../images/home-picture/shoes1.jpeg",
+    "title": "",
+    "description": "",
+    "price": ""
+  }
+]'>
+  </carousel-component>
+
+  <!-- footer responsive -->
+  <footer-res-layout class="footer-res-layout sm:hidden"></footer-res-layout>
+
+  <!-- footer section -->
+  <menu-bottom-layout class="menu-bottom-layout"></menu-bottom-layout>
+</body>
+<!-- script link component home page -->
+<script src="../script/home.js"></script>
+<script src="../script/btn.js"></script>
+<script src="../script/slider.js"></script>
+<script src="../script/carousel.js"></script>
+<script src="../script/heroSection.js"></script>
+<script src="../script/featuredesign.js"></script>
+<script src="../script/header.js"></script>
+<script src="../script/navbar.js"></script>
 </html>
+

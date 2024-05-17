@@ -1,4 +1,4 @@
-const carousel = (data, title) => {
+const carousel = (data, title, align_text) => {
     return `
         <div class="carousel-container bg-white flex justify-between w-full px-4 max-w-[1600px] mx-auto py-4">
             <div class="w-full flex justify-between items-center">
@@ -15,14 +15,14 @@ const carousel = (data, title) => {
         </div>
 
         <div class="carousel-content w-full max-w-[1600px] flex mx-auto overflow-hidden">
-            <div class="slider flex gap-3 text-center transition-transform duration-300">
+            <div class="slider flex gap-3 ${align_text} transition-transform duration-300">
                 ${data.map((item) => `
                     <div class="card-slider flex-shrink-0 w-72 md:w-[24rem]">
                         <div class="bg-white rounded-lg overflow-hidden">
                             <img class="w-full object-cover" src="${item.img}" alt="" />
-                            <div class="p-4">
+                            <div class="py-4">
                                 <p class="text-base md:text-lg lg:text-xl mb-2">${item.description}</p>
-                                <p class="text-sm md:text-base font-medium">${item.price}</p>
+                                <p class="text-sm md:text-lg font-medium">${item.price}</p>
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,8 @@ class Carousel extends HTMLElement {
     connectedCallback() {
         const data = JSON.parse(this.getAttribute('data')) || [];
         const title = this.getAttribute('title') || 'Trending';
-        this.innerHTML = carousel(data, title);
+        const align_text = this.getAttribute('align_text') || 'text-center';
+        this.innerHTML = carousel(data, title, align_text);
 
         const cardPrev = this.querySelector(".prev-btn");
         const cardNext = this.querySelector(".next-btn");

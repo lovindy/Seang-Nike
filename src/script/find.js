@@ -153,8 +153,8 @@ fetch("../components/findastore.html")
       return `
       <div class="flex flex-col gap-1">
       ${listCards
-        .map((card) => {
-          return `
+          .map((card) => {
+            return `
         <div id="button-up"
         class="card-location hover:bg-gray-100 rounded-lg py-[20px] flex justify-between items-center">
         <!-- content -->
@@ -167,8 +167,8 @@ fetch("../components/findastore.html")
             </div>
       </div>
         `;
-        })
-        .join("")}
+          })
+          .join("")}
 
       </div>
       
@@ -229,7 +229,6 @@ fetch("../components/findastore.html")
       });
     });
 
-    // click and show filter
     const filterBTN = document.querySelector("#filter-btn");
     const closeBTN = document.querySelector("#close-btn");
     const filterContent = document.querySelector("#filter-content");
@@ -237,53 +236,23 @@ fetch("../components/findastore.html")
     const componentHide = document.querySelector("#component-hide");
     const findBTN = document.querySelector("#find-btn");
 
-    filterBTN.addEventListener("click", () => {
-      filterContent.classList.remove("scale-[120%]");
-      filterContent.classList.remove("opacity-0");
-      filterContent.classList.remove("pointer-events-none");
+    const showFilter = () => {
+      filterContent.classList.remove("scale-[120%]", "opacity-0", "pointer-events-none");
+      filterContent.classList.add("scale-[100%]", "opacity-100", "pointer-events-auto");
       componentHide.classList.add("hidden");
       externalContent.classList.add("hidden");
+    };
 
-      filterContent.classList.add("scale-[100%]");
-      filterContent.classList.add("opacity-100");
-      filterContent.classList.add("pointer-events-auto");
-    });
-
-    closeBTN.addEventListener("click", () => {
-      filterContent.classList.add("scale-[120%]");
-      filterContent.classList.add("opacity-0");
-      filterContent.classList.add("pointer-events-none");
-
-      filterContent.classList.remove("scale-[100%]");
-      filterContent.classList.remove("opacity-100");
-      filterContent.classList.remove("pointer-events-auto");
+    const hideFilter = () => {
+      filterContent.classList.add("scale-[120%]", "opacity-0", "pointer-events-none");
+      filterContent.classList.remove("scale-[100%]", "opacity-100", "pointer-events-auto");
       componentHide.classList.remove("hidden");
       externalContent.classList.remove("hidden");
-    });
+    };
 
-    findBTN.addEventListener("click", () => {
-      filterContent.classList.remove("scale-[120%]");
-      filterContent.classList.remove("opacity-0");
-      filterContent.classList.remove("pointer-events-none");
-      componentHide.classList.add("hidden");
-      externalContent.classList.add("hidden");
-
-      filterContent.classList.add("scale-[100%]");
-      filterContent.classList.add("opacity-100");
-      filterContent.classList.add("pointer-events-auto");
-    });
-
-    closeBTN.addEventListener("click", () => {
-      filterContent.classList.add("scale-[120%]");
-      filterContent.classList.add("opacity-0");
-      filterContent.classList.add("pointer-events-none");
-
-      filterContent.classList.remove("scale-[100%]");
-      filterContent.classList.remove("opacity-100");
-      filterContent.classList.remove("pointer-events-auto");
-      componentHide.classList.remove("hidden");
-      externalContent.classList.remove("hidden");
-    });
+    filterBTN.addEventListener("click", showFilter);
+    closeBTN.addEventListener("click", hideFilter);
+    findBTN.addEventListener("click", showFilter);
 
     // filter underline
     const underlineToggle = document.querySelectorAll(".underline-toggle");
