@@ -27,7 +27,7 @@ const banner = () => {
     `;
   }
 // call back function
-  class Banner extends HTMLElement {
+class Banner extends HTMLElement {
     connectedCallback() {
       this.innerHTML = banner();
   
