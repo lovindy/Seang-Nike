@@ -1,53 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nike.com</title>
-    <link rel="stylesheet" href="../styles/output.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="shortcut icon"
-      type="x-icon"
-      href="../images/home-icon/nike.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/memberSlide.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="../styles/memberSlide.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
-      rel="stylesheet" />
-  </head>
-  <body>
-    <!-- header section -->
-    <header-layout class="header-layout"></header-layout>
 
-    <!-- nav-bar section -->
-    <navbar-layout class="navbar-layout"></navbar-layout>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike.com</title>
+  <link rel="stylesheet" href="../styles/output.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/memberSlide.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/memberSlide.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="../styles/banner.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+</head>
+<style>
+  .accordion-content-10 {
 
-    <!-- banner seciton -->
-    <slide-container class="slide-container"></slide-container>
+    transition: max-height 0.3s ease-in-out;
+  }
+</style>
 
-    <!-- body section -->
-    <member-content-layout
-      class="member-content-layout"></member-content-layout>
+<body>
+  <!-- header section -->
+  <header-component></header-component>
 
-    <!-- footer section -->
-    <footer-bottom-layout class="footer-bottom-layout"></footer-bottom-layout>
-  </body>
-  <!-- script link component home page -->
-  <script src="../script/home.js"></script>
-  <script src="../script/kids.js"></script>
-  <script src="../script/member.js"></script>
-  <script src="../script/btn.js"></script>
-  <script src="../script/slider.js"></script>
-  <script src="../script/autosilder.js"></script>
-  <script src="../script/find.js"></script>
+  <!-- nav-bar section -->
+  <nav-component></nav-component>
+
+  <!-- banner seciton -->
+  <slide-container class="slide-container"></slide-container>
+
+  <!-- body section -->
+  <!-- header section -->
+  <section class="sticky top-0 z-[10] bg-white">
+    <header class="w-full items-center lg:justify-center justify-between flex">
+      <div
+        class="lg:items-center lg:relative lg:justify-start justify-between w-full max-w-[1850px] py-4 flex lg:flex-row flex-col px-6">
+        <!-- logo nike -->
+        <div class="flex items-center justify-start">
+          <p class="text-[26px]">Nike Membership</p>
+        </div>
+
+        <!-- right side text -->
+        <div class="lg:absolute lg:flex items-center lg:justify-center w-full">
+          <ul class="grid grid-cols-3 gap-8 text-[16px]">
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Explore the Nike App</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Member Product</span></a>
+            </li>
+
+            <li>
+              <a href="#"><span class="hover:text-gray-300">Sign Up</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- hero section -->
+  <section>
+    <div class="relative flex justify-center items-center">
+      <video class="w-full" autoplay muted loop src="../images/home-picture/memberNike.mp4"></video>
+      <div class="absolute text-white sm:text-center">
+        <h1 class="titlemember sm:text-[60px] text-[20px]">
+          IT'S BETTER AS <br />
+          A MEMBER
+        </h1>
+        <p class="">Move, Shop, Customize and Celebrate with the best of Nike.</p>
+        <btn-component title="Sign Up" customClass="bg-white text-black sm:mt-6 mt-2"></btn-component>
+      </div>
+    </div>
+  </section>
+
+  <!-- member benefits -->
+  <membership-component></membership-component>
+
+  <!-- member also get -->
+  <section class="member px-4 pb-4 pt-6">
+    <div class="w-full pt-6 pb-4 max-w-[1600px] mx-auto hidden md:flex justify-between items-center">
+      <p class="text-[26px]">Members Also Get</p>
+      <span class="space-x-2">
+        <button id="prev-shop-1" class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="next-shop-1" class="hover:text-white w-[40px] h-[40px] rounded-full bg-gray-200">
+          <i class="fa-solid fa-chevron-right"></i></button></span>
+    </div>
+
+    <div class="max-w-[1600px] hidden md:flex mx-auto overflow-x-hidden">
+      <div class="flex gap-2 text-center duration-300" id="shop-slider-1">
+        <!-- original card -->
+        <div class="w-full" id="card-shop-1">
+          <div class="relative w-[528px] mx-auto flex justify-center items-center">
+            <img class="w-full h-full object-cover" src="../images/home-picture/mem1.jpeg" alt="" />
+            <div class="absolute flex flex-col items-center">
+              <h1 class="text-[26px] pt-6">Free Shipping</h1>
+              <p class="pt-6">Members score free delivery on every</p>
+              <p>$50+ order.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full" id="card-shop-1">
+          <div class="relative w-[528px] mx-auto flex justify-center items-center">
+            <img class="w-full h-full object-cover" src="../images/home-picture/mem2.jpeg" alt="" />
+            <div class="absolute flex flex-col items-center">
+              <h1 class="text-[26px] pt-6">Wear Test</h1>
+              <p class="pt-6">Not sure? Try it for 60 days-return if it's</p>
+              <p>not a fit</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full" id="card-shop-1">
+          <div class="relative w-[528px] mx-auto flex justify-center items-center">
+            <img class="w-full h-full object-cover" src="../images/home-picture/mem3.jpeg" alt="" />
+            <div class="absolute flex flex-col items-center">
+              <h1 class="text-[26px] pt-6">Receiptless</h1>
+              <p class="pt-6">Return or exchange receipt-free in-store</p>
+              <p>or in the Nike App.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full" id="card-shop-1">
+          <div class="relative w-[528px] mx-auto flex justify-center items-center">
+            <img class="w-full h-full object-cover" src="../images/home-picture/mem4.jpeg" alt="" />
+            <div class="absolute flex flex-col items-center">
+              <h1 class="text-[26px] pt-6">Member Experiences</h1>
+              <p class="pt-6">Join your community for live, Member-</p>
+              <p>only events.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full" id="card-shop-1">
+          <div class="relative w-[528px] mx-auto flex justify-center items-center">
+            <img class="w-full h-full object-cover" src="../images/home-picture/mem5.jpeg" alt="" />
+            <div class="absolute flex flex-col items-center">
+              <h1 class="text-[26px] pt-6">Nike Experts</h1>
+              <p class="pt-6">Members score free delivery on every</p>
+              <p>$50+ order.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- responsive of member also get -->
+  <section>
+    <h1 class="text-[26px] px-4 flex md:hidden">Members Also Get</h1>
+    <div class="flex md:hidden flex-col items-center justify-center">
+      <div class="w-full flex justify-center items-center" id="card-shop-1">
+        <div class="relative w-[300px] mx-auto flex justify-center items-center">
+          <img class="w-full h-full object-cover" src="../images/home-picture/mem1.jpeg" alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Free Shipping</h1>
+            <p class="pt-6">Members score free delivery on every</p>
+            <p>$50+ order.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center items-center" id="card-shop-1">
+        <div class="relative w-[300px] mx-auto flex justify-center items-center">
+          <img class="w-full h-full object-cover" src="../images/home-picture/mem2.jpeg" alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Wear Test</h1>
+            <p class="pt-6">Not sure? Try it for 60 days-return if it's</p>
+            <p>not a fit</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex justify-center items-center" id="card-shop-1">
+        <div class="relative w-[300px] mx-auto flex justify-center items-center">
+          <img class="w-full h-full object-cover" src="../images/home-picture/mem4.jpeg" alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Member Experiences</h1>
+            <p class="pt-6">Join your community for live, Member-</p>
+            <p>only events.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center items-center" id="card-shop-1">
+        <div class="relative w-[300px] mx-auto flex justify-center items-center">
+          <img class="w-full h-full object-cover" src="../images/home-picture/mem5.jpeg" alt="" />
+          <div class="absolute flex flex-col items-center">
+            <h1 class="text-[26px] pt-6">Nike Experts</h1>
+            <p class="pt-6">Members score free delivery on every</p>
+            <p>$50+ order.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- nike red line -->
+  <section>
+    <img class="w-full hidden md:flex" src="../images/home-picture/memline.jpeg" alt="" />
+    <img class="w-full flex md:hidden" src="../images/home-picture/nikelineSm.jpeg" alt="" />
+  </section>
+
+  <!-- connect through membership -->
+  <connect-through-component></connect-through-component>
+
+  <!-- autoslider -->
+  <auto-slide-component></auto-slide-component>
+
+  <!-- footer accordion -->
+  <footer-member-component></footer-member-component>
+
+  <!-- image of footer -->
+  <section>
+    <img class="hidden md:flex" src="../images/home-picture/nikemembership .jpeg" alt="">
+    <img class="flex md:hidden" src="../images/home-picture/nikeSM.jpeg" alt="">
+  </section>
+
+  <!-- footer section -->
+  <footer-bottom-layout class="footer-bottom-layout"></footer-bottom-layout>
+</body>
+<!-- script link component home page -->
+<script src="../script/home.js"></script>
+<script src="../script/kids.js"></script>
+<script src="../script/member.js"></script>
+<script src="../script/btn.js"></script>
+<script src="../script/autosilder.js"></script>
+<script src="../script/find.js"></script>
+<script src="../script/membership.js"></script>
+<script src="../script/connectThrough.js"></script>
+<script src="../script/footerMember.js"></script>
+<script src="../script/header.js"></script>
+<script src="../script/navbar.js"></script>
+<script src="../script/banner.js"></script>
 </html>
+

@@ -1,4 +1,6 @@
-<!-- Upper footer -->
+const footerTwin = () => {
+  return `
+  <!-- Upper footer -->
 <footer class="w-full px-6 sm:py-16">
   <div
     class="max-w-screen-xl hidden sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 mx-auto  ">
@@ -135,5 +137,13 @@
     </div>
   </div>
 </footer>
+  `
+}
 
+class FooterTwin extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = footerTwin();
+  }
+}
+customElements.define("footer-twin", FooterTwin);
 

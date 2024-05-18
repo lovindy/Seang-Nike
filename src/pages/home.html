@@ -1,44 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nike.com</title>
-    <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet" />
-      <link rel="stylesheet" href="../styles/style.css" />
-      <link rel="stylesheet" href="../styles/output.css">
-      <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-  <body>
-    <!-- header section -->
-    <header-layout class="header-layout"></header-layout>
 
-    <!-- nav-bar section -->
-    <navbar-layout class="navbar-layout" ></navbar-layout>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike.com</title>
+  <!-- font and logo -->
+  <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+    <!-- style link -->
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/output.css">
+  <link rel="stylesheet" href="../styles/banner.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <!-- banner seciton -->
-    <slide-container class="slide-container" ></slide-container>
+<body>
+  <!-- header section -->
+  <header-component></header-component>
 
-    <!-- body section -->
-    <bodyhome-layout class="bodyhome-layout" ></bodyhome-layout>
+  <!-- nav-bar section -->
+  <nav-component></nav-component>
 
-    <!-- footer responsive -->
-    <footer-res-layout class="footer-res-layout sm:hidden"></footer-res-layout>
+  <!-- banner seciton -->
+  <banner-component></banner-component>
 
-    <!-- footer section -->
-    <bodyhome-layout class="menu-bottom-layout" ></menu-bottom-layout>
+  <!-- body section -->
+  <!-- hero section -->
+  <hero-section-component imgURL_1="../images/home-picture/cama.jpeg" imgURL_2="../images/home-picture/homenikeres.jpeg"
+    miniTitle="Step into the unreal" title_1="GEAR-UP FOR" title_2="THE MAJORS" description="Swing into style and performance with Nike Golf: Where excellence meets
+      comfort." button="Shop the Collection">
 
-  </body>
-  <!-- script link component home page -->
-  <script src="../script/home.js"></script>
-  <script src="../script/slider.js"></script>
-  <script src="../script/btn.js"></script>
+  </hero-section-component>
+
+  <!-- trending -->
+  <carousel-component data='[
+{
+  "img": "../images/home-picture/e1.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+
+{
+  "img": "../images/home-picture/e2.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/e3.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/e4.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/e5.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/e1.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/e2.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/e3.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+}
+]'>
+  </carousel-component>
+
+  <!-- feature head -->
+  <feature-design-component imgFeatured_1="../images/home-picture/nike-just-do-it.jpg"
+    imgFeatured_2="../images/home-picture/nike_lyhour.jpeg" des_1="Nike Alphafly 3"
+    title_1="Push Beyond What's Possible" des_2="Jordan New Arrivals" title_2="Air Jordan 4 'Vivid Sulfur'">
+  </feature-design-component>
+
+  <!-- Shop by sport -->
+  <carousel-component data='[
+{
+  "img": "../images/home-picture/black1.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+
+{
+  "img": "../images/home-picture/black2.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/black3.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/black4.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/black5.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/black6.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/black7.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/black8.jpeg",
+  "description": "Nike apparel merges fashion, function.",
+  "price": ""
+}
+]'>
+  </carousel-component>
+
+  <!-- Classic  spotlight -->
+  <carousel-component data='[
+{
+  "img": "../images/home-picture/shoes1.jpeg",
+  "description": "",
+  "price": ""
+},
+
+{
+  "img": "../images/home-picture/shoes2.jpeg",
+  "description": "",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/shoes3.jpeg",
+  "description": "",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/shoes4.png",
+  "description": "",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/shoes5.jpeg",
+  "description": "",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/shoes6.jpeg",
+  "description": "",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/shoes7.jpeg",
+  "description": "",
+  "price": ""
+},
+{
+  "img": "../images/home-picture/shoes1.jpeg",
+  "description": "",
+  "price": ""
+}
+]'>
+  </carousel-component>
+
+  <!-- footer responsive -->
+  <footer-accordion class="footer-accordion"></footer-accordion>
+
+  <!-- footer section -->
+  <footer-twin class="footer-twin"></footer-twin>
+
+</body>
+<!-- script link component home page -->
+<script src="../script/home.js"></script>
+<script src="../script/btn.js"></script>
+<script src="../script/carousel.js"></script>
+<script src="../script/featuredesign.js"></script>
+<script src="../script/heroSection.js"></script>
+<script src="../script/header.js"></script>
+<script src="../script/navbar.js"></script>
+<script src="../script/resFooter.js"></script>
+<script src="../script/banner.js"></script>
+<script src="../script/footerAccordion.js"></script>
+<script src="../script/footerTwin.js"></script>
 </html>
+

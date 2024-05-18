@@ -1,4 +1,5 @@
-<!-- header section -->
+const headerDesign = () => {
+  return `
 <section class=".header-layout bg-[#f5f5f5] flex items-center justify-center">
   <header
     class="head-bar px-6 items-center justify-between w-full max-w-[1850px] h-[36px] hidden md:flex">
@@ -62,3 +63,13 @@
     </div>
   </header>
 </section>
+    `
+}
+
+class Header extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = headerDesign();
+  }
+}
+customElements.define('header-component', Header);
+
