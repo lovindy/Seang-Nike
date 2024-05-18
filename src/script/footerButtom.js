@@ -1,5 +1,6 @@
-<!-- solo footer -->
-<footer class="footer-bottom-layout bg-black w-full">
+const footerFindAStore = () => {
+  return `
+  <footer class="footer-bottom-layout bg-black w-full">
     <div class="max-w-[1600px] mx-auto p-6 grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2">
       <ul class="font-medium text-[14px] text-white leading-8 md:pt-0 pt-4">
         <h1 class="cursor-pointer">RESOURCES</h1>
@@ -97,3 +98,12 @@
       </div>
     </div>
   </footer>
+  `
+}
+
+class FindAStore extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = footerFindAStore();
+  }
+}
+customElements.define("find-a-store-footer", FindAStore);
