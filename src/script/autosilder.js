@@ -1,4 +1,4 @@
-// create component function
+// create design of component
 const AutoSlideComponent = () => {
   return `
       
@@ -59,7 +59,6 @@ const AutoSlideComponent = () => {
       
           `;
 };
-
 // create class name
 class AutoComponent extends HTMLElement {
   connectedCallback() {

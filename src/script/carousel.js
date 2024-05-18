@@ -14,7 +14,7 @@ const carousel = (data, title, align_text) => {
             </div>
         </div>
 
-        <div class="carousel-content w-full max-w-[1600px] flex mx-auto overflow-hidden">
+        <div class="carousel-content px-4 w-full max-w-[1600px] flex mx-auto overflow-hidden">
             <div class="slider flex gap-3 ${align_text} transition-transform duration-300">
                 ${data.map((item) => `
                     <div class="card-slider flex-shrink-0 w-72 md:w-[24rem]">

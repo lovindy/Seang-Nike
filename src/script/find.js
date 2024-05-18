@@ -1,8 +1,4 @@
-const find_a_store = document.querySelector("find-a-store-layout");
-fetch("../components/findastore.html")
-  .then((res) => res.text())
-  .then((data) => {
-    find_a_store.innerHTML = data;
+
     const listCards = [
       {
         location: "Nike Well Collective - Kansas City",
@@ -292,13 +288,5 @@ fetch("../components/findastore.html")
         moveDown();
       }
     });
-  })
-  .catch((error) => console.error("Error fetching included file:", error));
+    
 
-const footerBottom = document.querySelector(".footer-bottom-layout");
-fetch("../components/footerBottom.html")
-  .then((res) => res.text())
-  .then((data) => {
-    footerBottom.innerHTML = data;
-  })
-  .catch((error) => console.error("Error fetching included file:", error));

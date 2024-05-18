@@ -80,7 +80,7 @@ const createCardComponent = () => {
             <div class="mt-20 grid grid-cols-2 gap-4 max-w-screen-md mx-auto px-6">
                 <!-- Card -->
                 ${cardArray.map((item) => {
-                    return `
+    return `
                     <div class="p-4 rounded-xl shadow-lg bg-white">
                         <img
                         src="${item.imgUrl}"
@@ -94,7 +94,7 @@ const createCardComponent = () => {
                         </div>
                 </div>
                     `
-                }).join("")}
+  }).join("")}
             </div>
         </section>
     `;
