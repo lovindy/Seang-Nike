@@ -21,7 +21,7 @@ const carousel = (data, title, align_text) => {
                         <div class="bg-white rounded-lg overflow-hidden">
                             <img class="w-full object-cover" src="${item.img}" alt="" />
                             <div class="py-4">
-                                <p class="text-base md:text-lg lg:text-xl mb-2">${item.description}</p>
+                                <p class="text-base md:text-lg mb-2">${item.description}</p>
                                 <p class="text-sm md:text-lg font-medium">${item.price}</p>
                             </div>
                         </div>
