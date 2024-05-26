@@ -19,7 +19,7 @@ const navDesign = () => {
             <li id="feature_btn">
               <a class="p-1"  href="../pages/feature.html"
                 ><span class="group hover:text-gray-300 hidden sm:flex"
-                  >Featured</span
+                  >New & Featured</span
                 ></a
               >
             </li>
@@ -41,13 +41,13 @@ const navDesign = () => {
             <li id="acc_btn">
               <a class="p-1"  href=""
                 ><span class="hover:text-gray-300 hidden sm:flex"
-                  >Sale</span
+                  >Jordan</span
                 ></a
               >
             </li>
             <li>
               <a class="p-1" href=""
-                ><span class="hover:text-gray-300 hidden sm:flex">Jordan</span></a
+                ><span class="hover:text-gray-300 hidden sm:flex">Sale</span></a
               >
             </li>
           </ul>
