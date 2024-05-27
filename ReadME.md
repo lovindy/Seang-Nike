@@ -38,7 +38,7 @@ The goal of this project is to replicate the functionality and design of the Nik
 
 # Folder Structure
 
-- Image of folder structure :
+### **Image of Folder Structure:**
   ![Screenshot_2024-05-27_at_6.51.28_in_the_evening](/uploads/0e494dfcceab408819e2a984082749b0/Screenshot_2024-05-27_at_6.51.28_in_the_evening.png)
 
 1. **Src (folder)**:
