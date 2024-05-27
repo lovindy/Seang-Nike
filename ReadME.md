@@ -1,20 +1,4 @@
-# Seang-Makaramarady
-
-**Nike.com**
-
-**Link of the file project** :
-
-- Flow planning :
-
-[https://www.figma.com/file/r91fufaOK6Rc9J6HRWKM5s/Process-Flow-Diagram-(nike.com%2FCloned)?type=whiteboard&node-id=0%3A1&t=i7KVq1iiN0vRVNjg-1](<https://www.figma.com/file/r91fufaOK6Rc9J6HRWKM5s/Process-Flow-Diagram-(nike.com%2FCloned)?type=whiteboard&node-id=0%3A1&t=i7KVq1iiN0vRVNjg-1>)
-
-- Figma UI Design :
-
-[https://www.figma.com/file/puPUg2voWAKmXKzlH5uiTt/Seang-Makaramarady?type=design&node-id=0%3A1&mode=design&t=ECpsCdkcf8fHmO3U-1](https://www.figma.com/file/puPUg2voWAKmXKzlH5uiTt/Seang-Makaramarady?type=design&node-id=0%3A1&mode=design&t=ECpsCdkcf8fHmO3U-1)
-
-- GitLab link repository :
-
-[https://git.clp.kr/anbschool/2nd/hexcode/seang-makaramarady/seang-makaramarady-nike.com](https://git.clp.kr/anbschool/2nd/hexcode/seang-makaramarady/seang-makaramarady-nike.com)
+# Developer : Seang-Makaramarady
 
 # GOAL
 
