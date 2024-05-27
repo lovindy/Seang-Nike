@@ -54,18 +54,40 @@ The goal of this project is to replicate the functionality and design of the Nik
    - Footer Bottom section
    - AutoSlider Image
 
-# Timeline
+# Folder Structure
 
-- Research and Planning: [18/April/2024] to [19/April/2024]
-- Design and Development: [20/April/2024] to [30/April/2024]
-- Testing and Debugging: [01/May/2024] to [4/May/2024]
-- Optimization and Documentation: [05/May/2024] to [08/May/2024]
-- Deploy Project: [09/May/2024]
+- Image of folder structure :
+  ![Screenshot 2024-05-27 at 6.51.28 in the evening.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1eae2e72-7484-4991-b7d8-ff8695b87196/679c6068-b727-43b3-acb9-8b49111f81f6/Screenshot_2024-05-27_at_6.51.28_in_the_evening.png)
+
+1. **Src (folder)**:
+   - This is the main container directory for organizing all project resources.
+   - **Images**: Contains various images used throughout the website, such as product photos, logos, or background images.
+   - **Pages**: Holds HTML files or templates that represent different sections or pages of the website, organized into subdirectories like **`Home`**, **`New & Feature`**, **`Men`**, **`Women`**, **`Kids`**, **`Nike Membership`**, and **`Find a Store`**. This structure helps in managing and navigating through different parts of the site.
+   - **Script**: Includes JavaScript files responsible for different functionalities or components on the website. Files like **`Carousel.js`**, **`Banner.js`**, **`autoslider.js`**, and **`Find.js`** are stored here, promoting modular code organization and maintenance.
+   - **Style**: Contains CSS files that style various components or sections of the website. Files such as **`Output.css`**, **`Style.css`**, **`Member.css`**, and **`Banner.css`** manage the visual appearance and layout across different pages.
+2. **Additional Files**:
+   - **`.gitignore`**: Specifies which files and directories to exclude from version control, maintaining a clean repository.
+   - **`Index.html`**: The main entry point of the website, serving as the initial landing page for visitors.
+   - **`ReadMe.md`**: Provides project documentation, instructions, or details about the project setup.
+   - **`tailwind.config.js`**: Configuration file for Tailwind CSS, allowing customization of the CSS framework to fit specific project requirements.
+
+### **Benefits of this Structure:**
+
+- **Clear Organization**: Separates assets, pages, scripts, and styles into distinct directories within **`Src`**, facilitating easier navigation and maintenance.
+- **Modularity**: Promotes modular development practices by grouping related files together, enhancing code reusability and scalability.
+- **Accessibility**: Centralizes all project resources under one main directory (**`Src`**), making it straightforward for developers to locate and manage files.
+- **Documentation**: Includes a **`ReadMe.md`** file for comprehensive project documentation, ensuring clarity and understanding among team members.
+
+### **Conclusion:**
+
+The **`Src`** folder serves as the foundational container for organizing and managing all essential project components, promoting efficient development practices and enhancing project maintainability. This structure supports collaboration and scalability, making it easier to expand and enhance the website over time.
+
+Feel free to adjust this explanation further based on specific aspects you want to emphasize in your presentation.
 
 # Resource and Tools
 
 - Development tools (Visual Studio Code , Gitlab Repository, Figma):
- 
+
 - HTML, CSS, JavaScript(DOM):
   HTML :
   CSS :
@@ -76,19 +98,20 @@ The goal of this project is to replicate the functionality and design of the Nik
   It is an utility-first CSS framework packed with classes like **`flex`**, **`pt-4`**, **`text-center`** and **`rotate-90`** that can be composed to build any design, directly in your markup.
   How to use it ?
   Following Step:
+
   ### Tailwind CDN : Tailwind content delivery network.
+
   **1. Add the Play CDN script to your HTML**
   Add the Play CDN script tag to the **`<head>`** of your HTML file, and start using Tailwind’s utility classes to style your content.
-  
+
   **2. Try customizing your config**
   Edit the **`tailwind.config`** object to **[customize your configuration](https://tailwindcss.com/docs/configuration)** with your own design tokens.
- 
+
   **3. Try adding some custom CSS**
   Use **`type="text/tailwindcss"`** to add custom CSS that supports all of Tailwind's CSS features.
 
   **4. Try using a first-party plugin**
   Enable first-party plugins, like forms and typography, using the **`plugins`** query parameter.
-
 
 # GIT-FLOW STRATEGY
 
@@ -123,6 +146,7 @@ The goal of this project is to replicate the functionality and design of the Nik
 # Name Convention
 
 1. Git/GitHub:
+
    1. Remote Repository:
 
       - Creating Issue and choosing label:
@@ -234,33 +258,44 @@ The goal of this project is to replicate the functionality and design of the Nik
 
 1. Website Styling :
 
-  ### Colors :
-  ![Screenshot_2024-05-08_at_10.09.29_in_the_morning](/uploads/b863a05c07eb8e5d52d3f8e296e7687b/Screenshot_2024-05-08_at_10.09.29_in_the_morning.png)
-  ### Background Colors:
-  - #ffffff
-  - #f7f7f7
-  - #f5f5f5
-  - #e5e7eb
-  - #d1d5db
-  - #000000
-  ### Text Colors:
-  - #ffffff
-  - #9ca3af
-  - #757575
-  - #747476
-  - #707072
-  - #616161
-  - #11827
-  - #000000
-  ### Fill Colors:
-  - #111111
-  ### Border Colors:
-  - #e5e7eb
-  ### Fonts :
-  Font-Style : Libre Baskerville, Alfa Slab One.
-  ![Screenshot_2024-05-08_at_10.07.28_in_the_morning](/uploads/3377e1c2746844d1cf515b2a6aa0e40f/Screenshot_2024-05-08_at_10.07.28_in_the_morning.png)
-  Font Size
-  Title : [60px]
-  Heading : [26px]
-  Description : [16px]
-  Paragraph : [14px]
+### Colors :
+
+![Screenshot_2024-05-08_at_10.09.29_in_the_morning](/uploads/b863a05c07eb8e5d52d3f8e296e7687b/Screenshot_2024-05-08_at_10.09.29_in_the_morning.png)
+
+### Background Colors:
+
+- #ffffff
+- #f7f7f7
+- #f5f5f5
+- #e5e7eb
+- #d1d5db
+- #000000
+
+### Text Colors:
+
+- #ffffff
+- #9ca3af
+- #757575
+- #747476
+- #707072
+- #616161
+- #11827
+- #000000
+
+### Fill Colors:
+
+- #111111
+
+### Border Colors:
+
+- #e5e7eb
+
+### Fonts :
+
+Font-Style : Libre Baskerville, Alfa Slab One.
+![Screenshot_2024-05-08_at_10.07.28_in_the_morning](/uploads/3377e1c2746844d1cf515b2a6aa0e40f/Screenshot_2024-05-08_at_10.07.28_in_the_morning.png)
+Font Size
+Title : [60px]
+Heading : [26px]
+Description : [16px]
+Paragraph : [14px]
