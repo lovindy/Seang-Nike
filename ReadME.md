@@ -39,7 +39,7 @@ The goal of this project is to replicate the functionality and design of the Nik
 # Folder Structure
 
 - Image of folder structure :
-  ![Screenshot 2024-05-27 at 6.51.28 in the evening.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/1eae2e72-7484-4991-b7d8-ff8695b87196/679c6068-b727-43b3-acb9-8b49111f81f6/Screenshot_2024-05-27_at_6.51.28_in_the_evening.png)
+  ![Screenshot_2024-05-27_at_6.51.28_in_the_evening](/uploads/0e494dfcceab408819e2a984082749b0/Screenshot_2024-05-27_at_6.51.28_in_the_evening.png)
 
 1. **Src (folder)**:
    - This is the main container directory for organizing all project resources.
