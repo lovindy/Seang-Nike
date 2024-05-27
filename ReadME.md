@@ -1,5 +1,3 @@
-# Developer : Seang-Makaramarady
-
 # GOAL
 
 The goal of this project is to replicate the functionality and design of the Nike.com website as closely as possible. This involves recreating the layout, features, and user experience of the original website.
