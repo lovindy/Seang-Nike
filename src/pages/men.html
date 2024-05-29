@@ -1,197 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike.com</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="stylesheet" href="../styles/banner.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="../images/home-icon/nike.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nike.com</title>
-  <link rel="stylesheet" href="../styles/output.css" />
-  <link rel="stylesheet" href="../styles/banner.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+  <body>
+    <!-- header section -->
+    <header-component></header-component>
 
-<body>
-  <!-- header section -->
-  <header-component></header-component>
+    <!-- nav-bar section -->
+    <nav-component></nav-component>
 
-  <!-- nav-bar section -->
-  <nav-component></nav-component>
+    <!-- banner seciton -->
+    <banner-component></banner-component>
 
-  <!-- banner seciton -->
-  <banner-component></banner-component>
+    <!-- main section -->
+    <main>
+      <!-- header section -->
+      <div class=".header-layout items-center justify-center hidden md:flex">
+        <header
+          class="head-bar items-center justify-between w-full max-w-[1850px] h-[72px] flex p-6"
+        >
+          <!-- logo nike -->
+          <div
+            class="imgage-logo size-[50px] flex items-center justify-between"
+          >
+            <a class="jordan-logo" href="">
+              <p class="text-[26px]">Men</p>
+            </a>
+          </div>
+          <!-- right side text -->
+          <div>
+            <ul class="flex justify-center items-center gap-8 text-[16px]">
+              <li>
+                <a href="#"><span class="hover:text-sky-300">Shoes</span></a>
+              </li>
 
-  <!-- main section -->
-  <!-- header section -->
-  <div class=".header-layout items-center justify-center hidden md:flex">
-    <header class="head-bar items-center justify-between w-full max-w-[1850px] h-[72px] flex p-6">
-      <!-- logo nike -->
-      <div class="imgage-logo size-[50px] flex items-center justify-between">
-        <a class="jordan-logo" href="">
-          <p class="text-[26px]">Men</p>
-        </a>
+              <li>
+                <a href="#"><span class="hover:text-sky-300">Clothing</span></a>
+              </li>
+
+              <li>
+                <a href="#"
+                  ><span class="hover:text-sky-300">Accessories</span></a
+                >
+              </li>
+
+              <li>
+                <a href="#"><span class="hover:text-sky-300">Sale</span></a>
+              </li>
+            </ul>
+          </div>
+        </header>
       </div>
-      <!-- right side text -->
-      <div>
-        <ul class="flex justify-center items-center gap-8 text-[16px]">
-          <li>
-            <a href="#"><span class="hover:text-sky-300">Shoes</span></a>
-          </li>
 
-          <li>
-            <a href="#"><span class="hover:text-sky-300">Clothing</span></a>
-          </li>
+      <hero-section-component
+        imgURL_1="../images/home-picture/halenman.jpeg"
+        imgURL_2="../images/home-picture/solohalen.jpeg"
+        miniTitle="Step into the unreal"
+        title_1="GEAR-UP FOR"
+        title_2="THE MAJORS"
+        description="Swing into style and performance with Nike Golf: Where excellence meets
+        comfort."
+        button="Shop the Collection"
+      >
+      </hero-section-component>
 
-          <li>
-            <a href="#"><span class="hover:text-sky-300">Accessories</span></a>
-          </li>
+      <!-- shop the essential -->
+      <carousel-component
+        title="Shop By Classic"
+        carouselType="shopEssential"
+      ></carousel-component>
+      <!-- hero section -->
+      <section>
+        <div
+          class="mx-auto items-center max-w-[1850px] h-[72px] flex py-[50px]"
+        >
+          <p class="text-[26px] ml-[15px]">Marathon Speed Ahead</p>
+        </div>
 
-          <li>
-            <a href="#"><span class="hover:text-sky-300">Sale</span></a>
-          </li>
-        </ul>
-      </div>
-    </header>
-  </div>
+        <div>
+          <img class="w-full" src="../images/home-picture/hero1.jpeg" alt="" />
+        </div>
+      </section>
+      <!-- slogan -->
+      <hero-section-component
+        miniTitle="Nike Alphafly 3"
+        title_1="LEAVE YOURSELF"
+        title_2="IN THE DUST"
+        description="Stay fresh from the start mile 26.2 in the electic new colorway"
+        button="Shop"
+      >
+      </hero-section-component>
 
-  <hero-section-component imgURL_1="../images/home-picture/halenman.jpeg"
-    imgURL_2="../images/home-picture/solohalen.jpeg" miniTitle="Step into the unreal" title_1="GEAR-UP FOR"
-    title_2="THE MAJORS" description="Swing into style and performance with Nike Golf: Where excellence meets
-        comfort." button="Shop the Collection">
-  </hero-section-component>
+      <!-- feature -->
+      <feature-design-component
+        imgFeatured_1="../images/home-picture/nike-just-do-it.jpg"
+        imgFeatured_2="../images/home-picture/nike_lyhour.jpeg"
+        des_1="Nike Alphafly 3"
+        title_1="Desgin Crew Collection"
+        des_2="Refreshing Adventure Collection"
+        title_2="Expression in Motion"
+      >
+      </feature-design-component>
 
-  <!-- shop the essential  -->
-  <carousel-component title="Shop the essential" data='[
-  {
-    "img": "../images/home-picture/y1.jpeg",
-    "description": "",
-    "price": ""
-  },
+      <!-- Classic  spotlight -->
+      <carousel-component
+        title="Shop By Classic"
+        carouselType="shopByClassic"
+      ></carousel-component>
 
-  {
-    "img": "../images/home-picture/y2.jpeg",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/y3.jpeg",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/y1.jpeg",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/y3.jpeg",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/y2.jpeg",
-    "description": "",
-    "price": ""
-  }
-]'>
-  </carousel-component>
+      <!-- membership -->
+      <membership-component></membership-component>
+    </main>
 
-  <!-- hero section -->
-  <section>
-    <div class="mx-auto items-center max-w-[1850px] h-[72px] flex py-[50px]">
-      <p class="text-[26px] ml-[15px]">Marathon Speed Ahead</p>
-    </div>
+    <!-- footer responsive -->
+    <footer-accordion class="footer-accordion"></footer-accordion>
 
-    <div>
-      <img class="w-full" src="../images/home-picture/hero1.jpeg" alt="" />
-    </div>
-  </section>
-  <!-- slogan -->
-  <hero-section-component miniTitle="Nike Alphafly 3" title_1="LEAVE YOURSELF" title_2="IN THE DUST"
-    description="Stay fresh from the start mile 26.2 in the electic new colorway" button="Shop">
-  </hero-section-component>
+    <!-- footer section -->
+    <footer-twin class="footer-twin"></footer-twin>
+  </body>
 
-  <!-- feature -->
-  <feature-design-component imgFeatured_1="../images/home-picture/nike-just-do-it.jpg"
-    imgFeatured_2="../images/home-picture/nike_lyhour.jpeg" des_1="Nike Alphafly 3" title_1="Desgin Crew Collection"
-    des_2="Refreshing Adventure Collection" title_2="Expression in Motion">
-  </feature-design-component>
-
-  <!-- Classic  spotlight -->
-  <carousel-component title="Classic  Spotlight" data='[
-  {
-    "img": "../images/home-picture/shoes1.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-
-  {
-    "img": "../images/home-picture/shoes2.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/shoes3.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/shoes4.png",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/shoes5.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/shoes6.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/shoes7.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  },
-  {
-    "img": "../images/home-picture/shoes1.jpeg",
-    "title": "",
-    "description": "",
-    "price": ""
-  }
-]'>
-  </carousel-component>
-
-  <!-- membership -->
-  <membership-component></membership-component>
-
-  <!-- footer responsive -->
-  <footer-accordion class="footer-accordion"></footer-accordion>
-
-  <!-- footer section -->
-  <footer-twin class="footer-twin"></footer-twin>
-</body>
-
-<!-- script link component -->
-<script src="../script/featuredesign.js"></script>
-<script src="../script/membership.js"></script>
-<script src="../script/carousel.js"></script>
-<script src="../script/heroSection.js"></script>
-<script src="../script/header.js"></script>
-<script src="../script/navbar.js"></script>
-<script src="../script/resFooter.js"></script>
-<script src="../script/banner.js"></script>
-<script src="../script/footerAccordion.js"></script>
-<script src="../script/footerTwin.js"></script>
-
+  <!-- script link component -->
+  <script src="../script/featuredesign.js"></script>
+  <script src="../script/membership.js"></script>
+  <script src="../script/carousel.js"></script>
+  <script src="../script/heroSection.js"></script>
+  <script src="../script/header.js"></script>
+  <script src="../script/navbar.js"></script>
+  <script src="../script/resFooter.js"></script>
+  <script src="../script/banner.js"></script>
+  <script src="../script/footerAccordion.js"></script>
+  <script src="../script/footerTwin.js"></script>
 </html>

@@ -1,5 +1,169 @@
+// Data of each carousel
+const carouselData = {
+  trending: [
+    {
+      img: "../images/home-picture/e1.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e2.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e3.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e4.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e5.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e1.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e2.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/e3.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+  ],
+  classicSpotlight: [
+    {
+      img: "../images/home-picture/black1.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black2.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black3.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black4.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black5.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black6.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black7.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/black8.jpeg",
+      description: "Nike apparel merges fashion, function.",
+      price: "",
+    },
+  ],
+  shopByClassic: [
+    {
+      img: "../images/home-picture/shoes1.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes2.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes3.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes4.png",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes5.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes6.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes7.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/shoes1.jpeg",
+      description: "",
+      price: "",
+    },
+  ],
+  shopEssential: [
+    {
+      img: "https://i.pinimg.com/564x/5f/75/94/5f7594d28895c8f910e106a61735b6e2.jpg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/y1.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "https://i.pinimg.com/564x/69/f5/8a/69f58af5a7899258c1682fe8b9460d59.jpg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/y2.jpeg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "https://i.pinimg.com/564x/38/91/bc/3891bc63bcd136111f0d243e09e848b6.jpg",
+      description: "",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/y2.jpeg",
+
+      description: "",
+      price: "",
+    },
+  ],
+};
+
+// carousel card design
 const carousel = (data, title, align_text) => {
-    return `
+  return `
         <div class="carousel-container bg-white flex justify-between w-full px-4 max-w-[1600px] mx-auto py-4">
             <div class="w-full flex justify-between items-center">
                 <p class="text-2xl">${title}</p>
@@ -16,7 +180,9 @@ const carousel = (data, title, align_text) => {
 
         <div class="carousel-content px-4 w-full max-w-[1600px] flex mx-auto overflow-hidden">
             <div class="slider flex gap-3 ${align_text} transition-transform duration-300">
-                ${data.map((item) => `
+                ${data
+                  .map(
+                    (item) => `
                     <div class="card-slider flex-shrink-0 w-72 md:w-[24rem]">
                         <div class="bg-white rounded-lg overflow-hidden">
                             <img class="w-full object-cover" src="${item.img}" alt="" />
@@ -26,56 +192,62 @@ const carousel = (data, title, align_text) => {
                             </div>
                         </div>
                     </div>
-                `).join('')}
+                `
+                  )
+                  .join("")}
             </div>
         </div>
     `;
-}
+};
 
 class Carousel extends HTMLElement {
-    connectedCallback() {
-        const data = JSON.parse(this.getAttribute('data')) || [];
-        const title = this.getAttribute('title') || 'Trending';
-        const align_text = this.getAttribute('align_text') || 'text-center';
-        this.innerHTML = carousel(data, title, align_text);
+  connectedCallback() {
+    const title = this.getAttribute("title") || "Trending";
+    const align_text = this.getAttribute("align_text") || "text-center";
+    const carouselType = this.getAttribute("carouselType") || "trending";
+    const carouselStyle = carouselData[carouselType];
+    const data = carouselStyle || [];
+    this.innerHTML = carousel(data, title, align_text);
 
-        const cardPrev = this.querySelector(".prev-btn");
-        const cardNext = this.querySelector(".next-btn");
-        const cardImage = this.querySelector(".slider");
-        const cardSlider = this.querySelectorAll(".card-slider");
+    const cardPrev = this.querySelector(".prev-btn");
+    const cardNext = this.querySelector(".next-btn");
+    const cardImage = this.querySelector(".slider");
+    const cardSlider = this.querySelectorAll(".card-slider");
 
-        let currentIndexCard = 0;
+    let currentIndexCard = 0;
 
-        const nextCard = () => {
-            if (currentIndexCard < cardSlider.length - 4) {
-                currentIndexCard++;
-                updateCard();
-            }
-        }
-
-        const prevCard = () => {
-            if (currentIndexCard > 0) {
-                currentIndexCard--;
-                updateCard();
-            }
-        }
-
-        const updateCard = () => {
-            const cardWidth = cardSlider[0].clientWidth + parseInt(window.getComputedStyle(cardSlider[0]).marginRight); // Card width plus margin
-            const offset = -currentIndexCard * cardWidth;
-            cardImage.style.transform = `translateX(${offset}px)`;
-
-            // Update button states
-            cardPrev.disabled = currentIndexCard === 0;
-            cardNext.disabled = currentIndexCard === cardSlider.length - 1;
-        }
-
-        cardPrev.addEventListener("click", prevCard);
-        cardNext.addEventListener("click", nextCard);
-
-        // Initial button state update
+    const nextCard = () => {
+      if (currentIndexCard < cardSlider.length - 4) {
+        currentIndexCard++;
         updateCard();
-    }
+      }
+    };
+
+    const prevCard = () => {
+      if (currentIndexCard > 0) {
+        currentIndexCard--;
+        updateCard();
+      }
+    };
+
+    const updateCard = () => {
+      const cardWidth =
+        cardSlider[0].clientWidth +
+        parseInt(window.getComputedStyle(cardSlider[0]).marginRight); // Card width plus margin
+      const offset = -currentIndexCard * cardWidth;
+      cardImage.style.transform = `translateX(${offset}px)`;
+
+      // Update button states
+      cardPrev.disabled = currentIndexCard === 0;
+      cardNext.disabled = currentIndexCard === cardSlider.length - 1;
+    };
+
+    cardPrev.addEventListener("click", prevCard);
+    cardNext.addEventListener("click", nextCard);
+
+    // Initial button state update
+    updateCard();
+  }
 }
 
-customElements.define('carousel-component', Carousel);
+customElements.define("carousel-component", Carousel);
