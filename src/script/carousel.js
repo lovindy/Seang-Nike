@@ -1,5 +1,6 @@
 // Data of each carousel
 const carouselData = {
+  // Data for "Trending" carousel
   trending: [
     {
       img: "../images/home-picture/e1.jpeg",
@@ -42,6 +43,7 @@ const carouselData = {
       price: "",
     },
   ],
+  // Data for "Shop By Sport" carousel
   classicSpotlight: [
     {
       img: "../images/home-picture/black1.jpeg",
@@ -84,6 +86,7 @@ const carouselData = {
       price: "",
     },
   ],
+  // Data for "Shop By Classic" carousel
   shopByClassic: [
     {
       img: "../images/home-picture/shoes1.jpeg",
@@ -126,6 +129,7 @@ const carouselData = {
       price: "",
     },
   ],
+  // Data for "Shop the Essential Men" carousel
   shopEssentialMen: [
     {
       img: "https://i.pinimg.com/564x/5f/75/94/5f7594d28895c8f910e106a61735b6e2.jpg",
@@ -159,7 +163,7 @@ const carouselData = {
       price: "",
     },
   ],
-  // Data for "Shop the Essential" carousel
+  // Data for "Shop the Essential Women" carousel
   shopEssentialWomen: [
     {
       img: "../images/home-picture/w2.jpeg",
