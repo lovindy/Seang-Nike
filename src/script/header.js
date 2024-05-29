@@ -53,7 +53,7 @@ const headerDesign = () => {
         </li>
         <div class="line h-[18px] w-[1px] bg-black"></div>
         <li>
-          <a href="#"><span class="hover:text-gray-300">About Us</span></a>
+          <a href="../pages/member.html"><span class="hover:text-gray-300">Join Us</span></a>
         </li>
         <div class="line h-[18px] w-[1px] bg-black"></div>
         <li>
