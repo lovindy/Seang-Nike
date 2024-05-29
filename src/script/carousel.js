@@ -157,7 +157,7 @@ const carouselData = {
       price: "",
     },
     {
-      img: "../images/home-picture/y2.jpeg",
+      img: "../images/home-picture/y3.jpeg",
 
       description: "",
       price: "",
