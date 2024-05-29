@@ -126,7 +126,7 @@ const carouselData = {
       price: "",
     },
   ],
-  shopEssential: [
+  shopEssentialMen: [
     {
       img: "https://i.pinimg.com/564x/5f/75/94/5f7594d28895c8f910e106a61735b6e2.jpg",
       description: "",
@@ -157,6 +157,77 @@ const carouselData = {
 
       description: "",
       price: "",
+    },
+  ],
+  // Data for "Shop the Essential" carousel
+  shopEssentialWomen: [
+    {
+      img: "../images/home-picture/w2.jpeg",
+      description: "Just Do It Now",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/w3.jpeg",
+      description: "Run Faster, Feel Better",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/w4.jpeg",
+      description: "Step Up Your Style",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/w5.jpeg",
+      description: "Power Your Every Move",
+      price: "",
+    },
+    {
+      img: "../images/home-picture/ws1.png",
+      description: "Defy Limits, Reach Goals",
+      price: "",
+    },
+  ],
+  // Data for "Popular Right Now" carousel
+  popularRightNow: [
+    {
+      img: "../images/home-picture/ws1.png",
+      description: "Run with unstoppable comfort",
+      price: "$130",
+    },
+    {
+      img: "../images/home-picture/ws3.png",
+      description: "Style meets athletic prowess",
+      price: "$140",
+    },
+    {
+      img: "../images/home-picture/ws2.png",
+      description: "Elevate your game today",
+      price: "$150",
+    },
+    {
+      img: "../images/home-picture/ws4.png",
+      description: "Push beyond your limits",
+      price: "$160",
+    },
+    {
+      img: "../images/home-picture/ws5.png",
+      description: "Innovate your performance wear",
+      price: "$170",
+    },
+    {
+      img: "../images/home-picture/ky2.jpeg",
+      description: "Iconic style, unbeatable performance",
+      price: "$180",
+    },
+    {
+      img: "../images/home-picture/f3.png",
+      description: "Embrace the future, excel",
+      price: "$190",
+    },
+    {
+      img: "../images/home-picture/ws1.png",
+      description: "Fuel your every step",
+      price: "$200",
     },
   ],
 };
