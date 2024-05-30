@@ -1,227 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike.com</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <link rel="stylesheet" href="../styles/banner.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="../images/home-icon/nike.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nike.com</title>
-  <link rel="stylesheet" href="../styles/output.css" />
-  <link rel="stylesheet" href="../styles/banner.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/style.css" />
-</head>
+  <body>
+    <!-- header section -->
+    <header-component></header-component>
 
-<body>
-  <!-- header section -->
-  <header-component></header-component>
+    <!-- nav-bar section -->
+    <nav-component></nav-component>
 
-  <!-- nav-bar section -->
-  <nav-component></nav-component>
+    <!-- banner seciton -->
+    <banner-component></banner-component>
 
-  <!-- banner seciton -->
-  <banner-component></banner-component>
+    <!-- main section -->
+    <main>
+      <!-- Hero section -->
+      <hero-section-component
+        imgURL_1="../images/home-picture/hallanddddd.jpeg"
+        imgURL_2="../images/home-picture/hallen2.jpeg"
+        miniTitle="Step into the unreal"
+        title_1="AIR MAX DN"
+        title_2=""
+        description="Dynamic Style of Sha'Carri Richardson"
+        button="Shop"
+      >
+      </hero-section-component>
 
-  <!-- body section -->
-  <!-- Hero section -->
-  <hero-section-component imgURL_1="../images/home-picture/hallanddddd.jpeg"
-    imgURL_2="../images/home-picture/hallen2.jpeg" miniTitle="Step into the unreal" title_1="AIR MAX DN" title_2=""
-    description="Dynamic Style of Sha'Carri Richardson" button="Shop">
-  </hero-section-component>
+      <!-- Shop the Essential -->
+      <carousel-component
+        title="Shop The Essential"
+        carouselType="shopEssentialWomen"
+      ></carousel-component>
 
-  <!-- Shop the Essential -->
-  <carousel-component title="Shop the Essential" data='[
-{
-  "img": "../images/home-picture/w2.jpeg",
-  "description": "Just Do It Now",
-  "price": ""
-},
+      <!-- Featured component -->
+      <feature-design-component
+        imgFeatured_1="../images/home-picture/w6.jpeg"
+        imgFeatured_2="../images/home-picture/w7.png"
+        des_1="What Limit?"
+        title_1="Desgin Crew Collection"
+        des_2="Expression in Motion"
+        title_2="Refreshing Adventure Collection"
+      >
+      </feature-design-component>
 
-{
-  "img": "../images/home-picture/w3.jpeg",
-  "description": "Run Faster, Feel Better",
-  "price": ""
-},
-{
-  "img": "../images/home-picture/w4.jpeg",
-  "description": "Step Up Your Style",
-  "price": ""
-},
-{
-  "img": "../images/home-picture/w5.jpeg",
-  "description": "Power Your Every Move",
-  "price": ""
-},
-{
-  "img": "../images/home-picture/ws1.png",
-  "description": "Defy Limits, Reach Goals",
-  "price": ""
-}
-]'>
-  </carousel-component>
+      <!-- Classic spotlight -->
+      <carousel-component
+        title="Shop By Classic"
+        carouselType="shopByClassic"
+      ></carousel-component>
 
-  <!-- featured component -->
-  <feature-design-component imgFeatured_1="../images/home-picture/w6.jpeg" imgFeatured_2="../images/home-picture/w7.png"
-    des_1="What Limit?" title_1="Desgin Crew Collection" des_2="Expression in Motion"
-    title_2="Refreshing Adventure Collection">
-  </feature-design-component>
+      <!-- More to Explore -->
+      <section>
+        <div
+          class="flex max-w-[1850px] px-4 mx-auto pt-12 justify-between items-center"
+        >
+          <p class="text-[26px] pb-4">More to Explore</p>
+        </div>
+        <div class="w-full max-w-[1850px] px-4 flex mx-auto overflow-x-hidden">
+          <div class="flex gap-3 text-start duration-300">
+            <div class="w-full">
+              <div class="max-w-[600px]">
+                <img
+                  class="w-full h-full object-cover"
+                  src="../images/home-picture/w8.png"
+                  alt=""
+                />
+                <h1 class="text-[20px] pt-2">New from Nike Running</h1>
+                <button class="underline underline-offset-2 text-black pt-6">
+                  Shop
+                </button>
+              </div>
+            </div>
 
-  <!-- classic spotlight -->
-  <carousel-component title="Classic  Spotlight" data='[
-{
-"img": "../images/home-picture/shoes1.jpeg",
-"description": "",
-"price": ""
-},
+            <div class="w-full">
+              <div class="max-w-[600px]">
+                <img
+                  class="w-full h-full object-cover"
+                  src="../images/home-picture/w9.jpeg"
+                  alt=""
+                />
+                <h1 class="text-[20px] pt-2">Killshot from Day to Night</h1>
+                <button class="underline underline-offset-2 text-black pt-6">
+                  Shop
+                </button>
+              </div>
+            </div>
 
-{
-"img": "../images/home-picture/shoes2.jpeg",
-"description": "",
-"price": ""
-},
-{
-"img": "../images/home-picture/shoes3.jpeg",
-"description": "",
-"price": ""
-},
-{
-"img": "../images/home-picture/shoes4.png",
-"description": "",
-"price": ""
-},
-{
-"img": "../images/home-picture/shoes5.jpeg",
-"description": "",
-"price": ""
-},
-{
-"img": "../images/home-picture/shoes6.jpeg",
-"description": "",
-"price": ""
-},
-{
-"img": "../images/home-picture/shoes7.jpeg",
-"description": "",
-"price": ""
-},
-{
-"img": "../images/home-picture/shoes1.jpeg",
-"description": "",
-"price": ""
-}
-]'>
-  </carousel-component>
-
-  <!-- More to Explore -->
-  <section>
-    <div class="flex max-w-[1850px] px-4 mx-auto pt-12 justify-between items-center">
-      <p class="text-[26px] pb-4">More to Explore</p>
-    </div>
-    <div class="w-full max-w-[1850px] px-4 flex mx-auto overflow-x-hidden">
-      <div class="flex gap-3 text-start duration-300">
-        <div class="w-full">
-          <div class="max-w-[600px]">
-            <img class="w-full h-full object-cover" src="../images/home-picture/w8.png" alt="" />
-            <h1 class="text-[20px] pt-2">New from Nike Running</h1>
-            <button class="underline underline-offset-2 text-black pt-6">
-              Shop
-            </button>
+            <div class="w-full">
+              <div class="max-w-[600px]">
+                <img
+                  class="w-full h-full object-cover"
+                  src="../images/home-picture/w10.jpeg"
+                  alt=""
+                />
+                <h1 class="text-[20px] pt-2">Spring Golf Essential</h1>
+                <button class="underline underline-offset-2 text-black pt-6">
+                  Shop
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="w-full">
-          <div class="max-w-[600px]">
-            <img class="w-full h-full object-cover" src="../images/home-picture/w9.jpeg" alt="" />
-            <h1 class="text-[20px] pt-2">Killshot from Day to Night</h1>
-            <button class="underline underline-offset-2 text-black pt-6">
-              Shop
-            </button>
-          </div>
-        </div>
+      <!-- Popular Rigth Now -->
+      <carousel-component
+        title="Popular Rigth Now"
+        carouselType="popularRightNow"
+        align_text="text-start"
+      ></carousel-component>
 
-        <div class="w-full">
-          <div class="max-w-[600px]">
-            <img class="w-full h-full object-cover" src="../images/home-picture/w10.jpeg" alt="" />
-            <h1 class="text-[20px] pt-2">Spring Golf Essential</h1>
-            <button class="underline underline-offset-2 text-black pt-6">
-              Shop
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Membership -->
+      <membership-component></membership-component>
+    </main>
 
-  <!-- Popular Rigth Now -->
-  <carousel-component title="Popular Rigth Now" align_text="text-start" data='[
-{
-"img": "../images/home-picture/ws1.png",
-"description": "Run with unstoppable comfort",
-"price": "$130"
-},
-{
-"img": "../images/home-picture/ws3.png",
-"description": "Style meets athletic prowess",
-"price": "$140"
-},
-{
-"img": "../images/home-picture/ws2.png",
-"description": "Elevate your game today",
-"price": "$150"
-},
-{
-"img": "../images/home-picture/ws4.png",
-"description": "Push beyond your limits",
-"price": "$160"
-},
-{
-"img": "../images/home-picture/ws5.png",
-"description": "Innovate your performance wear",
-"price": "$170"
-},
-{
-"img": "../images/home-picture/ky2.jpeg",
-"description": "Iconic style, unbeatable performance",
-"price": "$180"
-},
-{
-"img": "../images/home-picture/f3.png",
-"description": "Embrace the future, excel",
-"price": "$190"
-},
-{
-"img": "../images/home-picture/ws1.png",
-"description": "Fuel your every step",
-"price": "$200"
-}
-]'>
-  </carousel-component>
+    <!-- footer responsive -->
+    <footer-accordion class="footer-accordion"></footer-accordion>
 
-  <!-- membership -->
-  <membership-component></membership-component>
-
-  <!-- footer responsive -->
-  <footer-accordion class="footer-accordion"></footer-accordion>
-
-  <!-- footer section -->
-  <footer-twin class="footer-twin"></footer-twin>
-</body>
-<!-- script link component -->
-<script src="../script/btn.js"></script>
-<script src="../script/membership.js"></script>
-<script src="../script/heroSection.js"></script>
-<script src="../script/carousel.js"></script>
-<script src="../script/featuredesign.js"></script>
-<script src="../script/header.js"></script>
-<script src="../script/navbar.js"></script>
-<script src="../script/resFooter.js"></script>
-<script src="../script/banner.js"></script>
-<script src="../script/footerAccordion.js"></script>
-<script src="../script/footerTwin.js"></script>
+    <!-- footer section -->
+    <footer-twin class="footer-twin"></footer-twin>
+  </body>
+  <!-- script link component -->
+  <script src="../script/btn.js"></script>
+  <script src="../script/membership.js"></script>
+  <script src="../script/heroSection.js"></script>
+  <script src="../script/carousel.js"></script>
+  <script src="../script/featuredesign.js"></script>
+  <script src="../script/header.js"></script>
+  <script src="../script/navbar.js"></script>
+  <script src="../script/resFooter.js"></script>
+  <script src="../script/banner.js"></script>
+  <script src="../script/footerAccordion.js"></script>
+  <script src="../script/footerTwin.js"></script>
 </html>
-
