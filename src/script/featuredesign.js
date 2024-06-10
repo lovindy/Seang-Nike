@@ -48,13 +48,13 @@ const featureDesign = (imgFeatured_1, imgFeatured_2, des_1, title_1, des_2, titl
 
 class FeatureDesign extends HTMLElement {
   connectedCallback() {
-    const imgFeatured_1 = this.getAttribute('imgFeatured_1');
-    const imgFeatured_2 = this.getAttribute('imgFeatured_2');
-    const des_1 = this.getAttribute('des_1');
-    const title_1 = this.getAttribute('title_1');
-    const des_2 = this.getAttribute('des_2');
-    const title_2 = this.getAttribute('title_2');
-    this.innerHTML = featureDesign(imgFeatured_1, imgFeatured_2, des_1, title_1, des_2, title_2);
+    const imgFeatured1 = this.getAttribute('imgFeatured_1');
+    const imgFeatured2 = this.getAttribute('imgFeatured_2');
+    const des1 = this.getAttribute('des_1');
+    const title1 = this.getAttribute('title_1');
+    const des2 = this.getAttribute('des_2');
+    const title2 = this.getAttribute('title_2');
+    this.innerHTML = featureDesign(imgFeatured1, imgFeatured2, des1, title1, des2, title2);
   }
 }
 

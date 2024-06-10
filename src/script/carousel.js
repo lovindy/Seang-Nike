@@ -278,11 +278,11 @@ const carousel = (data, title, align_text) => {
 class Carousel extends HTMLElement {
   connectedCallback() {
     const title = this.getAttribute("title") || "Trending";
-    const align_text = this.getAttribute("align_text") || "text-center";
+    const alignText = this.getAttribute("align_text") || "text-center";
     const carouselType = this.getAttribute("carouselType") || "trending";
     const carouselStyle = carouselData[carouselType];
     const data = carouselStyle || [];
-    this.innerHTML = carousel(data, title, align_text);
+    this.innerHTML = carousel(data, title, alignText);
 
     const cardPrev = this.querySelector(".prev-btn");
     const cardNext = this.querySelector(".next-btn");

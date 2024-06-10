@@ -1,5 +1,13 @@
-const heroSection = (imgURL_1, imgURL_2, miniTitle, title_1, title_2, description, button) => {
-    return `
+const heroSection = (
+  imgURL_1,
+  imgURL_2,
+  miniTitle,
+  title_1,
+  title_2,
+  description,
+  button
+) => {
+  return `
         <section>
           <div>
             <img class="w-full hidden md:block" src="${imgURL_1}" alt="" />
@@ -22,22 +30,29 @@ const heroSection = (imgURL_1, imgURL_2, miniTitle, title_1, title_2, descriptio
             </div>
           </div>
         </section>
-    `
+    `;
 };
 
 class HeroSection extends HTMLElement {
-    connectedCallback() {
-        const imgURL_1 = this.getAttribute("imgURL_1");
-        const imgURL_2 = this.getAttribute("imgURL_2");
-        const miniTitle = this.getAttribute("miniTitle");
-        const title_1 = this.getAttribute("title_1");
-        const title_2 = this.getAttribute("title_2");
-        const description = this.getAttribute("description");
-        const button = this.getAttribute("button");
+  connectedCallback() {
+    const imgURL1 = this.getAttribute("imgURL_1");
+    const imgURL2 = this.getAttribute("imgURL_2");
+    const miniTitle = this.getAttribute("miniTitle");
+    const title1 = this.getAttribute("title_1");
+    const title2 = this.getAttribute("title_2");
+    const description = this.getAttribute("description");
+    const button = this.getAttribute("button");
 
-        this.innerHTML = heroSection(imgURL_1, imgURL_2, miniTitle, title_1, title_2, description, button);
-    }
+    this.innerHTML = heroSection(
+      imgURL1,
+      imgURL2,
+      miniTitle,
+      title1,
+      title2,
+      description,
+      button
+    );
+  }
 }
 
 customElements.define("hero-section-component", HeroSection);
-
