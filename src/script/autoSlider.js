@@ -1,5 +1,5 @@
 // create design of component
-const AutoSlideComponent = () => {
+const autoSlideComponent = () => {
   return `
       
           <div class="images flex">
@@ -62,7 +62,7 @@ const AutoSlideComponent = () => {
 // create class name
 class AutoComponent extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = AutoSlideComponent();
+    this.innerHTML = autoSlideComponent();
   }
 }
 customElements.define("auto-slide-component", AutoComponent);

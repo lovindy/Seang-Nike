@@ -1,143 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike.com</title>
+    <link rel="stylesheet" href="../styles/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="../images/home-icon/nike.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nike.com</title>
-  <link rel="stylesheet" href="../styles/output.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="shortcut icon" type="x-icon" href="../images/home-icon/nike.svg" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
+  <body>
+    <!-- header section -->
+    <header-component></header-component>
 
-<body>
-  <!-- header section -->
-  <header-component></header-component>
+    <!-- nav-bar section -->
+    <nav-component></nav-component>
 
-  <!-- nav-bar section -->
-  <nav-component></nav-component>
-
-  <!-- body section -->
-  <section class="find-a-store-layout w-full">
-    <!-- search bar -->
-    <div class="w-full h-[92vh] flex flex-col-reverse lg:flex-row justify-between">
-      <!-- find a store -->
-      <div class="overflow-y-hidden relative lg:py-6 py-0 lg:w-[40%]">
-        <div class="relative h-screen overflow-y-auto w-full flex flex-col gap-1">
-          <!-- search bar -->
-          <div class="sticky top-0 pb-4 py-2 px-8 z-[1] bg-white">
-            <div class="lg:flex hidden flex-col">
-              <h1 class="text-[24px] py-6">Find a Nike Store</h1>
-              <div class=" justify-between items-center w-full flex pt-5 lg:pt-0">
-                <input type="text" id="locationInput1"
-                  class="w-full outline-4 px-4 py-4 text-[18px] border-[1px] rounded-lg border-black" />
-                <!-- left-6 top-5 -->
-                <!-- top-[-10%] text-xs left-2 Location-->
-                <span id="location-move1"
-                  class="pointer-events-none absolute left-12 top-30 duration-300 px-1 text-[#838385] bg-white">Search
-                  Location</span>
-                <img class="cursor-pointer absolute right-12 size-[40px]" src="../images/home-icon/search.png" alt="" />
+    <!-- body section -->
+    <section class="find-a-store-layout w-full">
+      <!-- search bar -->
+      <div
+        class="w-full h-[92vh] flex flex-col-reverse lg:flex-row justify-between">
+        <!-- find a store -->
+        <div class="overflow-y-hidden relative lg:py-6 py-0 lg:w-[40%]">
+          <div
+            class="relative h-screen overflow-y-auto w-full flex flex-col gap-1">
+            <!-- search bar -->
+            <div class="sticky top-0 pb-4 py-2 px-8 z-[1] bg-white">
+              <div class="lg:flex hidden flex-col">
+                <h1 class="text-[24px] py-6">Find a Nike Store</h1>
+                <div
+                  class="justify-between items-center w-full flex pt-5 lg:pt-0">
+                  <input
+                    type="text"
+                    id="locationInput1"
+                    class="w-full outline-4 px-4 py-4 text-[18px] border-[1px] rounded-lg border-black" />
+                  <!-- left-6 top-5 -->
+                  <!-- top-[-10%] text-xs left-2 Location-->
+                  <span
+                    id="location-move1"
+                    class="pointer-events-none absolute left-12 top-30 duration-300 px-1 text-[#838385] bg-white"
+                    >Search Location</span
+                  >
+                  <img
+                    class="cursor-pointer absolute right-12 size-[40px]"
+                    src="../images/home-icon/search.png"
+                    alt="" />
+                </div>
+                <div class="flex justify-between items-center pt-5">
+                  <p class="text-[#838385] text-[13px]">
+                    15 Nike Value Stores Near You
+                  </p>
+                  <button
+                    id="filter-btn"
+                    class="hover:bg-gray-100 px-[18px] py-[5px] font-medium border-[1px] border-black rounded-full">
+                    Filter
+                  </button>
+                </div>
               </div>
-              <div class="flex justify-between items-center pt-5">
-                <p class="text-[#838385] text-[13px]">15 Nike Value Stores Near You</p>
-                <button id="filter-btn"
-                  class="hover:bg-gray-100 px-[18px] py-[5px] font-medium border-[1px] border-black rounded-full">
-                  Filter
+            </div>
+
+            <!-- Calling component from JS -->
+            <div id="component-hide">
+              <div
+                id="button-up"
+                class="card-location border-black bg-gray-50 hover:bg-gray-100 border-2 rounded-lg py-[20px] flex justify-between items-center">
+                <!-- content -->
+                <div class="pl-10 leading-6">
+                  <h1>Nike Factory Store - Omaha</h1>
+                  <p class="text-[14px] text-[#878789]">
+                    Omaha - Nebraska Crossings
+                  </p>
+                  <p class="text-[14px] text-[#878789]">
+                    21351 Nebraska Crossings Dr. Suite A-129
+                  </p>
+                  <p class="text-[14px] text-[#878789]">
+                    Gretna. NE, 68028-7371, US
+                  </p>
+                  <span class="flex gap-1">
+                    <p class="text-red-500">Closed -</p>
+                    <p>Opens Tomorrow at 10:00 AM</p>
+                  </span>
+                </div>
+              </div>
+              <card-component></card-component>
+              <card-component></card-component>
+            </div>
+
+            <!-- filter content -->
+            <div
+              id="filter-content"
+              class="duration-300 z-[4] opacity-0 pointer-events-none w-full lg:h-[140vh] h-[200vh] lg:absolute fixed lg:top-0 top-0 scale-[120%] bg-white overflow-y-hidden">
+              <div class="px-8">
+                <div class="flex item justify-end pt-6">
+                  <img
+                    id="close-btn"
+                    class="cursor-pointer size-[16px]"
+                    src="../images/home-icon/close.png"
+                    alt="" />
+                </div>
+                <h1 class="text-[28px] font-semibold py-6">Filters</h1>
+              </div>
+              <ul
+                class="flex items-start flex-col px-8 underline-offset-4 leading-8">
+                <button href="">
+                  <p class="underline-toggle underline">All Stores</p>
                 </button>
-              </div>
+                <button href="">
+                  <p class="underline-toggle">Nike Stores</p>
+                </button>
+                <button href="">
+                  <p class="underline-toggle">Nike Value Stores</p>
+                </button>
+              </ul>
             </div>
           </div>
-
-          <!-- Calling component from JS -->
-          <div id="component-hide">
-            <div id="button-up"
-              class="card-location border-black bg-gray-50 hover:bg-gray-100 border-2 rounded-lg py-[20px] flex justify-between items-center">
-              <!-- content -->
-              <div class="pl-10 leading-6">
-                <h1>Nike Factory Store - Omaha</h1>
-                <p class="text-[14px] text-[#878789]">
-                  Omaha - Nebraska Crossings
-                </p>
-                <p class="text-[14px] text-[#878789]">
-                  21351 Nebraska Crossings Dr. Suite A-129
-                </p>
-                <p class="text-[14px] text-[#878789]">
-                  Gretna. NE, 68028-7371, US
-                </p>
-                <span class="flex gap-1">
-                  <p class="text-red-500">Closed -</p>
-                  <p>Opens Tomorrow at 10:00 AM</p>
-                </span>
-              </div>
-            </div>
-            <card-component></card-component>
-            <card-component></card-component>
-          </div>
-
-          <!-- filter content -->
-          <div id="filter-content"
-            class="duration-300 z-[4] opacity-0 pointer-events-none w-full lg:h-[140vh] h-[200vh] lg:absolute fixed lg:top-0 top-0 scale-[120%] bg-white overflow-y-hidden">
-            <div class="px-8">
-              <div class="flex item justify-end pt-6">
-                <img id="close-btn" class="cursor-pointer size-[16px]" src="../images/home-icon/close.png" alt="" />
-              </div>
-              <h1 class="text-[28px] font-semibold py-6">Filters</h1>
-            </div>
-            <ul class="flex items-start flex-col px-8 underline-offset-4 leading-8">
-              <button href="">
-                <p class="underline-toggle underline">All Stores</p>
-              </button>
-              <button href="">
-                <p class="underline-toggle">Nike Stores</p>
-              </button>
-              <button href="">
-                <p class="underline-toggle">Nike Value Stores</p>
-              </button>
-            </ul>
+          <!-- external link -->
+          <div
+            id="external-content"
+            class="flex lg:opacity-100 opacity-0 pointer-events-none absolute bottom-0 w-full bg-white px-10 py-4">
+            <a href="">
+              <h1
+                class="flex text-[16px] hover:opacity-90 underline underline-offset-2">
+                View All Stores
+              </h1>
+            </a>
           </div>
         </div>
-        <!-- external link -->
-        <div id="external-content"
-          class="flex lg:opacity-100 opacity-0 pointer-events-none absolute bottom-0 w-full bg-white px-10 py-4">
-          <a href="">
-            <h1 class="flex text-[16px] hover:opacity-90 underline underline-offset-2">
-              View All Stores
-            </h1>
-          </a>
+        <!-- Google map -->
+        <div class="lg:h-full lg:w-[60%] w-full z-[3]">
+          <div class="lg:hidden sticky top-0 pb-4 pl-8 pr-8">
+            <div
+              class="relative justify-between items-center w-full flex pt-5 lg:pt-0">
+              <input
+                class="pb-2 w-full outline-none text-[18px] border-b-[1px] border-black"
+                type="text"
+                placeholder="Find a store" />
+              <img
+                class="cursor-pointer absolute right-20 size-[35px]"
+                src="../images/home-icon/search.png"
+                alt="" />
+
+              <button
+                id="find-btn"
+                class="hover:bg-gray-100 px-[18px] py-[5px] font-medium border-[1px] border-black rounded-full">
+                Filter
+              </button>
+            </div>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250151.42198261587!2d104.89018675!3d11.57936425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c010ee85ab525bb!2sPhnom%20Penh!5e0!3m2!1sen!2skh!4v1713955136091!5m2!1sen!2skh"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="lg:h-full h-[40vh] w-full border-none"></iframe>
         </div>
       </div>
-      <!-- Google map -->
-      <div class="lg:h-full lg:w-[60%] w-full z-[3]">
-        <div class="lg:hidden sticky top-0 pb-4 pl-8 pr-8">
-          <div class="relative justify-between items-center w-full flex pt-5 lg:pt-0">
-            <input class="pb-2 w-full outline-none text-[18px] border-b-[1px] border-black" type="text"
-              placeholder="Find a store" />
-            <img class="cursor-pointer absolute right-20 size-[35px]" src="../images/home-icon/search.png" alt="" />
+    </section>
 
-            <button id="find-btn"
-              class="hover:bg-gray-100 px-[18px] py-[5px] font-medium border-[1px] border-black rounded-full">
-              Filter
-            </button>
-          </div>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250151.42198261587!2d104.89018675!3d11.57936425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109513dc76a6be3%3A0x9c010ee85ab525bb!2sPhnom%20Penh!5e0!3m2!1sen!2skh!4v1713955136091!5m2!1sen!2skh"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" class="lg:h-full h-[40vh] w-full"></iframe>
-      </div>
-    </div>
-  </section>
-  
-  <!-- footer section -->
-  <find-a-store-footer class="find-a-store-footer"></find-a-store-footer>
-</body>
-<!-- script link component -->
-<script src="../script/slider.js"></script>
-<script src="../script/find.js"></script>
-<script src="../script/btn.js"></script>
-<script src="../script/header.js"></script>
-<script src="../script/navbar.js"></script>
-<script src="../script/footerButtom.js"></script>
+    <!-- footer section -->
+    <find-a-store-footer class="find-a-store-footer"></find-a-store-footer>
+  </body>
+  <!-- script link component -->
+  <script src="../script/slider.js"></script>
+  <script src="../script/find.js"></script>
+  <script src="../script/btn.js"></script>
+  <script src="../script/header.js"></script>
+  <script src="../script/navbar.js"></script>
+  <script src="../script/footerButtom.js"></script>
 </html>
-
