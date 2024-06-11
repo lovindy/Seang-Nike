@@ -132,6 +132,7 @@ const carouselData = {
       price: "",
     },
   ],
+
   // Data for "Shop the Essential Men" carousel
   shopEssentialMen: [
     {
@@ -166,6 +167,7 @@ const carouselData = {
       price: "",
     },
   ],
+
   // Data for "Shop the Essential Women" carousel
   shopEssentialWomen: [
     {
@@ -194,6 +196,7 @@ const carouselData = {
       price: "",
     },
   ],
+  
   // Data for "Popular Right Now" carousel
   popularRightNow: [
     {
