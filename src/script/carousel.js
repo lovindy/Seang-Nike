@@ -1,91 +1,94 @@
 // Data of each carousel
 const carouselData = {
   // Data for "Trending" carousel
+  // Data for "Trending" carousel
   trending: [
     {
       img: "../images/home-picture/e1.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Stylish Nike gear available.",
       price: "",
     },
     {
       img: "../images/home-picture/e2.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Stay ahead with Nike.",
       price: "",
     },
     {
       img: "../images/home-picture/e3.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Fashion meets functionality here.",
       price: "",
     },
     {
       img: "../images/home-picture/e4.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Elevate your style now.",
       price: "",
     },
     {
       img: "../images/home-picture/e5.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Comfort and style blend.",
       price: "",
     },
     {
       img: "../images/home-picture/e1.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Iconic Nike apparel designs.",
       price: "",
     },
     {
       img: "../images/home-picture/e2.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Experience unmatched Nike quality.",
       price: "",
     },
     {
       img: "../images/home-picture/e3.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Performance-driven Nike clothing.",
       price: "",
     },
   ],
+
   // Data for "Shop By Sport" carousel
   classicSpotlight: [
     {
       img: "../images/home-picture/black1.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Top-notch Nike sportswear.",
       price: "",
     },
     {
       img: "../images/home-picture/black2.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Designed for active lifestyles.",
       price: "",
     },
     {
       img: "../images/home-picture/black3.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Elite gear for athletes.",
       price: "",
     },
     {
       img: "../images/home-picture/black4.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Innovative sportswear solutions here.",
       price: "",
     },
     {
       img: "../images/home-picture/black5.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Unleash potential with Nike.",
       price: "",
     },
     {
       img: "../images/home-picture/black6.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Athletic wear redefined brilliantly.",
       price: "",
     },
     {
       img: "../images/home-picture/black7.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Peak performance with style.",
       price: "",
     },
     {
       img: "../images/home-picture/black8.jpeg",
-      description: "Nike apparel merges fashion, function.",
+      description: "Engineered for sport excellence.",
       price: "",
     },
   ],
+
   // Data for "Shop By Classic" carousel
   shopByClassic: [
     {
@@ -256,8 +259,8 @@ const carousel = (data, title, align_text) => {
         <div class="carousel-content px-4 w-full max-w-[1600px] flex mx-auto overflow-hidden">
             <div class="slider flex gap-3 ${align_text} transition-transform duration-300">
                 ${data
-                  .map(
-                    (item) => `
+      .map(
+        (item) => `
                     <div class="card-slider flex-shrink-0 w-72 md:w-[24rem]">
                         <div class="bg-white rounded-lg overflow-hidden">
                             <img class="w-full object-cover" src="${item.img}" alt="" />
@@ -268,8 +271,8 @@ const carousel = (data, title, align_text) => {
                         </div>
                     </div>
                 `
-                  )
-                  .join("")}
+      )
+      .join("")}
             </div>
         </div>
     `;
