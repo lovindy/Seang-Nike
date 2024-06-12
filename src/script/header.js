@@ -1,6 +1,6 @@
 const headerDesign = () => {
   return `
-<section class=".header-layout bg-[#f5f5f5] flex items-center justify-center">
+<section class=".header-layout bg-[#f5f5f5] flex items-center justify-center z-[100]">
   <header
     class="head-bar px-6 items-center justify-between w-full max-w-[1850px] h-[36px] hidden md:flex">
     <!-- logo nike -->

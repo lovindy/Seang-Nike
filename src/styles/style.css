@@ -22,3 +22,19 @@
   transition: max-height 0.4s ease-out, padding 0.4s ease;
   max-height: 0;
 }
+
+/* Add these styles to your CSS file */
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.dropdown-menu.open {
+  display: block;
+  opacity: 1;
+  max-height: 500px; /* Adjust this value based on your dropdown content height */
+}
