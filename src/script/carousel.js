@@ -1,7 +1,6 @@
 // Data of each carousel
 const carouselData = {
   // Data for "Trending" carousel
-  // Data for "Trending" carousel
   trending: [
     {
       img: "../images/home-picture/e1.jpeg",
