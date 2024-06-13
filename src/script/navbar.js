@@ -270,9 +270,6 @@ const navDesign = () => {
     `;
 };
 
-// Inject the HTML into the DOM
-document.body.innerHTML += navDesign();
-
 class Navbar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = navDesign();
